@@ -18,7 +18,11 @@ public class Board {
     @Id @GeneratedValue
     @Column(name = "board_id")
     private Long id;
-
+    
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "manager_id")
+    private Manager manager;
+    
     private String title;
 
     private String content;
