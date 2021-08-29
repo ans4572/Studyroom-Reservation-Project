@@ -2,6 +2,7 @@ package fullstack.reservation.domain;
 
 import fullstack.reservation.domain.Enum.OrderStatus;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
@@ -12,7 +13,9 @@ import java.time.LocalDateTime;
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Orders {
+@Builder
+@Table(name = "orders")
+public class Order {
 
     @Id @GeneratedValue
     @Column(name = "orders_id")
@@ -29,6 +32,6 @@ public class Orders {
     private LocalDateTime orderDate;
 
     @Enumerated(EnumType.STRING)
-    private OrderStatus status;
+    private OrderStatus orderStatus;
 
 }
