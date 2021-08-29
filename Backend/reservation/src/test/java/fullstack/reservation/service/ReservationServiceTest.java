@@ -114,12 +114,18 @@ class ReservationServiceTest {
         //예약
         //예약 시 이용권 상태 = UNAVAILABLE, 좌석 상태 = AVAILABLE
         Reservation reservation = reservationService.reservation(saveUser.getId(), registerSeat.getId(), order.getId());
-        Reservation reservation2 = reservationService.reservation(saveUser2.getId(), registerSeat2.getId(), order2.getId());
 
         List<Reservation> reservations = reservationService.retrieveAll();
         List<Order> orders = orderService.retrieveAll();
 
-        assertThat(reservations.size()).isEqualTo(2);
         assertThat(orders.size()).isEqualTo(2);
+        
+        //퇴실
+        reservationService.exit(saveUser.getId());
+        assertThat(reservation.getExitDate()).isNotNull();
+
+        Reservation reservation3 = reservationService.reservation(saveUser.getId(), registerSeat.getId(), order2.getId());
+
+
     }
 }

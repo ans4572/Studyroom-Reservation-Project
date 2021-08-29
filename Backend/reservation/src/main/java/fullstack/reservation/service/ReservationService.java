@@ -78,4 +78,15 @@ public class ReservationService {
     public List<Reservation> retrieveAll() {
         return reservationRepository.findAll();
     }
+
+    public void exit(Long userId) {
+        List<Reservation> reservations = retrieveByUserId(userId);
+
+        for (Reservation r : reservations) {
+            if (r.getExitDate() == null) {
+                r.changeExitDate(LocalDateTime.now());
+                r.getSeat().changSeatStatus(SeatStatus.AVAILABLE);
+            }
+        }
+    }
 }

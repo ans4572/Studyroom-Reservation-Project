@@ -39,4 +39,8 @@ public class Reservation {
     public void changeExpireDate(LocalDateTime expireDate) {
         this.expireDate = expireDate;
     }
+
+    public void changeExitDate(LocalDateTime exitDate) {
+        this.exitDate = exitDate;
+    }
 }
