@@ -1,5 +1,6 @@
 package fullstack.reservation.service;
 
+import fullstack.reservation.domain.Enum.SeatStatus;
 import fullstack.reservation.domain.Seat;
 import fullstack.reservation.repository.SeatRepository;
 import lombok.RequiredArgsConstructor;
