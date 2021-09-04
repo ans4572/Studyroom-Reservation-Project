@@ -1,6 +1,7 @@
 package fullstack.reservation.service;
 
 import fullstack.reservation.domain.Enum.OrderStatus;
+import fullstack.reservation.domain.Enum.Ticket;
 import fullstack.reservation.domain.Item;
 import fullstack.reservation.domain.Order;
 import fullstack.reservation.domain.User;
@@ -24,9 +25,10 @@ public class OrderService {
     private final UserRepository userRepository;
 
     @Transactional
-    public Order order(Long userId, Long itemId) {
+    public Order order(Long userId, Ticket ticket) {
         User findUser = userRepository.findById(userId).orElse(null);
-        Item findItem = itemRepository.findById(itemId).orElse(null);
+        Item findItem = itemRepository.findByTicketType(ticket);
+
 
         Order order = Order.builder()
                 .user(findUser)
