@@ -45,6 +45,7 @@ public class ReservationController {
         } else {
             //사용중인 이용권이 없는 경우
             log.info("새로 사용");
+            //
             reservation = reservationService.reservation(sessionUser.getId(), reservationDto.getSeatNumber(), reservationDto.getOrderId());
         }
 
