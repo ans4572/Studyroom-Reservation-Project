@@ -31,10 +31,16 @@ public class Order {
 
     private LocalDateTime orderDate;
 
+    private LocalDateTime expireDate;
+
     @Enumerated(EnumType.STRING)
     private OrderStatus orderStatus;
 
     public void changOrderStatus(OrderStatus orderStatus) {
         this.orderStatus = orderStatus;
+    }
+
+    public void changExpireDate(LocalDateTime expireDate) {
+        this.expireDate = expireDate;
     }
 }

@@ -25,7 +25,7 @@ public class ErrorController extends ResponseEntityExceptionHandler {
     @ExceptionHandler
     public ResponseEntity interceptorExceptionHandler(InterceptorException ex, WebRequest request) {
         ErrorResult errorResult =
-                new ErrorResult(LocalDateTime.now(), ex.getMessage(), request.getDescription(false));
+                new ErrorResult(LocalDateTime.now(), "로그인 후 이용 가능합니다.", request.getDescription(false));
 
         return new ResponseEntity<>(errorResult, HttpStatus.NOT_FOUND);
     }
