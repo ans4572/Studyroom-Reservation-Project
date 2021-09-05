@@ -26,19 +26,13 @@ public class Reservation {
     @JoinColumn(name = "seat_id")
     private Seat seat;
 
-    @OneToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "order_id")
     private Order order;
 
     private LocalDateTime enterDate;
 
     private LocalDateTime exitDate;
-
-    private LocalDateTime expireDate;
-
-    public void changeExpireDate(LocalDateTime expireDate) {
-        this.expireDate = expireDate;
-    }
 
     public void changeExitDate(LocalDateTime exitDate) {
         this.exitDate = exitDate;

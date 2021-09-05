@@ -7,6 +7,7 @@ import fullstack.reservation.domain.User;
 import fullstack.reservation.repository.ItemRepository;
 import fullstack.reservation.repository.OrderRepository;
 import fullstack.reservation.repository.UserRepository;
+import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -17,7 +18,6 @@ import java.util.List;
 
 @SpringBootTest
 @Transactional
-@Rollback(value = false)
 class OrderServiceTest {
 
     @Autowired
@@ -48,5 +48,7 @@ class OrderServiceTest {
 
         Order order = orderService.order(user.getId(), Ticket.DAY);
         System.out.println(order.getId() + " " + order.getOrderStatus() + " " );
+
+        Assertions.assertThat(order.getItem()).isEqualTo(day);
     }
 }
