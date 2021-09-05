@@ -16,6 +16,7 @@ import javax.annotation.PostConstruct;
 public class InitService {
 
     private final SeatService seatService;
+    private final ItemService itemService;
 
     @PostConstruct
     public void postInit() {
@@ -26,5 +27,15 @@ public class InitService {
                     .build();
             seatService.register(seat);
         }
+        Item day = Item.builder()
+                .price(10000)
+                .ticket(Ticket.DAY)
+                .build();
+        Item month = Item.builder()
+                .price(200000)
+                .ticket(Ticket.MONTH)
+                .build();
+        itemService.register(day);
+        itemService.register(month);
     }
 }

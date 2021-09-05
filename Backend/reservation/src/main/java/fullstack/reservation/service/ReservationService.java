@@ -124,6 +124,7 @@ public class ReservationService {
         }
     }
 
+    @Transactional
     public void exit(Long userId) {
         List<Reservation> reservations = retrieveByUserId(userId);
 

@@ -37,12 +37,6 @@ public class OrderService {
                 .orderStatus(OrderStatus.AVAILABLE)
                 .build();
 
-        if (findItem.getTicket() == Ticket.DAY) {
-            order.changExpireDate(order.getOrderDate().plusDays(1));
-        } else if (findItem.getTicket() == Ticket.MONTH) {
-            order.changExpireDate(order.getOrderDate().plusMonths(1));
-        }
-
         return orderRepository.save(order);
     }
 
