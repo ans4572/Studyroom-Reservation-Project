@@ -71,7 +71,7 @@ set CLASSPATH=%APP_HOME%\lib\reservation-0.0.1-SNAPSHOT-plain.jar;%APP_HOME%\lib
 
 
 @rem Execute reservation
-"%JAVA_EXE%" %DEFAULT_JVM_OPTS% %JAVA_OPTS% %RESERVATION_OPTS%  -classpath "%CLASSPATH%" ReservationApplicationA %*
+"%JAVA_EXE%" %DEFAULT_JVM_OPTS% %JAVA_OPTS% %RESERVATION_OPTS%  -classpath "%CLASSPATH%"  %*
 
 :end
 @rem End local scope for the variables with windows NT shell
