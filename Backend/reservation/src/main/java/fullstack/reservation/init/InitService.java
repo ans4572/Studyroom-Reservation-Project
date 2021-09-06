@@ -20,7 +20,7 @@ public class InitService {
 
     @PostConstruct
     public void postInit() {
-        for (int i = 0; i < 45; i++) {
+        for (int i = 0; i < 10; i++) {
             Seat seat = Seat.builder()
                     .seatNumber(i + 1)
                     .seatStatus(SeatStatus.AVAILABLE)
