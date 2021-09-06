@@ -29,25 +29,15 @@ import java.time.LocalDateTime;
 public class ReservationController {
 
     private final ReservationService reservationService;
-
+    
+    //입실 후 로그아웃
     @PostMapping("/reservation")
     public ResponseEntity reservation(@RequestBody ReservationDto reservationDto, HttpServletRequest request) {
         HttpSession session = request.getSession(false);
         User sessionUser = (User)session.getAttribute(SessionConst.LOGIN_MEMBER);
 
-        Reservation reservation;
+        Reservation reservation = reservationService.reservation(sessionUser.getId(), reservationDto.getSeatNumber());
 
-        if (reservationService.isExistOnUsing(sessionUser.getId())) {
-            //사용중인 이용권이 있는경우
-            log.info("사용중");
-            reservation = reservationService.reservation(sessionUser.getId(), reservationDto.getSeatNumber());
-
-        } else {
-            //사용중인 이용권이 없는 경우
-            log.info("새로 사용");
-            //
-            reservation = reservationService.reservation(sessionUser.getId(), reservationDto.getSeatNumber(), reservationDto.getOrderId());
-        }
 
         URI uri = ServletUriComponentsBuilder.fromCurrentRequest()
                 .path("/{id}")
@@ -55,14 +45,20 @@ public class ReservationController {
                 .toUri();
 
         ReservationResultDto reservationResultDto = ReservationResultDto.builder()
-                .ticket(reservation.getOrder().getItem().getTicket())
+                .name(sessionUser.getName())
                 .seatNumber(reservationDto.getSeatNumber())
                 .reservationTime(reservation.getEnterDate())
                 .build();
 
+        if (session != null) {
+            session.invalidate();
+        }
+
         return ResponseEntity.created(uri).body(reservationResultDto);
     }
-
+    
+    
+    //퇴실
     @DeleteMapping("/reservation")
     public ResponseEntity leaving(HttpServletRequest request) {
         HttpSession session = request.getSession(false);
@@ -85,10 +81,16 @@ public class ReservationController {
 
         return ResponseEntity.ok().body(model);
     }
-
+    
+    //단건 조회
     @GetMapping("/reservation/{id}")
     public ResponseEntity getReservation(@PathVariable Long id) {
         Reservation reservation = reservationService.retrieveOne(id);
-        return new ResponseEntity(reservation, HttpStatus.OK);
+        ReservationResultDto reservationResultDto = ReservationResultDto.builder()
+                .name(reservation.getUser().getName())
+                .seatNumber(reservation.getSeat().getSeatNumber())
+                .reservationTime(reservation.getEnterDate())
+                .build();
+        return new ResponseEntity(reservationResultDto, HttpStatus.OK);
     }
 }

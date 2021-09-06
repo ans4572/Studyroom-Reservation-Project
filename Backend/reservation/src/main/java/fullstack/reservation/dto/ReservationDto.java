@@ -6,5 +6,4 @@ import lombok.Data;
 public class ReservationDto {
 
     private int seatNumber;
-    private Long orderId;
 }

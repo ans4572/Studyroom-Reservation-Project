@@ -1,11 +1,14 @@
 package fullstack.reservation.service;
 
+import fullstack.reservation.domain.TicketUser;
 import fullstack.reservation.domain.User;
 import fullstack.reservation.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Service
@@ -18,6 +21,9 @@ public class UserService {
     //가입
     @Transactional
     public User join(User user) {
+        TicketUser ticketUser = new TicketUser();
+        ticketUser.changeExpireDate(LocalDateTime.now());
+        user.setTicketUser(ticketUser);
         return userRepository.save(user);
     }
     

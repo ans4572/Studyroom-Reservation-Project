@@ -1,34 +1,27 @@
 package fullstack.reservation.service;
 
 import fullstack.reservation.domain.Enum.Gender;
-import fullstack.reservation.domain.Enum.Ticket;
-import fullstack.reservation.domain.Item;
-import fullstack.reservation.domain.Order;
 import fullstack.reservation.domain.User;
-import fullstack.reservation.repository.ItemRepository;
-import fullstack.reservation.repository.OrderRepository;
-import fullstack.reservation.repository.UserRepository;
-import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.annotation.Rollback;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.List;
+import java.time.LocalDateTime;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
 @Transactional
 @Rollback(value = false)
-class OrderServiceTest {
+class UserServiceTest {
 
     @Autowired
-    private OrderService orderService;
-    @Autowired
-    private UserService UserService;
+    private UserService userService;
 
     @Test
-    void order() {
+    void createUser() {
         User user = User.builder()
                 .name("김상운")
                 .age(24)
@@ -38,9 +31,6 @@ class OrderServiceTest {
                 .phoneNumber("01054866730")
                 .build();
 
-
-        User saveUser = UserService.join(user);
-
-        Order order = orderService.order(saveUser.getId(), Ticket.DAY);
+        userService.join(user);
     }
 }

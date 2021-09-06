@@ -16,6 +16,7 @@ import java.time.LocalDateTime;
 public class Reservation {
 
     @Id @GeneratedValue
+    @Column(name = "reservation_id")
     private Long id;
 
     @ManyToOne(fetch = FetchType.LAZY)
@@ -25,10 +26,6 @@ public class Reservation {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "seat_id")
     private Seat seat;
-
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "order_id")
-    private Order order;
 
     private LocalDateTime enterDate;
 

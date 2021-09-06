@@ -1,6 +1,6 @@
 package fullstack.reservation.domain;
 
-import fullstack.reservation.domain.Enum.OrderStatus;
+import fullstack.reservation.domain.Enum.OrderType;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -31,16 +31,10 @@ public class Order {
 
     private LocalDateTime orderDate;
 
-    private LocalDateTime expireDate;
-
     @Enumerated(EnumType.STRING)
-    private OrderStatus orderStatus;
+    private OrderType orderType;
 
-    public void changOrderStatus(OrderStatus orderStatus) {
-        this.orderStatus = orderStatus;
-    }
-
-    public void changExpireDate(LocalDateTime expireDate) {
-        this.expireDate = expireDate;
+    public void changeOrderType(OrderType orderType) {
+        this.orderType = orderType;
     }
 }

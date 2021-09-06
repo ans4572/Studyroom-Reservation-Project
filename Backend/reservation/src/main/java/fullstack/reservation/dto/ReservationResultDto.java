@@ -14,7 +14,7 @@ import java.time.LocalDateTime;
 @Builder
 public class ReservationResultDto {
 
-    private Ticket ticket;
+    private String name;
     private LocalDateTime reservationTime;
     private int seatNumber;
 }

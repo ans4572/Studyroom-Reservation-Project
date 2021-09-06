@@ -5,7 +5,6 @@ import lombok.*;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
-import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
@@ -21,6 +20,10 @@ public class User {
     @Id @GeneratedValue
     @Column(name = "user_id")
     private Long id;
+
+    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JoinColumn(name = "ticket_id")
+    private TicketUser ticketUser;
 
     private String name;
 
@@ -40,5 +43,10 @@ public class User {
     private String password;
 
     private String phoneNumber;
+
+    public void setTicketUser(TicketUser ticketUser) {
+        this.ticketUser = ticketUser;
+        ticketUser.setUser(this);
+    }
 }
 
