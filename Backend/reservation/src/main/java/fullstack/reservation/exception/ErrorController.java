@@ -14,8 +14,32 @@ import java.time.LocalDateTime;
 @RestControllerAdvice
 public class ErrorController extends ResponseEntityExceptionHandler {
 
+    @ExceptionHandler(NoAvailableTicketException.class)
+    public ResponseEntity noAvailableTicketExceptionHandler(Exception ex, WebRequest request) {
+        ErrorResult errorResult =
+                new ErrorResult(LocalDateTime.now(), ex.getMessage(), request.getDescription(false));
+
+        return new ResponseEntity<>(errorResult, HttpStatus.NOT_FOUND);
+    }
+
     @ExceptionHandler
-    public ResponseEntity loginFailedExceptionHandler(LoginFailedException ex, WebRequest request) {
+    public ResponseEntity noReservationExceptionHandler(NoReservationException ex, WebRequest request) {
+        ErrorResult errorResult =
+                new ErrorResult(LocalDateTime.now(), ex.getMessage(), request.getDescription(false));
+
+        return new ResponseEntity<>(errorResult, HttpStatus.NOT_FOUND);
+    }
+
+    @ExceptionHandler(NoSeatException.class)
+    public ResponseEntity noSeatExceptionHandler(Exception ex, WebRequest request) {
+        ErrorResult errorResult =
+                new ErrorResult(LocalDateTime.now(), ex.getMessage(), request.getDescription(false));
+
+        return new ResponseEntity<>(errorResult, HttpStatus.NOT_FOUND);
+    }
+
+    @ExceptionHandler(LoginFailedException.class)
+    public ResponseEntity loginFailedExceptionHandler(Exception ex, WebRequest request) {
         ErrorResult errorResult =
                 new ErrorResult(LocalDateTime.now(), ex.getMessage(), request.getDescription(false));
 

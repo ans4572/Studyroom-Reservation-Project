@@ -3,6 +3,9 @@ package fullstack.reservation.service;
 import fullstack.reservation.domain.*;
 import fullstack.reservation.domain.Enum.OrderType;
 import fullstack.reservation.domain.Enum.SeatStatus;
+import fullstack.reservation.exception.NoAvailableTicketException;
+import fullstack.reservation.exception.NoReservationException;
+import fullstack.reservation.exception.NoSeatException;
 import fullstack.reservation.repository.*;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -29,26 +32,20 @@ public class ReservationService {
         //해당 사용자의 사용중인 이용권 조회
 
         if (findUser.getTicketUser().getExpiredDate().isBefore(LocalDateTime.now())) {
-            throw new IllegalStateException("이용권이 없습니다.");
+            throw new NoAvailableTicketException("이용권이 없습니다.");
         }
 
         List<Reservation> reservations = retrieveByUserId(userId);
 
         for (Reservation r : reservations) {
             if (r.getExitDate() == null) {
-                throw new IllegalStateException("아직 퇴실하지 않는 정보가 있습니다.");
+                throw new NoReservationException("아직 퇴실하지 않는 정보가 있습니다.");
             }
         }
-        
-//        //사용중인 이용권의 기간이 만료가 되었는지
-//        if (LocalDateTime.now().isAfter(order.getExpireDate())) {
-//            order.changOrderStatus(OrderStatus.UNAVAILABLE);
-//            throw new IllegalStateException("이용권이 만료되었습니다.");
-//        }
 
         //좌석 상태
         if (findSeat.getSeatStatus() == SeatStatus.UNAVAILABLE) {
-            throw new IllegalStateException("이미 좌석이 사용중입니다.");
+            throw new NoSeatException("이미 좌석이 사용중입니다.");
         }
 
         Reservation reservation = Reservation.builder()
