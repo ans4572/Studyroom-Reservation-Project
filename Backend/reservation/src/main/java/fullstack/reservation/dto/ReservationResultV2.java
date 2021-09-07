@@ -1,6 +1,5 @@
 package fullstack.reservation.dto;
 
-import fullstack.reservation.domain.Enum.Ticket;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -12,10 +11,9 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class ReservationResultDto {
-
+public class ReservationResultV2 {
+    //퇴실하지 않은
     private String name;
     private LocalDateTime reservationTime;
     private int seatNumber;
-    private LocalDateTime exitTime;
 }

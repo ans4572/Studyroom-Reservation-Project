@@ -76,15 +76,20 @@ public class ReservationService {
     }
 
     @Transactional
-    public void exit(Long userId) {
+    public Reservation exit(Long userId) {
         List<Reservation> reservations = retrieveByUserId(userId);
+
+        Reservation tmp = null;
 
         for (Reservation r : reservations) {
             if (r.getExitDate() == null) {
+                tmp = r;
                 r.changeExitDate(LocalDateTime.now());
                 r.getSeat().changSeatStatus(SeatStatus.AVAILABLE);
             }
         }
+
+        return tmp;
     }
 
 }
