@@ -4,12 +4,11 @@ import fullstack.reservation.domain.Reservation;
 import fullstack.reservation.domain.User;
 import fullstack.reservation.dto.ReservationDto;
 import fullstack.reservation.dto.ReservationResultDto;
+import fullstack.reservation.dto.ReservationResultV2;
 import fullstack.reservation.service.ReservationService;
 import fullstack.reservation.session.SessionConst;
-import fullstack.reservation.vo.Message;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.data.repository.query.Param;
 import org.springframework.hateoas.EntityModel;
 import org.springframework.hateoas.Link;
 import org.springframework.hateoas.server.mvc.WebMvcLinkBuilder;
@@ -21,7 +20,8 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import java.net.URI;
-import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
@@ -29,40 +29,45 @@ import java.time.LocalDateTime;
 public class ReservationController {
 
     private final ReservationService reservationService;
-
+    
+    //예약 후 로그아웃
     @PostMapping("/reservation")
     public ResponseEntity reservation(@RequestBody ReservationDto reservationDto, HttpServletRequest request) {
         HttpSession session = request.getSession(false);
         User sessionUser = (User)session.getAttribute(SessionConst.LOGIN_MEMBER);
 
-        Reservation reservation;
+        Reservation reservation = reservationService.reservation(sessionUser.getId(), reservationDto.getSeatNumber());
 
-        if (reservationService.isExistOnUsing(sessionUser.getId())) {
-            //사용중인 이용권이 있는경우
-            log.info("사용중");
-            reservation = reservationService.reservation(sessionUser.getId(), reservationDto.getSeatNumber());
-
-        } else {
-            //사용중인 이용권이 없는 경우
-            log.info("새로 사용");
-            //
-            reservation = reservationService.reservation(sessionUser.getId(), reservationDto.getSeatNumber(), reservationDto.getOrderId());
-        }
 
         URI uri = ServletUriComponentsBuilder.fromCurrentRequest()
                 .path("/{id}")
                 .buildAndExpand(reservation.getId())
                 .toUri();
 
-        ReservationResultDto reservationResultDto = ReservationResultDto.builder()
-                .ticket(reservation.getOrder().getItem().getTicket())
+        ReservationResultV2 reservationResultDto = ReservationResultV2.builder()
+                .name(sessionUser.getName())
                 .seatNumber(reservationDto.getSeatNumber())
                 .reservationTime(reservation.getEnterDate())
                 .build();
 
-        return ResponseEntity.created(uri).body(reservationResultDto);
-    }
+        EntityModel model = EntityModel.of(reservationResultDto);
 
+        WebMvcLinkBuilder self = WebMvcLinkBuilder.linkTo(WebMvcLinkBuilder.methodOn(this.getClass()).reservation(reservationDto, request));
+        WebMvcLinkBuilder retrieve = WebMvcLinkBuilder.linkTo(WebMvcLinkBuilder.methodOn(this.getClass()).getReservation(reservation.getId()));
+
+        model.add(self.withSelfRel());
+        model.add(retrieve.withRel("retrieve"));
+
+
+        if (session != null) {
+            session.invalidate();
+        }
+
+        return ResponseEntity.created(uri).body(model);
+    }
+    
+    
+    //퇴실
     @DeleteMapping("/reservation")
     public ResponseEntity leaving(HttpServletRequest request) {
         HttpSession session = request.getSession(false);
@@ -72,10 +77,15 @@ public class ReservationController {
             session.invalidate();
         }
 
-        reservationService.exit(sessionUser.getId());
+        Reservation exit = reservationService.exit(sessionUser.getId());
 
-        Message message = new Message("퇴실이 완료되었습니다.");
-        EntityModel model = EntityModel.of(message);
+        ReservationResultDto reservationResultDto = ReservationResultDto.builder()
+                .name(sessionUser.getName())
+                .seatNumber(exit.getSeat().getSeatNumber())
+                .reservationTime(exit.getEnterDate())
+                .exitTime(exit.getExitDate()).build();
+
+        EntityModel model = EntityModel.of(reservationResultDto);
         //self
         WebMvcLinkBuilder self = WebMvcLinkBuilder.linkTo(WebMvcLinkBuilder.methodOn(this.getClass()).leaving(request));
 
@@ -85,10 +95,49 @@ public class ReservationController {
 
         return ResponseEntity.ok().body(model);
     }
-
+    
+    //단건 조회
     @GetMapping("/reservation/{id}")
     public ResponseEntity getReservation(@PathVariable Long id) {
         Reservation reservation = reservationService.retrieveOne(id);
-        return new ResponseEntity(reservation, HttpStatus.OK);
+
+        ReservationResultDto reservationResultDto = ReservationResultDto.builder()
+                .name(reservation.getUser().getName())
+                .seatNumber(reservation.getSeat().getSeatNumber())
+                .reservationTime(reservation.getEnterDate())
+                .exitTime(reservation.getExitDate())
+                .build();
+
+        EntityModel model = EntityModel.of(reservationResultDto);
+
+        WebMvcLinkBuilder self = WebMvcLinkBuilder.linkTo(WebMvcLinkBuilder.methodOn(this.getClass()).getReservation(id));
+
+        model.add(self.withSelfRel());
+
+        return new ResponseEntity(model, HttpStatus.OK);
+    }
+
+    @GetMapping("/reservation")
+    public ResponseEntity getAllReservation() {
+        List<Reservation> reservations = reservationService.retrieveAll();
+        List<EntityModel> list = new ArrayList<>();
+
+        for (Reservation reservation : reservations) {
+            ReservationResultDto reservationResultDto = ReservationResultDto.builder()
+                    .name(reservation.getUser().getName())
+                    .seatNumber(reservation.getSeat().getSeatNumber())
+                    .reservationTime(reservation.getEnterDate())
+                    .exitTime(reservation.getExitDate())
+                    .build();
+
+            WebMvcLinkBuilder retrieve = WebMvcLinkBuilder.linkTo(WebMvcLinkBuilder.methodOn(this.getClass()).getReservation(reservation.getId()));
+
+            EntityModel model = EntityModel.of(reservationResultDto);
+            model.add(retrieve.withRel("retrieve"));
+
+            list.add(model);
+        }
+
+        return ResponseEntity.ok().body(list);
     }
 }

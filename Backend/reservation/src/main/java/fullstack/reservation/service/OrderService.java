@@ -1,9 +1,10 @@
 package fullstack.reservation.service;
 
-import fullstack.reservation.domain.Enum.OrderStatus;
+import fullstack.reservation.domain.Enum.OrderType;
 import fullstack.reservation.domain.Enum.Ticket;
 import fullstack.reservation.domain.Item;
 import fullstack.reservation.domain.Order;
+import fullstack.reservation.domain.TicketUser;
 import fullstack.reservation.domain.User;
 import fullstack.reservation.repository.ItemRepository;
 import fullstack.reservation.repository.OrderRepository;
@@ -27,15 +28,36 @@ public class OrderService {
     @Transactional
     public Order order(Long userId, Ticket ticket) {
         User findUser = userRepository.findById(userId).orElse(null);
-        Item findItem = itemRepository.findByTicketType(ticket);
+        TicketUser ticketUser = findUser.getTicketUser();
 
+        if (ticket == Ticket.DAY) {
+            //이용권 기간이 만료되었으면
+            if (ticketUser.getExpiredDate().isBefore(LocalDateTime.now())) {
+                ticketUser.changeExpireDate(LocalDateTime.now().plusDays(1));
+            } else {
+                ticketUser.changeExpireDate(ticketUser.getExpiredDate().plusDays(1));
+            }
+        } else if (ticket == Ticket.MONTH) {
+            //이용권 기간이 만료되었으면
+            if (ticketUser.getExpiredDate().isBefore(LocalDateTime.now())) {
+                ticketUser.changeExpireDate(LocalDateTime.now().plusMonths(1));
+            } else {
+                ticketUser.changeExpireDate(ticketUser.getExpiredDate().plusMonths(1));
+            }
+        }
+
+        Item findItem = itemRepository.findByTicketType(ticket);
 
         Order order = Order.builder()
                 .user(findUser)
                 .item(findItem)
                 .orderDate(LocalDateTime.now())
-                .orderStatus(OrderStatus.AVAILABLE)
                 .build();
+        if (ticket == Ticket.DAY) {
+            order.changeOrderType(OrderType.DAY);
+        } else {
+            order.changeOrderType(OrderType.MONTH);
+        }
 
         return orderRepository.save(order);
     }

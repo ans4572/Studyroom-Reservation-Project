@@ -1,5 +1,6 @@
 package fullstack.reservation.service;
 
+import fullstack.reservation.domain.Enum.Gender;
 import fullstack.reservation.domain.Enum.Ticket;
 import fullstack.reservation.domain.Item;
 import fullstack.reservation.domain.Order;
@@ -18,37 +19,28 @@ import java.util.List;
 
 @SpringBootTest
 @Transactional
+@Rollback(value = false)
 class OrderServiceTest {
 
     @Autowired
     private OrderService orderService;
     @Autowired
-    private ItemRepository itemRepository;
-    @Autowired
-    private UserRepository userRepository;
+    private UserService UserService;
 
     @Test
     void order() {
         User user = User.builder()
                 .name("김상운")
+                .age(24)
+                .gender(Gender.MALE)
+                .loginId("issiscv")
+                .password("369369rt")
+                .phoneNumber("01054866730")
                 .build();
 
-        Item day = Item.builder()
-                .ticket(Ticket.DAY)
-                .price(10000)
-                .build();
-        Item month = Item.builder()
-                .ticket(Ticket.MONTH)
-                .price(200000)
-                .build();
 
-        userRepository.save(user);
-        itemRepository.save(day);
-        itemRepository.save(month);
+        User saveUser = UserService.join(user);
 
-        Order order = orderService.order(user.getId(), Ticket.DAY);
-        System.out.println(order.getId() + " " + order.getOrderStatus() + " " );
-
-        Assertions.assertThat(order.getItem()).isEqualTo(day);
+        Order order = orderService.order(saveUser.getId(), Ticket.DAY);
     }
 }
