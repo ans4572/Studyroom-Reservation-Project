@@ -3,6 +3,8 @@ package fullstack.reservation.controller;
 import fullstack.reservation.domain.User;
 import fullstack.reservation.dto.CreateUserDto;
 import fullstack.reservation.dto.LoginDto;
+import fullstack.reservation.dto.ReservationDto;
+import fullstack.reservation.dto.UserResultDto;
 import fullstack.reservation.exception.LoginFailedException;
 import fullstack.reservation.service.LoginService;
 import fullstack.reservation.service.UserService;
@@ -23,6 +25,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 import java.net.URI;
+import java.util.ArrayList;
+import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
@@ -34,7 +38,7 @@ public class UserController {
 
     //회원 가입
     @PostMapping("/users")
-    public ResponseEntity createUser(@RequestBody @Valid CreateUserDto createUserDto) {
+    public ResponseEntity createUser(@RequestBody @Valid CreateUserDto createUserDto, HttpServletRequest request) {
         modelMapper.getConfiguration().setMatchingStrategy(MatchingStrategies.STRICT);
         User user = modelMapper.map(createUserDto, User.class);
         User saveUser = userService.join(user);
@@ -45,14 +49,23 @@ public class UserController {
                 .buildAndExpand(saveUser.getId())
                 .toUri();
 
+        UserResultDto userResultDto = UserResultDto.builder()
+                .age(user.getAge())
+                .name(user.getName())
+                .loginId(user.getLoginId())
+                .build();
+
         //hateoas
-        EntityModel model = EntityModel.of(createUserDto);
-        WebMvcLinkBuilder self = WebMvcLinkBuilder.linkTo(WebMvcLinkBuilder.methodOn(this.getClass()).createUser(createUserDto));
+        EntityModel model = EntityModel.of(userResultDto);
+        WebMvcLinkBuilder self = WebMvcLinkBuilder.linkTo(WebMvcLinkBuilder.methodOn(this.getClass()).createUser(createUserDto, request));
+        WebMvcLinkBuilder login = WebMvcLinkBuilder.linkTo(WebMvcLinkBuilder.methodOn(this.getClass()).login(new LoginDto(), request));
+
 
         //자기 자신
         model.add(self.withSelfRel());
+        model.add(login.withRel("login"));
         //로그인 페이지 전이
-        model.add(Link.of("http://localhost:8080/users/login", "loginPage"));
+        model.add();
 
         return ResponseEntity.created(uri).body(model);
     }
@@ -72,11 +85,12 @@ public class UserController {
         EntityModel model = EntityModel.of(new Message("로그인에 성공하였습니다."));
         WebMvcLinkBuilder self = WebMvcLinkBuilder.linkTo(WebMvcLinkBuilder.methodOn(this.getClass()).login(loginDto, request));
         WebMvcLinkBuilder logoutLink = WebMvcLinkBuilder.linkTo(WebMvcLinkBuilder.methodOn(this.getClass()).logout(request));
+        WebMvcLinkBuilder reservation = WebMvcLinkBuilder.linkTo(WebMvcLinkBuilder.methodOn(ReservationController.class).reservation(new ReservationDto(), request));
 
         //self
         model.add(self.withSelfRel());
         //reservation
-        model.add(Link.of("http://localhost:8080/reservation", "reservationPage"));
+        model.add(reservation.withRel("reservation"));
         //logout
         model.add(logoutLink.withRel("logout"));
 
@@ -102,7 +116,48 @@ public class UserController {
 
         return ResponseEntity.ok().body(model);
     }
-    
+
+    @GetMapping("/users/{id}")
+    public ResponseEntity getUser(@PathVariable Long id) {
+        User user = userService.retrieveOne(id);
+        UserResultDto userResultDto = UserResultDto.builder()
+                .name(user.getName())
+                .age(user.getAge())
+                .loginId(user.getLoginId())
+                .build();
+        EntityModel model = EntityModel.of(userResultDto);
+
+        WebMvcLinkBuilder self = WebMvcLinkBuilder.linkTo(WebMvcLinkBuilder.methodOn(this.getClass()).getUser(id));
+        model.add(self.withSelfRel());
+
+        return ResponseEntity.ok().body(model);
+    }
+
+    @GetMapping("/users")
+    public ResponseEntity getAllUser() {
+
+        List<User> users = userService.retrieveAll();
+
+        List<EntityModel> modelList = new ArrayList<>();
+
+        for (User user : users) {
+            UserResultDto userResultDto = UserResultDto.builder()
+                    .name(user.getName())
+                    .age(user.getAge())
+                    .loginId(user.getLoginId())
+                    .build();
+
+            EntityModel model = EntityModel.of(userResultDto);
+            WebMvcLinkBuilder self = WebMvcLinkBuilder.linkTo(WebMvcLinkBuilder.methodOn(this.getClass()).getUser(user.getId()));
+
+            model.add(self.withSelfRel());
+
+            modelList.add(model);
+        }
+
+        return ResponseEntity.ok().body(modelList);
+    }
+
     //테스트
     @GetMapping("/login/test")
     public ResponseEntity test(HttpServletRequest request) {

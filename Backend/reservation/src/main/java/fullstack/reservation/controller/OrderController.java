@@ -5,13 +5,12 @@ import fullstack.reservation.domain.User;
 import fullstack.reservation.dto.OrderDto;
 import fullstack.reservation.dto.OrderResultDto;
 import fullstack.reservation.dto.OrderResultDtoV2;
+import fullstack.reservation.dto.OrderResultPostDto;
 import fullstack.reservation.service.OrderService;
 import fullstack.reservation.session.SessionConst;
-import fullstack.reservation.vo.Message;
 import lombok.RequiredArgsConstructor;
 import org.springframework.hateoas.EntityModel;
 import org.springframework.hateoas.server.mvc.WebMvcLinkBuilder;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
@@ -22,7 +21,6 @@ import javax.servlet.http.HttpSession;
 import java.net.URI;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.*;
 
@@ -40,11 +38,12 @@ public class OrderController {
 
         Order order = orderService.order(user.getId(), orderDto.getTicket());
 
-        OrderResultDto orderResultDto = OrderResultDto.builder()
+        OrderResultPostDto orderResultDto = OrderResultPostDto.builder()
                 .ticket(order.getItem().getTicket())
                 .name(order.getUser().getName())
                 .price(order.getItem().getPrice())
-                .availableTime(order.getUser().getTicketUser().getExpiredDate())
+                .orderDate(order.getOrderDate())
+                .availableDate(order.getUser().getTicketUser().getExpiredDate())
                 .build();
 
         URI uri = ServletUriComponentsBuilder.fromCurrentRequest()
@@ -71,7 +70,7 @@ public class OrderController {
                 .ticket(order.getItem().getTicket())
                 .price(order.getItem().getPrice())
                 .name(order.getUser().getName())
-                .availableTime(order.getUser().getTicketUser().getExpiredDate())
+                .orderDate(order.getOrderDate())
                 .build();
 
         EntityModel model = EntityModel.of(orderResultDto);
@@ -89,8 +88,8 @@ public class OrderController {
         List<EntityModel> list = new ArrayList<>();
 
         for (Order o : orders) {
-            OrderResultDtoV2 orderResultDto = new OrderResultDtoV2(o.getUser().getName(),
-                    o.getItem().getPrice(), o.getItem().getTicket());
+            OrderResultDto orderResultDto = new OrderResultDto(o.getUser().getName(),
+                    o.getItem().getPrice(), o.getItem().getTicket(), o.getOrderDate());
             EntityModel model = EntityModel.of(orderResultDto);
             WebMvcLinkBuilder retrieve = linkTo(methodOn(this.getClass()).getOrder(o.getId()));
             model.add(retrieve.withRel("retrieveOrder"));
