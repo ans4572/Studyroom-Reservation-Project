@@ -40,6 +40,9 @@ public class UserController {
     @PostMapping("/users")
     public ResponseEntity createUser(@RequestBody @Valid CreateUserDto createUserDto, HttpServletRequest request) {
         modelMapper.getConfiguration().setMatchingStrategy(MatchingStrategies.STRICT);
+
+        loginService.findDuplicatedLoginId(createUserDto.getLoginId());
+
         User user = modelMapper.map(createUserDto, User.class);
         User saveUser = userService.join(user);
 
@@ -74,10 +77,6 @@ public class UserController {
     @PostMapping("/users/login")
     public ResponseEntity login(@RequestBody @Valid LoginDto loginDto, HttpServletRequest request) {
         User user = loginService.loginService(loginDto.getLoginId(), loginDto.getPassword());
-
-        if (user == null) {
-            throw new LoginFailedException("로그인이 실패하였습니다.");
-        }
 
         HttpSession session = request.getSession();
         session.setAttribute(SessionConst.LOGIN_MEMBER, user);

@@ -14,8 +14,24 @@ import java.time.LocalDateTime;
 @RestControllerAdvice
 public class ErrorController extends ResponseEntityExceptionHandler {
 
-    @ExceptionHandler(NoAvailableTicketException.class)
-    public ResponseEntity noAvailableTicketExceptionHandler(Exception ex, WebRequest request) {
+    @ExceptionHandler
+    public ResponseEntity duplicatedLoginIdExceptionHandler(DuplicatedLoginIdException ex, WebRequest request) {
+        ErrorResult errorResult =
+                new ErrorResult(LocalDateTime.now(), ex.getMessage(), request.getDescription(false));
+
+        return new ResponseEntity<>(errorResult, HttpStatus.NOT_FOUND);
+    }
+
+    @ExceptionHandler
+    public ResponseEntity missMatchedLoginIdExceptionHandler(MissMatchedLoginIdException ex, WebRequest request) {
+        ErrorResult errorResult =
+                new ErrorResult(LocalDateTime.now(), ex.getMessage(), request.getDescription(false));
+
+        return new ResponseEntity<>(errorResult, HttpStatus.NOT_FOUND);
+    }
+
+    @ExceptionHandler
+    public ResponseEntity MissMatchedPasswordExceptionHandler(MissMatchedPasswordException ex, WebRequest request) {
         ErrorResult errorResult =
                 new ErrorResult(LocalDateTime.now(), ex.getMessage(), request.getDescription(false));
 
