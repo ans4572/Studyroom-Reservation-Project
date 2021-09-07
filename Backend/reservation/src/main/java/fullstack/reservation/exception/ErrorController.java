@@ -15,6 +15,14 @@ import java.time.LocalDateTime;
 public class ErrorController extends ResponseEntityExceptionHandler {
 
     @ExceptionHandler
+    public ResponseEntity duplicatedLoginIdExceptionHandler(NoAvailableTicketException ex, WebRequest request) {
+        ErrorResult errorResult =
+                new ErrorResult(LocalDateTime.now(), ex.getMessage(), request.getDescription(false));
+
+        return new ResponseEntity<>(errorResult, HttpStatus.NOT_FOUND);
+    }
+
+    @ExceptionHandler
     public ResponseEntity duplicatedLoginIdExceptionHandler(DuplicatedLoginIdException ex, WebRequest request) {
         ErrorResult errorResult =
                 new ErrorResult(LocalDateTime.now(), ex.getMessage(), request.getDescription(false));
