@@ -28,7 +28,4 @@ public class CreateUserDto {
     private String loginId;
     @NotBlank(message = "비밀번호를 입력해주세요.")
     private String password;
-    
-    @NotBlank(message = "핸드폰 번호를 입력해주세요.")
-    private String phoneNumber;
 }
