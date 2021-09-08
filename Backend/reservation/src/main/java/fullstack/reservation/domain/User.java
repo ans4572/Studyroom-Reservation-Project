@@ -42,8 +42,6 @@ public class User {
 
     private String password;
 
-    private String phoneNumber;
-
     public void setTicketUser(TicketUser ticketUser) {
         this.ticketUser = ticketUser;
         ticketUser.setUser(this);

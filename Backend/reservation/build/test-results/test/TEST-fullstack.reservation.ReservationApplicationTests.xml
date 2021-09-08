@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="fullstack.reservation.ReservationApplicationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-09-07T16:46:35" hostname="DESKTOP-F55RK1N" time="0.245">
+<testsuite name="fullstack.reservation.ReservationApplicationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-09-08T08:45:28" hostname="DESKTOP-F55RK1N" time="0.18">
   <properties/>
-  <testcase name="contextLoads()" classname="fullstack.reservation.ReservationApplicationTests" time="0.245"/>
-  <system-out><![CDATA[01:46:07.518 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
-01:46:07.535 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
-01:46:07.578 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [fullstack.reservation.ReservationApplicationTests] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
-01:46:07.593 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [fullstack.reservation.ReservationApplicationTests], using SpringBootContextLoader
-01:46:07.599 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [fullstack.reservation.ReservationApplicationTests]: class path resource [fullstack/reservation/ReservationApplicationTests-context.xml] does not exist
-01:46:07.600 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [fullstack.reservation.ReservationApplicationTests]: class path resource [fullstack/reservation/ReservationApplicationTestsContext.groovy] does not exist
-01:46:07.600 [Test worker] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [fullstack.reservation.ReservationApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
-01:46:07.601 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [fullstack.reservation.ReservationApplicationTests]: ReservationApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-01:46:07.665 [Test worker] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [fullstack.reservation.ReservationApplicationTests]
-01:46:07.749 [Test worker] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [D:\springStudy\web-study\Studyroom-Reservation-Project-main\Studyroom-Reservation-Project-main\Backend\reservation\build\classes\java\main\fullstack\reservation\ReservationApplication.class]
-01:46:07.751 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration fullstack.reservation.ReservationApplication for test class fullstack.reservation.ReservationApplicationTests
-01:46:07.891 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [fullstack.reservation.ReservationApplicationTests]: using defaults.
-01:46:07.892 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
-01:46:07.938 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@4f873e78, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@72376ae2, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@3ecd5ccd, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@7fa88d60, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@9aa1813, org.springframework.test.context.support.DirtiesContextTestExecutionListener@400313be, org.springframework.test.context.transaction.TransactionalTestExecutionListener@147c0447, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@2f044825, org.springframework.test.context.event.EventPublishingTestExecutionListener@76b7b756, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@2e71c4dd, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@5adba368, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@57139d76, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@1cd59dc5, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@3c22f5ae, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@3be5d1a1]
-01:46:07.942 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@4d7fa81e testClass = ReservationApplicationTests, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@1723b847 testClass = ReservationApplicationTests, locations = '{}', classes = '{class fullstack.reservation.ReservationApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@777e5a03, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@4d8ecf4d, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@2e05cc48, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@567d0c3b, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@63cd0db0, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@1768ccb], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true]], class annotated with @DirtiesContext [false] with mode [null].
-01:46:07.993 [Test worker] DEBUG org.springframework.test.context.support.TestPropertySourceUtils - Adding inlined properties to environment: {spring.jmx.enabled=false, org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}
+  <testcase name="contextLoads()" classname="fullstack.reservation.ReservationApplicationTests" time="0.18"/>
+  <system-out><![CDATA[17:45:18.580 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+17:45:18.601 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+17:45:18.654 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [fullstack.reservation.ReservationApplicationTests] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+17:45:18.671 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [fullstack.reservation.ReservationApplicationTests], using SpringBootContextLoader
+17:45:18.678 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [fullstack.reservation.ReservationApplicationTests]: class path resource [fullstack/reservation/ReservationApplicationTests-context.xml] does not exist
+17:45:18.679 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [fullstack.reservation.ReservationApplicationTests]: class path resource [fullstack/reservation/ReservationApplicationTestsContext.groovy] does not exist
+17:45:18.679 [Test worker] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [fullstack.reservation.ReservationApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+17:45:18.680 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [fullstack.reservation.ReservationApplicationTests]: ReservationApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+17:45:18.742 [Test worker] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [fullstack.reservation.ReservationApplicationTests]
+17:45:18.829 [Test worker] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [D:\springStudy\web-study\Studyroom-Reservation-Project-main\Studyroom-Reservation-Project-main\Backend\reservation\build\classes\java\main\fullstack\reservation\ReservationApplication.class]
+17:45:18.831 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration fullstack.reservation.ReservationApplication for test class fullstack.reservation.ReservationApplicationTests
+17:45:18.977 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [fullstack.reservation.ReservationApplicationTests]: using defaults.
+17:45:18.978 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+17:45:19.017 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@78785697, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@7b1679a8, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@504f4ac3, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@717ee1de, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@4b88cd88, org.springframework.test.context.support.DirtiesContextTestExecutionListener@31b2668, org.springframework.test.context.transaction.TransactionalTestExecutionListener@29286d9a, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@2fde0970, org.springframework.test.context.event.EventPublishingTestExecutionListener@2237758e, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@78c52fc6, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@12ebd9f9, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@4d21c75d, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@54a35072, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@549fe3f, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@4921cb7e]
+17:45:19.022 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@2f044825 testClass = ReservationApplicationTests, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@76b7b756 testClass = ReservationApplicationTests, locations = '{}', classes = '{class fullstack.reservation.ReservationApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@6c46c39, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@3a8bee7f, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@22e1d9ba, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@6926b91e, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@3565dc58, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@1768ccb], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true]], class annotated with @DirtiesContext [false] with mode [null].
+17:45:19.061 [Test worker] DEBUG org.springframework.test.context.support.TestPropertySourceUtils - Adding inlined properties to environment: {spring.jmx.enabled=false, org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -27,983 +27,252 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v2.5.4)
 
-2021-09-08 01:46:08.487  INFO 23928 --- [    Test worker] f.r.ReservationApplicationTests          : Starting ReservationApplicationTests using Java 11.0.9 on DESKTOP-F55RK1N with PID 23928 (started by ksw in D:\springStudy\web-study\Studyroom-Reservation-Project-main\Studyroom-Reservation-Project-main\Backend\reservation)
-2021-09-08 01:46:08.491  INFO 23928 --- [    Test worker] f.r.ReservationApplicationTests          : No active profile set, falling back to default profiles: default
-2021-09-08 01:46:09.603  INFO 23928 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2021-09-08 01:46:09.756  INFO 23928 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 141 ms. Found 7 JPA repository interfaces.
-2021-09-08 01:46:10.955  INFO 23928 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2021-09-08 01:46:11.053  INFO 23928 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
-2021-09-08 01:46:11.328  INFO 23928 --- [    Test worker] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2021-09-08 01:46:11.540  INFO 23928 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2021-09-08 01:46:12.122  INFO 23928 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2021-09-08 01:46:12.181  INFO 23928 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2021-09-08 01:46:13.440 DEBUG 23928 --- [    Test worker] org.hibernate.SQL                        : 
-    
-    alter table board 
-       drop 
-       foreign key FK823kr97vy648u763w10vwv95i
-2021-09-08 01:46:13.535  INFO 23928 --- [    Test worker] p6spy                                    : #1631033173535 | took 92ms | statement | connection 1| url jdbc:mysql://localhost:3306/library?serverTimezone=UTC&characterEncoding=UTF-8
-
-    alter table board 
-       drop 
-       foreign key FK823kr97vy648u763w10vwv95i
-
-    alter table board 
-       drop 
-       foreign key FK823kr97vy648u763w10vwv95i;
-2021-09-08 01:46:13.537 DEBUG 23928 --- [    Test worker] org.hibernate.SQL                        : 
-    
-    alter table orders 
-       drop 
-       foreign key FK1f1jovhxtx7fax217fq0gi17
-2021-09-08 01:46:13.645  INFO 23928 --- [    Test worker] p6spy                                    : #1631033173645 | took 108ms | statement | connection 1| url jdbc:mysql://localhost:3306/library?serverTimezone=UTC&characterEncoding=UTF-8
-
-    alter table orders 
-       drop 
-       foreign key FK1f1jovhxtx7fax217fq0gi17
-
-    alter table orders 
-       drop 
-       foreign key FK1f1jovhxtx7fax217fq0gi17;
-2021-09-08 01:46:13.646 DEBUG 23928 --- [    Test worker] org.hibernate.SQL                        : 
-    
-    alter table orders 
-       drop 
-       foreign key FKel9kyl84ego2otj2accfd8mr7
-2021-09-08 01:46:13.724  INFO 23928 --- [    Test worker] p6spy                                    : #1631033173724 | took 78ms | statement | connection 1| url jdbc:mysql://localhost:3306/library?serverTimezone=UTC&characterEncoding=UTF-8
-
-    alter table orders 
-       drop 
-       foreign key FKel9kyl84ego2otj2accfd8mr7
-
-    alter table orders 
-       drop 
-       foreign key FKel9kyl84ego2otj2accfd8mr7;
-2021-09-08 01:46:13.725 DEBUG 23928 --- [    Test worker] org.hibernate.SQL                        : 
-    
-    alter table reservation 
-       drop 
-       foreign key FKewd3sohjspqf2sjjvdcmcefpb
-2021-09-08 01:46:13.792  INFO 23928 --- [    Test worker] p6spy                                    : #1631033173792 | took 66ms | statement | connection 1| url jdbc:mysql://localhost:3306/library?serverTimezone=UTC&characterEncoding=UTF-8
-
-    alter table reservation 
-       drop 
-       foreign key FKewd3sohjspqf2sjjvdcmcefpb
-
-    alter table reservation 
-       drop 
-       foreign key FKewd3sohjspqf2sjjvdcmcefpb;
-2021-09-08 01:46:13.793 DEBUG 23928 --- [    Test worker] org.hibernate.SQL                        : 
-    
-    alter table reservation 
-       drop 
-       foreign key FKm4oimk0l1757o9pwavorj6ljg
-2021-09-08 01:46:14.164  INFO 23928 --- [    Test worker] p6spy                                    : #1631033174164 | took 370ms | statement | connection 1| url jdbc:mysql://localhost:3306/library?serverTimezone=UTC&characterEncoding=UTF-8
-
-    alter table reservation 
-       drop 
-       foreign key FKm4oimk0l1757o9pwavorj6ljg
-
-    alter table reservation 
-       drop 
-       foreign key FKm4oimk0l1757o9pwavorj6ljg;
-2021-09-08 01:46:14.165 DEBUG 23928 --- [    Test worker] org.hibernate.SQL                        : 
-    
-    alter table ticket_user 
-       drop 
-       foreign key FKj6famkhbucghqhg4diwlvrvaa
-2021-09-08 01:46:14.241  INFO 23928 --- [    Test worker] p6spy                                    : #1631033174241 | took 75ms | statement | connection 1| url jdbc:mysql://localhost:3306/library?serverTimezone=UTC&characterEncoding=UTF-8
-
-    alter table ticket_user 
-       drop 
-       foreign key FKj6famkhbucghqhg4diwlvrvaa
-
-    alter table ticket_user 
-       drop 
-       foreign key FKj6famkhbucghqhg4diwlvrvaa;
-2021-09-08 01:46:14.242 DEBUG 23928 --- [    Test worker] org.hibernate.SQL                        : 
-    
-    alter table user 
-       drop 
-       foreign key FK38t21tkxjyxjscd7w5o8y36lk
-2021-09-08 01:46:14.294  INFO 23928 --- [    Test worker] p6spy                                    : #1631033174294 | took 52ms | statement | connection 1| url jdbc:mysql://localhost:3306/library?serverTimezone=UTC&characterEncoding=UTF-8
-
-    alter table user 
-       drop 
-       foreign key FK38t21tkxjyxjscd7w5o8y36lk
-
-    alter table user 
-       drop 
-       foreign key FK38t21tkxjyxjscd7w5o8y36lk;
-2021-09-08 01:46:14.295 DEBUG 23928 --- [    Test worker] org.hibernate.SQL                        : 
-    
-    drop table if exists board
-2021-09-08 01:46:14.443  INFO 23928 --- [    Test worker] p6spy                                    : #1631033174443 | took 146ms | statement | connection 1| url jdbc:mysql://localhost:3306/library?serverTimezone=UTC&characterEncoding=UTF-8
-
-    drop table if exists board
-
-    drop table if exists board;
-2021-09-08 01:46:14.444 DEBUG 23928 --- [    Test worker] org.hibernate.SQL                        : 
-    
-    drop table if exists hibernate_sequence
-2021-09-08 01:46:14.561  INFO 23928 --- [    Test worker] p6spy                                    : #1631033174561 | took 116ms | statement | connection 1| url jdbc:mysql://localhost:3306/library?serverTimezone=UTC&characterEncoding=UTF-8
-
-    drop table if exists hibernate_sequence
-
-    drop table if exists hibernate_sequence;
-2021-09-08 01:46:14.562 DEBUG 23928 --- [    Test worker] org.hibernate.SQL                        : 
-    
-    drop table if exists item
-2021-09-08 01:46:14.663  INFO 23928 --- [    Test worker] p6spy                                    : #1631033174663 | took 101ms | statement | connection 1| url jdbc:mysql://localhost:3306/library?serverTimezone=UTC&characterEncoding=UTF-8
-
-    drop table if exists item
-
-    drop table if exists item;
-2021-09-08 01:46:14.664 DEBUG 23928 --- [    Test worker] org.hibernate.SQL                        : 
-    
-    drop table if exists manager
-2021-09-08 01:46:14.839  INFO 23928 --- [    Test worker] p6spy                                    : #1631033174839 | took 173ms | statement | connection 1| url jdbc:mysql://localhost:3306/library?serverTimezone=UTC&characterEncoding=UTF-8
-
-    drop table if exists manager
-
-    drop table if exists manager;
-2021-09-08 01:46:14.840 DEBUG 23928 --- [    Test worker] org.hibernate.SQL                        : 
-    
-    drop table if exists orders
-2021-09-08 01:46:15.063  INFO 23928 --- [    Test worker] p6spy                                    : #1631033175063 | took 222ms | statement | connection 1| url jdbc:mysql://localhost:3306/library?serverTimezone=UTC&characterEncoding=UTF-8
-
-    drop table if exists orders
-
-    drop table if exists orders;
-2021-09-08 01:46:15.064 DEBUG 23928 --- [    Test worker] org.hibernate.SQL                        : 
-    
-    drop table if exists reservation
-2021-09-08 01:46:15.169  INFO 23928 --- [    Test worker] p6spy                                    : #1631033175169 | took 104ms | statement | connection 1| url jdbc:mysql://localhost:3306/library?serverTimezone=UTC&characterEncoding=UTF-8
-
-    drop table if exists reservation
-
-    drop table if exists reservation;
-2021-09-08 01:46:15.170 DEBUG 23928 --- [    Test worker] org.hibernate.SQL                        : 
-    
-    drop table if exists seat
-2021-09-08 01:46:15.317  INFO 23928 --- [    Test worker] p6spy                                    : #1631033175317 | took 146ms | statement | connection 1| url jdbc:mysql://localhost:3306/library?serverTimezone=UTC&characterEncoding=UTF-8
-
-    drop table if exists seat
-
-    drop table if exists seat;
-2021-09-08 01:46:15.318 DEBUG 23928 --- [    Test worker] org.hibernate.SQL                        : 
-    
-    drop table if exists ticket_user
-2021-09-08 01:46:15.422  INFO 23928 --- [    Test worker] p6spy                                    : #1631033175422 | took 104ms | statement | connection 1| url jdbc:mysql://localhost:3306/library?serverTimezone=UTC&characterEncoding=UTF-8
-
-    drop table if exists ticket_user
-
-    drop table if exists ticket_user;
-2021-09-08 01:46:15.423 DEBUG 23928 --- [    Test worker] org.hibernate.SQL                        : 
-    
-    drop table if exists user
-2021-09-08 01:46:15.540  INFO 23928 --- [    Test worker] p6spy                                    : #1631033175540 | took 116ms | statement | connection 1| url jdbc:mysql://localhost:3306/library?serverTimezone=UTC&characterEncoding=UTF-8
-
-    drop table if exists user
-
-    drop table if exists user;
-2021-09-08 01:46:15.544 DEBUG 23928 --- [    Test worker] org.hibernate.SQL                        : 
-    
-    create table board (
-       board_id bigint not null,
-        content varchar(255),
-        created_date datetime(6),
-        last_modified_date datetime(6),
-        title varchar(255),
-        manager_id bigint,
-        primary key (board_id)
-    ) engine=InnoDB
-2021-09-08 01:46:15.751  INFO 23928 --- [    Test worker] p6spy                                    : #1631033175751 | took 206ms | statement | connection 2| url jdbc:mysql://localhost:3306/library?serverTimezone=UTC&characterEncoding=UTF-8
-
-    create table board (
-       board_id bigint not null,
-        content varchar(255),
-        created_date datetime(6),
-        last_modified_date datetime(6),
-        title varchar(255),
-        manager_id bigint,
-        primary key (board_id)
-    ) engine=InnoDB
-
-    create table board (
-       board_id bigint not null,
-        content varchar(255),
-        created_date datetime(6),
-        last_modified_date datetime(6),
-        title varchar(255),
-        manager_id bigint,
-        primary key (board_id)
-    ) engine=InnoDB;
-2021-09-08 01:46:15.752 DEBUG 23928 --- [    Test worker] org.hibernate.SQL                        : 
-    
-    create table hibernate_sequence (
-       next_val bigint
-    ) engine=InnoDB
-2021-09-08 01:46:16.097  INFO 23928 --- [    Test worker] p6spy                                    : #1631033176097 | took 344ms | statement | connection 2| url jdbc:mysql://localhost:3306/library?serverTimezone=UTC&characterEncoding=UTF-8
-
-    create table hibernate_sequence (
-       next_val bigint
-    ) engine=InnoDB
-
-    create table hibernate_sequence (
-       next_val bigint
-    ) engine=InnoDB;
-2021-09-08 01:46:16.098 DEBUG 23928 --- [    Test worker] org.hibernate.SQL                        : 
-    
-    insert into hibernate_sequence values ( 1 )
-2021-09-08 01:46:16.127  INFO 23928 --- [    Test worker] p6spy                                    : #1631033176127 | took 28ms | statement | connection 2| url jdbc:mysql://localhost:3306/library?serverTimezone=UTC&characterEncoding=UTF-8
-
-    insert into hibernate_sequence values ( 1 )
-
-    insert into hibernate_sequence values ( 1 );
-2021-09-08 01:46:16.128 DEBUG 23928 --- [    Test worker] org.hibernate.SQL                        : 
-    
-    create table item (
-       item_id bigint not null,
-        hour_type varchar(255),
-        price integer not null,
-        ticket varchar(255),
-        primary key (item_id)
-    ) engine=InnoDB
-2021-09-08 01:46:16.284  INFO 23928 --- [    Test worker] p6spy                                    : #1631033176284 | took 154ms | statement | connection 2| url jdbc:mysql://localhost:3306/library?serverTimezone=UTC&characterEncoding=UTF-8
-
-    create table item (
-       item_id bigint not null,
-        hour_type varchar(255),
-        price integer not null,
-        ticket varchar(255),
-        primary key (item_id)
-    ) engine=InnoDB
-
-    create table item (
-       item_id bigint not null,
-        hour_type varchar(255),
-        price integer not null,
-        ticket varchar(255),
-        primary key (item_id)
-    ) engine=InnoDB;
-2021-09-08 01:46:16.285 DEBUG 23928 --- [    Test worker] org.hibernate.SQL                        : 
-    
-    create table manager (
-       manager_id bigint not null,
-        login_id varchar(255),
-        name varchar(255),
-        password varchar(255),
-        primary key (manager_id)
-    ) engine=InnoDB
-2021-09-08 01:46:16.486  INFO 23928 --- [    Test worker] p6spy                                    : #1631033176486 | took 200ms | statement | connection 2| url jdbc:mysql://localhost:3306/library?serverTimezone=UTC&characterEncoding=UTF-8
-
-    create table manager (
-       manager_id bigint not null,
-        login_id varchar(255),
-        name varchar(255),
-        password varchar(255),
-        primary key (manager_id)
-    ) engine=InnoDB
-
-    create table manager (
-       manager_id bigint not null,
-        login_id varchar(255),
-        name varchar(255),
-        password varchar(255),
-        primary key (manager_id)
-    ) engine=InnoDB;
-2021-09-08 01:46:16.488 DEBUG 23928 --- [    Test worker] org.hibernate.SQL                        : 
-    
-    create table orders (
-       orders_id bigint not null,
-        order_date datetime(6),
-        order_type varchar(255),
-        item_id bigint,
-        user_id bigint,
-        primary key (orders_id)
-    ) engine=InnoDB
-2021-09-08 01:46:16.689  INFO 23928 --- [    Test worker] p6spy                                    : #1631033176689 | took 201ms | statement | connection 2| url jdbc:mysql://localhost:3306/library?serverTimezone=UTC&characterEncoding=UTF-8
-
-    create table orders (
-       orders_id bigint not null,
-        order_date datetime(6),
-        order_type varchar(255),
-        item_id bigint,
-        user_id bigint,
-        primary key (orders_id)
-    ) engine=InnoDB
-
-    create table orders (
-       orders_id bigint not null,
-        order_date datetime(6),
-        order_type varchar(255),
-        item_id bigint,
-        user_id bigint,
-        primary key (orders_id)
-    ) engine=InnoDB;
-2021-09-08 01:46:16.691 DEBUG 23928 --- [    Test worker] org.hibernate.SQL                        : 
-    
-    create table reservation (
-       reservation_id bigint not null,
-        enter_date datetime(6),
-        exit_date datetime(6),
-        seat_id bigint,
-        user_id bigint,
-        primary key (reservation_id)
-    ) engine=InnoDB
-2021-09-08 01:46:17.469  INFO 23928 --- [    Test worker] p6spy                                    : #1631033177469 | took 778ms | statement | connection 2| url jdbc:mysql://localhost:3306/library?serverTimezone=UTC&characterEncoding=UTF-8
-
-    create table reservation (
-       reservation_id bigint not null,
-        enter_date datetime(6),
-        exit_date datetime(6),
-        seat_id bigint,
-        user_id bigint,
-        primary key (reservation_id)
-    ) engine=InnoDB
-
-    create table reservation (
-       reservation_id bigint not null,
-        enter_date datetime(6),
-        exit_date datetime(6),
-        seat_id bigint,
-        user_id bigint,
-        primary key (reservation_id)
-    ) engine=InnoDB;
-2021-09-08 01:46:17.470 DEBUG 23928 --- [    Test worker] org.hibernate.SQL                        : 
-    
-    create table seat (
-       seat_id bigint not null,
-        seat_number integer not null,
-        seat_status varchar(255),
-        primary key (seat_id)
-    ) engine=InnoDB
-2021-09-08 01:46:17.652  INFO 23928 --- [    Test worker] p6spy                                    : #1631033177652 | took 180ms | statement | connection 2| url jdbc:mysql://localhost:3306/library?serverTimezone=UTC&characterEncoding=UTF-8
-
-    create table seat (
-       seat_id bigint not null,
-        seat_number integer not null,
-        seat_status varchar(255),
-        primary key (seat_id)
-    ) engine=InnoDB
-
-    create table seat (
-       seat_id bigint not null,
-        seat_number integer not null,
-        seat_status varchar(255),
-        primary key (seat_id)
-    ) engine=InnoDB;
-2021-09-08 01:46:17.653 DEBUG 23928 --- [    Test worker] org.hibernate.SQL                        : 
-    
-    create table ticket_user (
-       ticket_id bigint not null,
-        expired_date datetime(6),
-        user_user_id bigint,
-        primary key (ticket_id)
-    ) engine=InnoDB
-2021-09-08 01:46:18.016  INFO 23928 --- [    Test worker] p6spy                                    : #1631033178016 | took 363ms | statement | connection 2| url jdbc:mysql://localhost:3306/library?serverTimezone=UTC&characterEncoding=UTF-8
-
-    create table ticket_user (
-       ticket_id bigint not null,
-        expired_date datetime(6),
-        user_user_id bigint,
-        primary key (ticket_id)
-    ) engine=InnoDB
-
-    create table ticket_user (
-       ticket_id bigint not null,
-        expired_date datetime(6),
-        user_user_id bigint,
-        primary key (ticket_id)
-    ) engine=InnoDB;
-2021-09-08 01:46:18.018 DEBUG 23928 --- [    Test worker] org.hibernate.SQL                        : 
-    
-    create table user (
-       user_id bigint not null,
-        age integer not null,
-        created_date datetime(6),
-        gender varchar(255),
-        last_modified_date datetime(6),
-        login_id varchar(255),
-        name varchar(255),
-        password varchar(255),
-        phone_number varchar(255),
-        ticket_id bigint,
-        primary key (user_id)
-    ) engine=InnoDB
-2021-09-08 01:46:18.183  INFO 23928 --- [    Test worker] p6spy                                    : #1631033178183 | took 165ms | statement | connection 2| url jdbc:mysql://localhost:3306/library?serverTimezone=UTC&characterEncoding=UTF-8
-
-    create table user (
-       user_id bigint not null,
-        age integer not null,
-        created_date datetime(6),
-        gender varchar(255),
-        last_modified_date datetime(6),
-        login_id varchar(255),
-        name varchar(255),
-        password varchar(255),
-        phone_number varchar(255),
-        ticket_id bigint,
-        primary key (user_id)
-    ) engine=InnoDB
-
-    create table user (
-       user_id bigint not null,
-        age integer not null,
-        created_date datetime(6),
-        gender varchar(255),
-        last_modified_date datetime(6),
-        login_id varchar(255),
-        name varchar(255),
-        password varchar(255),
-        phone_number varchar(255),
-        ticket_id bigint,
-        primary key (user_id)
-    ) engine=InnoDB;
-2021-09-08 01:46:18.184 DEBUG 23928 --- [    Test worker] org.hibernate.SQL                        : 
-    
-    alter table board 
-       add constraint FK823kr97vy648u763w10vwv95i 
-       foreign key (manager_id) 
-       references manager (manager_id)
-2021-09-08 01:46:19.075  INFO 23928 --- [    Test worker] p6spy                                    : #1631033179075 | took 891ms | statement | connection 2| url jdbc:mysql://localhost:3306/library?serverTimezone=UTC&characterEncoding=UTF-8
-
-    alter table board 
-       add constraint FK823kr97vy648u763w10vwv95i 
-       foreign key (manager_id) 
-       references manager (manager_id)
-
-    alter table board 
-       add constraint FK823kr97vy648u763w10vwv95i 
-       foreign key (manager_id) 
-       references manager (manager_id);
-2021-09-08 01:46:19.076 DEBUG 23928 --- [    Test worker] org.hibernate.SQL                        : 
-    
-    alter table orders 
-       add constraint FK1f1jovhxtx7fax217fq0gi17 
-       foreign key (item_id) 
-       references item (item_id)
-2021-09-08 01:46:20.183  INFO 23928 --- [    Test worker] p6spy                                    : #1631033180183 | took 1106ms | statement | connection 2| url jdbc:mysql://localhost:3306/library?serverTimezone=UTC&characterEncoding=UTF-8
-
-    alter table orders 
-       add constraint FK1f1jovhxtx7fax217fq0gi17 
-       foreign key (item_id) 
-       references item (item_id)
-
-    alter table orders 
-       add constraint FK1f1jovhxtx7fax217fq0gi17 
-       foreign key (item_id) 
-       references item (item_id);
-2021-09-08 01:46:20.184 DEBUG 23928 --- [    Test worker] org.hibernate.SQL                        : 
-    
-    alter table orders 
-       add constraint FKel9kyl84ego2otj2accfd8mr7 
-       foreign key (user_id) 
-       references user (user_id)
-2021-09-08 01:46:26.413  INFO 23928 --- [    Test worker] p6spy                                    : #1631033186413 | took 6229ms | statement | connection 2| url jdbc:mysql://localhost:3306/library?serverTimezone=UTC&characterEncoding=UTF-8
-
-    alter table orders 
-       add constraint FKel9kyl84ego2otj2accfd8mr7 
-       foreign key (user_id) 
-       references user (user_id)
-
-    alter table orders 
-       add constraint FKel9kyl84ego2otj2accfd8mr7 
-       foreign key (user_id) 
-       references user (user_id);
-2021-09-08 01:46:26.417 DEBUG 23928 --- [    Test worker] org.hibernate.SQL                        : 
-    
-    alter table reservation 
-       add constraint FKewd3sohjspqf2sjjvdcmcefpb 
-       foreign key (seat_id) 
-       references seat (seat_id)
-2021-09-08 01:46:27.645  INFO 23928 --- [    Test worker] p6spy                                    : #1631033187645 | took 1227ms | statement | connection 2| url jdbc:mysql://localhost:3306/library?serverTimezone=UTC&characterEncoding=UTF-8
-
-    alter table reservation 
-       add constraint FKewd3sohjspqf2sjjvdcmcefpb 
-       foreign key (seat_id) 
-       references seat (seat_id)
-
-    alter table reservation 
-       add constraint FKewd3sohjspqf2sjjvdcmcefpb 
-       foreign key (seat_id) 
-       references seat (seat_id);
-2021-09-08 01:46:27.646 DEBUG 23928 --- [    Test worker] org.hibernate.SQL                        : 
-    
-    alter table reservation 
-       add constraint FKm4oimk0l1757o9pwavorj6ljg 
-       foreign key (user_id) 
-       references user (user_id)
-2021-09-08 01:46:28.352  INFO 23928 --- [    Test worker] p6spy                                    : #1631033188351 | took 705ms | statement | connection 2| url jdbc:mysql://localhost:3306/library?serverTimezone=UTC&characterEncoding=UTF-8
-
-    alter table reservation 
-       add constraint FKm4oimk0l1757o9pwavorj6ljg 
-       foreign key (user_id) 
-       references user (user_id)
-
-    alter table reservation 
-       add constraint FKm4oimk0l1757o9pwavorj6ljg 
-       foreign key (user_id) 
-       references user (user_id);
-2021-09-08 01:46:28.353 DEBUG 23928 --- [    Test worker] org.hibernate.SQL                        : 
-    
-    alter table ticket_user 
-       add constraint FKj6famkhbucghqhg4diwlvrvaa 
-       foreign key (user_user_id) 
-       references user (user_id)
-2021-09-08 01:46:29.133  INFO 23928 --- [    Test worker] p6spy                                    : #1631033189133 | took 781ms | statement | connection 2| url jdbc:mysql://localhost:3306/library?serverTimezone=UTC&characterEncoding=UTF-8
-
-    alter table ticket_user 
-       add constraint FKj6famkhbucghqhg4diwlvrvaa 
-       foreign key (user_user_id) 
-       references user (user_id)
-
-    alter table ticket_user 
-       add constraint FKj6famkhbucghqhg4diwlvrvaa 
-       foreign key (user_user_id) 
-       references user (user_id);
-2021-09-08 01:46:29.134 DEBUG 23928 --- [    Test worker] org.hibernate.SQL                        : 
-    
-    alter table user 
-       add constraint FK38t21tkxjyxjscd7w5o8y36lk 
-       foreign key (ticket_id) 
-       references ticket_user (ticket_id)
-2021-09-08 01:46:30.055  INFO 23928 --- [    Test worker] p6spy                                    : #1631033190055 | took 920ms | statement | connection 2| url jdbc:mysql://localhost:3306/library?serverTimezone=UTC&characterEncoding=UTF-8
-
-    alter table user 
-       add constraint FK38t21tkxjyxjscd7w5o8y36lk 
-       foreign key (ticket_id) 
-       references ticket_user (ticket_id)
-
-    alter table user 
-       add constraint FK38t21tkxjyxjscd7w5o8y36lk 
-       foreign key (ticket_id) 
-       references ticket_user (ticket_id);
-2021-09-08 01:46:30.069  INFO 23928 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2021-09-08 01:46:30.237  INFO 23928 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2021-09-08 01:46:32.077 DEBUG 23928 --- [    Test worker] org.hibernate.SQL                        : 
-    select
-        next_val as id_val 
-    from
-        hibernate_sequence for update
-            
-2021-09-08 01:46:32.175  INFO 23928 --- [    Test worker] p6spy                                    : #1631033192175 | took 8ms | statement | connection 4| url jdbc:mysql://localhost:3306/library?serverTimezone=UTC&characterEncoding=UTF-8
-select next_val as id_val from hibernate_sequence for update
-select next_val as id_val from hibernate_sequence for update;
-2021-09-08 01:46:32.177 DEBUG 23928 --- [    Test worker] org.hibernate.SQL                        : 
-    update
-        hibernate_sequence 
-    set
-        next_val= ? 
-    where
-        next_val=?
-2021-09-08 01:46:32.179  INFO 23928 --- [    Test worker] p6spy                                    : #1631033192179 | took 1ms | statement | connection 4| url jdbc:mysql://localhost:3306/library?serverTimezone=UTC&characterEncoding=UTF-8
-update hibernate_sequence set next_val= ? where next_val=?
-update hibernate_sequence set next_val= 2 where next_val=1;
-2021-09-08 01:46:32.208  INFO 23928 --- [    Test worker] p6spy                                    : #1631033192208 | took 28ms | commit | connection 4| url jdbc:mysql://localhost:3306/library?serverTimezone=UTC&characterEncoding=UTF-8
-
-;
-2021-09-08 01:46:32.269 DEBUG 23928 --- [    Test worker] org.hibernate.SQL                        : 
-    insert 
-    into
-        seat
-        (seat_number, seat_status, seat_id) 
-    values
-        (?, ?, ?)
-2021-09-08 01:46:32.275  INFO 23928 --- [    Test worker] p6spy                                    : #1631033192275 | took 2ms | statement | connection 3| url jdbc:mysql://localhost:3306/library?serverTimezone=UTC&characterEncoding=UTF-8
+2021-09-08 17:45:19.541  INFO 45812 --- [    Test worker] f.r.ReservationApplicationTests          : Starting ReservationApplicationTests using Java 11.0.9 on DESKTOP-F55RK1N with PID 45812 (started by ksw in D:\springStudy\web-study\Studyroom-Reservation-Project-main\Studyroom-Reservation-Project-main\Backend\reservation)
+2021-09-08 17:45:19.544  INFO 45812 --- [    Test worker] f.r.ReservationApplicationTests          : No active profile set, falling back to default profiles: default
+2021-09-08 17:45:20.879  INFO 45812 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-09-08 17:45:21.040  INFO 45812 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 148 ms. Found 7 JPA repository interfaces.
+2021-09-08 17:45:22.125  INFO 45812 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-09-08 17:45:22.448  INFO 45812 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-09-08 17:45:22.602  INFO 45812 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-09-08 17:45:22.699  INFO 45812 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-09-08 17:45:22.957  INFO 45812 --- [    Test worker] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-09-08 17:45:23.196  INFO 45812 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-09-08 17:45:24.655 DEBUG 45812 --- [    Test worker] org.hibernate.SQL                        : drop table if exists board CASCADE 
+2021-09-08 17:45:24.659  INFO 45812 --- [    Test worker] p6spy                                    : #1631090724658 | took 1ms | statement | connection 2| url jdbc:h2:mem:a6cf614a-72f4-4331-817f-769324c22774
+drop table if exists board CASCADE 
+drop table if exists board CASCADE ;
+2021-09-08 17:45:24.659 DEBUG 45812 --- [    Test worker] org.hibernate.SQL                        : drop table if exists item CASCADE 
+2021-09-08 17:45:24.659  INFO 45812 --- [    Test worker] p6spy                                    : #1631090724659 | took 0ms | statement | connection 2| url jdbc:h2:mem:a6cf614a-72f4-4331-817f-769324c22774
+drop table if exists item CASCADE 
+drop table if exists item CASCADE ;
+2021-09-08 17:45:24.660 DEBUG 45812 --- [    Test worker] org.hibernate.SQL                        : drop table if exists manager CASCADE 
+2021-09-08 17:45:24.660  INFO 45812 --- [    Test worker] p6spy                                    : #1631090724660 | took 0ms | statement | connection 2| url jdbc:h2:mem:a6cf614a-72f4-4331-817f-769324c22774
+drop table if exists manager CASCADE 
+drop table if exists manager CASCADE ;
+2021-09-08 17:45:24.660 DEBUG 45812 --- [    Test worker] org.hibernate.SQL                        : drop table if exists orders CASCADE 
+2021-09-08 17:45:24.661  INFO 45812 --- [    Test worker] p6spy                                    : #1631090724661 | took 0ms | statement | connection 2| url jdbc:h2:mem:a6cf614a-72f4-4331-817f-769324c22774
+drop table if exists orders CASCADE 
+drop table if exists orders CASCADE ;
+2021-09-08 17:45:24.661 DEBUG 45812 --- [    Test worker] org.hibernate.SQL                        : drop table if exists reservation CASCADE 
+2021-09-08 17:45:24.661  INFO 45812 --- [    Test worker] p6spy                                    : #1631090724661 | took 0ms | statement | connection 2| url jdbc:h2:mem:a6cf614a-72f4-4331-817f-769324c22774
+drop table if exists reservation CASCADE 
+drop table if exists reservation CASCADE ;
+2021-09-08 17:45:24.662 DEBUG 45812 --- [    Test worker] org.hibernate.SQL                        : drop table if exists seat CASCADE 
+2021-09-08 17:45:24.662  INFO 45812 --- [    Test worker] p6spy                                    : #1631090724662 | took 0ms | statement | connection 2| url jdbc:h2:mem:a6cf614a-72f4-4331-817f-769324c22774
+drop table if exists seat CASCADE 
+drop table if exists seat CASCADE ;
+2021-09-08 17:45:24.662 DEBUG 45812 --- [    Test worker] org.hibernate.SQL                        : drop table if exists ticket_user CASCADE 
+2021-09-08 17:45:24.663  INFO 45812 --- [    Test worker] p6spy                                    : #1631090724663 | took 0ms | statement | connection 2| url jdbc:h2:mem:a6cf614a-72f4-4331-817f-769324c22774
+drop table if exists ticket_user CASCADE 
+drop table if exists ticket_user CASCADE ;
+2021-09-08 17:45:24.663 DEBUG 45812 --- [    Test worker] org.hibernate.SQL                        : drop table if exists user CASCADE 
+2021-09-08 17:45:24.663  INFO 45812 --- [    Test worker] p6spy                                    : #1631090724663 | took 0ms | statement | connection 2| url jdbc:h2:mem:a6cf614a-72f4-4331-817f-769324c22774
+drop table if exists user CASCADE 
+drop table if exists user CASCADE ;
+2021-09-08 17:45:24.664 DEBUG 45812 --- [    Test worker] org.hibernate.SQL                        : drop sequence if exists hibernate_sequence
+2021-09-08 17:45:24.664  INFO 45812 --- [    Test worker] p6spy                                    : #1631090724664 | took 0ms | statement | connection 2| url jdbc:h2:mem:a6cf614a-72f4-4331-817f-769324c22774
+drop sequence if exists hibernate_sequence
+drop sequence if exists hibernate_sequence;
+2021-09-08 17:45:24.668 DEBUG 45812 --- [    Test worker] org.hibernate.SQL                        : create sequence hibernate_sequence start with 1 increment by 1
+2021-09-08 17:45:24.671  INFO 45812 --- [    Test worker] p6spy                                    : #1631090724671 | took 2ms | statement | connection 3| url jdbc:h2:mem:a6cf614a-72f4-4331-817f-769324c22774
+create sequence hibernate_sequence start with 1 increment by 1
+create sequence hibernate_sequence start with 1 increment by 1;
+2021-09-08 17:45:24.672 DEBUG 45812 --- [    Test worker] org.hibernate.SQL                        : create table board (board_id bigint not null, content varchar(255), created_date timestamp, last_modified_date timestamp, title varchar(255), manager_id bigint, primary key (board_id))
+2021-09-08 17:45:24.679  INFO 45812 --- [    Test worker] p6spy                                    : #1631090724679 | took 6ms | statement | connection 3| url jdbc:h2:mem:a6cf614a-72f4-4331-817f-769324c22774
+create table board (board_id bigint not null, content varchar(255), created_date timestamp, last_modified_date timestamp, title varchar(255), manager_id bigint, primary key (board_id))
+create table board (board_id bigint not null, content varchar(255), created_date timestamp, last_modified_date timestamp, title varchar(255), manager_id bigint, primary key (board_id));
+2021-09-08 17:45:24.679 DEBUG 45812 --- [    Test worker] org.hibernate.SQL                        : create table item (item_id bigint not null, hour_type varchar(255), price integer not null, ticket varchar(255), primary key (item_id))
+2021-09-08 17:45:24.681  INFO 45812 --- [    Test worker] p6spy                                    : #1631090724681 | took 1ms | statement | connection 3| url jdbc:h2:mem:a6cf614a-72f4-4331-817f-769324c22774
+create table item (item_id bigint not null, hour_type varchar(255), price integer not null, ticket varchar(255), primary key (item_id))
+create table item (item_id bigint not null, hour_type varchar(255), price integer not null, ticket varchar(255), primary key (item_id));
+2021-09-08 17:45:24.681 DEBUG 45812 --- [    Test worker] org.hibernate.SQL                        : create table manager (manager_id bigint not null, login_id varchar(255), name varchar(255), password varchar(255), primary key (manager_id))
+2021-09-08 17:45:24.683  INFO 45812 --- [    Test worker] p6spy                                    : #1631090724683 | took 1ms | statement | connection 3| url jdbc:h2:mem:a6cf614a-72f4-4331-817f-769324c22774
+create table manager (manager_id bigint not null, login_id varchar(255), name varchar(255), password varchar(255), primary key (manager_id))
+create table manager (manager_id bigint not null, login_id varchar(255), name varchar(255), password varchar(255), primary key (manager_id));
+2021-09-08 17:45:24.684 DEBUG 45812 --- [    Test worker] org.hibernate.SQL                        : create table orders (orders_id bigint not null, order_date timestamp, order_type varchar(255), item_id bigint, user_id bigint, primary key (orders_id))
+2021-09-08 17:45:24.686  INFO 45812 --- [    Test worker] p6spy                                    : #1631090724686 | took 1ms | statement | connection 3| url jdbc:h2:mem:a6cf614a-72f4-4331-817f-769324c22774
+create table orders (orders_id bigint not null, order_date timestamp, order_type varchar(255), item_id bigint, user_id bigint, primary key (orders_id))
+create table orders (orders_id bigint not null, order_date timestamp, order_type varchar(255), item_id bigint, user_id bigint, primary key (orders_id));
+2021-09-08 17:45:24.686 DEBUG 45812 --- [    Test worker] org.hibernate.SQL                        : create table reservation (reservation_id bigint not null, enter_date timestamp, exit_date timestamp, seat_id bigint, user_id bigint, primary key (reservation_id))
+2021-09-08 17:45:24.688  INFO 45812 --- [    Test worker] p6spy                                    : #1631090724688 | took 1ms | statement | connection 3| url jdbc:h2:mem:a6cf614a-72f4-4331-817f-769324c22774
+create table reservation (reservation_id bigint not null, enter_date timestamp, exit_date timestamp, seat_id bigint, user_id bigint, primary key (reservation_id))
+create table reservation (reservation_id bigint not null, enter_date timestamp, exit_date timestamp, seat_id bigint, user_id bigint, primary key (reservation_id));
+2021-09-08 17:45:24.688 DEBUG 45812 --- [    Test worker] org.hibernate.SQL                        : create table seat (seat_id bigint not null, seat_number integer not null, seat_status varchar(255), primary key (seat_id))
+2021-09-08 17:45:24.690  INFO 45812 --- [    Test worker] p6spy                                    : #1631090724690 | took 1ms | statement | connection 3| url jdbc:h2:mem:a6cf614a-72f4-4331-817f-769324c22774
+create table seat (seat_id bigint not null, seat_number integer not null, seat_status varchar(255), primary key (seat_id))
+create table seat (seat_id bigint not null, seat_number integer not null, seat_status varchar(255), primary key (seat_id));
+2021-09-08 17:45:24.690 DEBUG 45812 --- [    Test worker] org.hibernate.SQL                        : create table ticket_user (ticket_id bigint not null, expired_date timestamp, user_user_id bigint, primary key (ticket_id))
+2021-09-08 17:45:24.692  INFO 45812 --- [    Test worker] p6spy                                    : #1631090724692 | took 1ms | statement | connection 3| url jdbc:h2:mem:a6cf614a-72f4-4331-817f-769324c22774
+create table ticket_user (ticket_id bigint not null, expired_date timestamp, user_user_id bigint, primary key (ticket_id))
+create table ticket_user (ticket_id bigint not null, expired_date timestamp, user_user_id bigint, primary key (ticket_id));
+2021-09-08 17:45:24.692 DEBUG 45812 --- [    Test worker] org.hibernate.SQL                        : create table user (user_id bigint not null, age integer not null, created_date timestamp, gender varchar(255), last_modified_date timestamp, login_id varchar(255), name varchar(255), password varchar(255), ticket_id bigint, primary key (user_id))
+2021-09-08 17:45:24.694  INFO 45812 --- [    Test worker] p6spy                                    : #1631090724694 | took 1ms | statement | connection 3| url jdbc:h2:mem:a6cf614a-72f4-4331-817f-769324c22774
+create table user (user_id bigint not null, age integer not null, created_date timestamp, gender varchar(255), last_modified_date timestamp, login_id varchar(255), name varchar(255), password varchar(255), ticket_id bigint, primary key (user_id))
+create table user (user_id bigint not null, age integer not null, created_date timestamp, gender varchar(255), last_modified_date timestamp, login_id varchar(255), name varchar(255), password varchar(255), ticket_id bigint, primary key (user_id));
+2021-09-08 17:45:24.695 DEBUG 45812 --- [    Test worker] org.hibernate.SQL                        : alter table board add constraint FK823kr97vy648u763w10vwv95i foreign key (manager_id) references manager
+2021-09-08 17:45:24.705  INFO 45812 --- [    Test worker] p6spy                                    : #1631090724705 | took 10ms | statement | connection 3| url jdbc:h2:mem:a6cf614a-72f4-4331-817f-769324c22774
+alter table board add constraint FK823kr97vy648u763w10vwv95i foreign key (manager_id) references manager
+alter table board add constraint FK823kr97vy648u763w10vwv95i foreign key (manager_id) references manager;
+2021-09-08 17:45:24.706 DEBUG 45812 --- [    Test worker] org.hibernate.SQL                        : alter table orders add constraint FK1f1jovhxtx7fax217fq0gi17 foreign key (item_id) references item
+2021-09-08 17:45:24.707  INFO 45812 --- [    Test worker] p6spy                                    : #1631090724707 | took 1ms | statement | connection 3| url jdbc:h2:mem:a6cf614a-72f4-4331-817f-769324c22774
+alter table orders add constraint FK1f1jovhxtx7fax217fq0gi17 foreign key (item_id) references item
+alter table orders add constraint FK1f1jovhxtx7fax217fq0gi17 foreign key (item_id) references item;
+2021-09-08 17:45:24.708 DEBUG 45812 --- [    Test worker] org.hibernate.SQL                        : alter table orders add constraint FKel9kyl84ego2otj2accfd8mr7 foreign key (user_id) references user
+2021-09-08 17:45:24.710  INFO 45812 --- [    Test worker] p6spy                                    : #1631090724710 | took 1ms | statement | connection 3| url jdbc:h2:mem:a6cf614a-72f4-4331-817f-769324c22774
+alter table orders add constraint FKel9kyl84ego2otj2accfd8mr7 foreign key (user_id) references user
+alter table orders add constraint FKel9kyl84ego2otj2accfd8mr7 foreign key (user_id) references user;
+2021-09-08 17:45:24.710 DEBUG 45812 --- [    Test worker] org.hibernate.SQL                        : alter table reservation add constraint FKewd3sohjspqf2sjjvdcmcefpb foreign key (seat_id) references seat
+2021-09-08 17:45:24.713  INFO 45812 --- [    Test worker] p6spy                                    : #1631090724713 | took 2ms | statement | connection 3| url jdbc:h2:mem:a6cf614a-72f4-4331-817f-769324c22774
+alter table reservation add constraint FKewd3sohjspqf2sjjvdcmcefpb foreign key (seat_id) references seat
+alter table reservation add constraint FKewd3sohjspqf2sjjvdcmcefpb foreign key (seat_id) references seat;
+2021-09-08 17:45:24.713 DEBUG 45812 --- [    Test worker] org.hibernate.SQL                        : alter table reservation add constraint FKm4oimk0l1757o9pwavorj6ljg foreign key (user_id) references user
+2021-09-08 17:45:24.715  INFO 45812 --- [    Test worker] p6spy                                    : #1631090724715 | took 1ms | statement | connection 3| url jdbc:h2:mem:a6cf614a-72f4-4331-817f-769324c22774
+alter table reservation add constraint FKm4oimk0l1757o9pwavorj6ljg foreign key (user_id) references user
+alter table reservation add constraint FKm4oimk0l1757o9pwavorj6ljg foreign key (user_id) references user;
+2021-09-08 17:45:24.715 DEBUG 45812 --- [    Test worker] org.hibernate.SQL                        : alter table ticket_user add constraint FKj6famkhbucghqhg4diwlvrvaa foreign key (user_user_id) references user
+2021-09-08 17:45:24.717  INFO 45812 --- [    Test worker] p6spy                                    : #1631090724717 | took 1ms | statement | connection 3| url jdbc:h2:mem:a6cf614a-72f4-4331-817f-769324c22774
+alter table ticket_user add constraint FKj6famkhbucghqhg4diwlvrvaa foreign key (user_user_id) references user
+alter table ticket_user add constraint FKj6famkhbucghqhg4diwlvrvaa foreign key (user_user_id) references user;
+2021-09-08 17:45:24.717 DEBUG 45812 --- [    Test worker] org.hibernate.SQL                        : alter table user add constraint FK38t21tkxjyxjscd7w5o8y36lk foreign key (ticket_id) references ticket_user
+2021-09-08 17:45:24.719  INFO 45812 --- [    Test worker] p6spy                                    : #1631090724719 | took 1ms | statement | connection 3| url jdbc:h2:mem:a6cf614a-72f4-4331-817f-769324c22774
+alter table user add constraint FK38t21tkxjyxjscd7w5o8y36lk foreign key (ticket_id) references ticket_user
+alter table user add constraint FK38t21tkxjyxjscd7w5o8y36lk foreign key (ticket_id) references ticket_user;
+2021-09-08 17:45:24.723  INFO 45812 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-09-08 17:45:24.737  INFO 45812 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-09-08 17:45:25.983 DEBUG 45812 --- [    Test worker] org.hibernate.SQL                        : call next value for hibernate_sequence
+2021-09-08 17:45:25.996  INFO 45812 --- [    Test worker] p6spy                                    : #1631090725996 | took 4ms | statement | connection 4| url jdbc:h2:mem:a6cf614a-72f4-4331-817f-769324c22774
+call next value for hibernate_sequence
+call next value for hibernate_sequence;
+2021-09-08 17:45:26.059 DEBUG 45812 --- [    Test worker] org.hibernate.SQL                        : insert into seat (seat_number, seat_status, seat_id) values (?, ?, ?)
+2021-09-08 17:45:26.063  INFO 45812 --- [    Test worker] p6spy                                    : #1631090726063 | took 0ms | statement | connection 4| url jdbc:h2:mem:a6cf614a-72f4-4331-817f-769324c22774
 insert into seat (seat_number, seat_status, seat_id) values (?, ?, ?)
 insert into seat (seat_number, seat_status, seat_id) values (1, 'AVAILABLE', 1);
-2021-09-08 01:46:32.306  INFO 23928 --- [    Test worker] p6spy                                    : #1631033192306 | took 28ms | commit | connection 3| url jdbc:mysql://localhost:3306/library?serverTimezone=UTC&characterEncoding=UTF-8
+2021-09-08 17:45:26.068  INFO 45812 --- [    Test worker] p6spy                                    : #1631090726068 | took 0ms | commit | connection 4| url jdbc:h2:mem:a6cf614a-72f4-4331-817f-769324c22774
 
 ;
-2021-09-08 01:46:32.308 DEBUG 23928 --- [    Test worker] org.hibernate.SQL                        : 
-    select
-        next_val as id_val 
-    from
-        hibernate_sequence for update
-            
-2021-09-08 01:46:32.309  INFO 23928 --- [    Test worker] p6spy                                    : #1631033192309 | took 0ms | statement | connection 6| url jdbc:mysql://localhost:3306/library?serverTimezone=UTC&characterEncoding=UTF-8
-select next_val as id_val from hibernate_sequence for update
-select next_val as id_val from hibernate_sequence for update;
-2021-09-08 01:46:32.310 DEBUG 23928 --- [    Test worker] org.hibernate.SQL                        : 
-    update
-        hibernate_sequence 
-    set
-        next_val= ? 
-    where
-        next_val=?
-2021-09-08 01:46:32.324  INFO 23928 --- [    Test worker] p6spy                                    : #1631033192324 | took 14ms | statement | connection 6| url jdbc:mysql://localhost:3306/library?serverTimezone=UTC&characterEncoding=UTF-8
-update hibernate_sequence set next_val= ? where next_val=?
-update hibernate_sequence set next_val= 3 where next_val=2;
-2021-09-08 01:46:32.353  INFO 23928 --- [    Test worker] p6spy                                    : #1631033192353 | took 28ms | commit | connection 6| url jdbc:mysql://localhost:3306/library?serverTimezone=UTC&characterEncoding=UTF-8
-
-;
-2021-09-08 01:46:32.354 DEBUG 23928 --- [    Test worker] org.hibernate.SQL                        : 
-    insert 
-    into
-        seat
-        (seat_number, seat_status, seat_id) 
-    values
-        (?, ?, ?)
-2021-09-08 01:46:32.369  INFO 23928 --- [    Test worker] p6spy                                    : #1631033192369 | took 13ms | statement | connection 5| url jdbc:mysql://localhost:3306/library?serverTimezone=UTC&characterEncoding=UTF-8
+2021-09-08 17:45:26.070 DEBUG 45812 --- [    Test worker] org.hibernate.SQL                        : call next value for hibernate_sequence
+2021-09-08 17:45:26.070  INFO 45812 --- [    Test worker] p6spy                                    : #1631090726070 | took 0ms | statement | connection 5| url jdbc:h2:mem:a6cf614a-72f4-4331-817f-769324c22774
+call next value for hibernate_sequence
+call next value for hibernate_sequence;
+2021-09-08 17:45:26.071 DEBUG 45812 --- [    Test worker] org.hibernate.SQL                        : insert into seat (seat_number, seat_status, seat_id) values (?, ?, ?)
+2021-09-08 17:45:26.072  INFO 45812 --- [    Test worker] p6spy                                    : #1631090726072 | took 0ms | statement | connection 5| url jdbc:h2:mem:a6cf614a-72f4-4331-817f-769324c22774
 insert into seat (seat_number, seat_status, seat_id) values (?, ?, ?)
 insert into seat (seat_number, seat_status, seat_id) values (2, 'AVAILABLE', 2);
-2021-09-08 01:46:32.409  INFO 23928 --- [    Test worker] p6spy                                    : #1631033192409 | took 39ms | commit | connection 5| url jdbc:mysql://localhost:3306/library?serverTimezone=UTC&characterEncoding=UTF-8
+2021-09-08 17:45:26.073  INFO 45812 --- [    Test worker] p6spy                                    : #1631090726073 | took 0ms | commit | connection 5| url jdbc:h2:mem:a6cf614a-72f4-4331-817f-769324c22774
 
 ;
-2021-09-08 01:46:32.411 DEBUG 23928 --- [    Test worker] org.hibernate.SQL                        : 
-    select
-        next_val as id_val 
-    from
-        hibernate_sequence for update
-            
-2021-09-08 01:46:32.412  INFO 23928 --- [    Test worker] p6spy                                    : #1631033192412 | took 0ms | statement | connection 8| url jdbc:mysql://localhost:3306/library?serverTimezone=UTC&characterEncoding=UTF-8
-select next_val as id_val from hibernate_sequence for update
-select next_val as id_val from hibernate_sequence for update;
-2021-09-08 01:46:32.413 DEBUG 23928 --- [    Test worker] org.hibernate.SQL                        : 
-    update
-        hibernate_sequence 
-    set
-        next_val= ? 
-    where
-        next_val=?
-2021-09-08 01:46:32.422  INFO 23928 --- [    Test worker] p6spy                                    : #1631033192422 | took 9ms | statement | connection 8| url jdbc:mysql://localhost:3306/library?serverTimezone=UTC&characterEncoding=UTF-8
-update hibernate_sequence set next_val= ? where next_val=?
-update hibernate_sequence set next_val= 4 where next_val=3;
-2021-09-08 01:46:32.463  INFO 23928 --- [    Test worker] p6spy                                    : #1631033192463 | took 40ms | commit | connection 8| url jdbc:mysql://localhost:3306/library?serverTimezone=UTC&characterEncoding=UTF-8
-
-;
-2021-09-08 01:46:32.464 DEBUG 23928 --- [    Test worker] org.hibernate.SQL                        : 
-    insert 
-    into
-        seat
-        (seat_number, seat_status, seat_id) 
-    values
-        (?, ?, ?)
-2021-09-08 01:46:32.466  INFO 23928 --- [    Test worker] p6spy                                    : #1631033192466 | took 0ms | statement | connection 7| url jdbc:mysql://localhost:3306/library?serverTimezone=UTC&characterEncoding=UTF-8
+2021-09-08 17:45:26.075 DEBUG 45812 --- [    Test worker] org.hibernate.SQL                        : call next value for hibernate_sequence
+2021-09-08 17:45:26.076  INFO 45812 --- [    Test worker] p6spy                                    : #1631090726076 | took 0ms | statement | connection 6| url jdbc:h2:mem:a6cf614a-72f4-4331-817f-769324c22774
+call next value for hibernate_sequence
+call next value for hibernate_sequence;
+2021-09-08 17:45:26.077 DEBUG 45812 --- [    Test worker] org.hibernate.SQL                        : insert into seat (seat_number, seat_status, seat_id) values (?, ?, ?)
+2021-09-08 17:45:26.077  INFO 45812 --- [    Test worker] p6spy                                    : #1631090726077 | took 0ms | statement | connection 6| url jdbc:h2:mem:a6cf614a-72f4-4331-817f-769324c22774
 insert into seat (seat_number, seat_status, seat_id) values (?, ?, ?)
 insert into seat (seat_number, seat_status, seat_id) values (3, 'AVAILABLE', 3);
-2021-09-08 01:46:32.494  INFO 23928 --- [    Test worker] p6spy                                    : #1631033192494 | took 28ms | commit | connection 7| url jdbc:mysql://localhost:3306/library?serverTimezone=UTC&characterEncoding=UTF-8
+2021-09-08 17:45:26.078  INFO 45812 --- [    Test worker] p6spy                                    : #1631090726078 | took 0ms | commit | connection 6| url jdbc:h2:mem:a6cf614a-72f4-4331-817f-769324c22774
 
 ;
-2021-09-08 01:46:32.496 DEBUG 23928 --- [    Test worker] org.hibernate.SQL                        : 
-    select
-        next_val as id_val 
-    from
-        hibernate_sequence for update
-            
-2021-09-08 01:46:32.497  INFO 23928 --- [    Test worker] p6spy                                    : #1631033192497 | took 0ms | statement | connection 10| url jdbc:mysql://localhost:3306/library?serverTimezone=UTC&characterEncoding=UTF-8
-select next_val as id_val from hibernate_sequence for update
-select next_val as id_val from hibernate_sequence for update;
-2021-09-08 01:46:32.497 DEBUG 23928 --- [    Test worker] org.hibernate.SQL                        : 
-    update
-        hibernate_sequence 
-    set
-        next_val= ? 
-    where
-        next_val=?
-2021-09-08 01:46:32.498  INFO 23928 --- [    Test worker] p6spy                                    : #1631033192498 | took 0ms | statement | connection 10| url jdbc:mysql://localhost:3306/library?serverTimezone=UTC&characterEncoding=UTF-8
-update hibernate_sequence set next_val= ? where next_val=?
-update hibernate_sequence set next_val= 5 where next_val=4;
-2021-09-08 01:46:32.529  INFO 23928 --- [    Test worker] p6spy                                    : #1631033192529 | took 29ms | commit | connection 10| url jdbc:mysql://localhost:3306/library?serverTimezone=UTC&characterEncoding=UTF-8
-
-;
-2021-09-08 01:46:32.530 DEBUG 23928 --- [    Test worker] org.hibernate.SQL                        : 
-    insert 
-    into
-        seat
-        (seat_number, seat_status, seat_id) 
-    values
-        (?, ?, ?)
-2021-09-08 01:46:32.542  INFO 23928 --- [    Test worker] p6spy                                    : #1631033192542 | took 11ms | statement | connection 9| url jdbc:mysql://localhost:3306/library?serverTimezone=UTC&characterEncoding=UTF-8
+2021-09-08 17:45:26.079 DEBUG 45812 --- [    Test worker] org.hibernate.SQL                        : call next value for hibernate_sequence
+2021-09-08 17:45:26.079  INFO 45812 --- [    Test worker] p6spy                                    : #1631090726079 | took 0ms | statement | connection 7| url jdbc:h2:mem:a6cf614a-72f4-4331-817f-769324c22774
+call next value for hibernate_sequence
+call next value for hibernate_sequence;
+2021-09-08 17:45:26.080 DEBUG 45812 --- [    Test worker] org.hibernate.SQL                        : insert into seat (seat_number, seat_status, seat_id) values (?, ?, ?)
+2021-09-08 17:45:26.081  INFO 45812 --- [    Test worker] p6spy                                    : #1631090726081 | took 0ms | statement | connection 7| url jdbc:h2:mem:a6cf614a-72f4-4331-817f-769324c22774
 insert into seat (seat_number, seat_status, seat_id) values (?, ?, ?)
 insert into seat (seat_number, seat_status, seat_id) values (4, 'AVAILABLE', 4);
-2021-09-08 01:46:32.581  INFO 23928 --- [    Test worker] p6spy                                    : #1631033192581 | took 38ms | commit | connection 9| url jdbc:mysql://localhost:3306/library?serverTimezone=UTC&characterEncoding=UTF-8
+2021-09-08 17:45:26.083  INFO 45812 --- [    Test worker] p6spy                                    : #1631090726083 | took 0ms | commit | connection 7| url jdbc:h2:mem:a6cf614a-72f4-4331-817f-769324c22774
 
 ;
-2021-09-08 01:46:32.583 DEBUG 23928 --- [    Test worker] org.hibernate.SQL                        : 
-    select
-        next_val as id_val 
-    from
-        hibernate_sequence for update
-            
-2021-09-08 01:46:32.584  INFO 23928 --- [    Test worker] p6spy                                    : #1631033192584 | took 0ms | statement | connection 12| url jdbc:mysql://localhost:3306/library?serverTimezone=UTC&characterEncoding=UTF-8
-select next_val as id_val from hibernate_sequence for update
-select next_val as id_val from hibernate_sequence for update;
-2021-09-08 01:46:32.584 DEBUG 23928 --- [    Test worker] org.hibernate.SQL                        : 
-    update
-        hibernate_sequence 
-    set
-        next_val= ? 
-    where
-        next_val=?
-2021-09-08 01:46:32.585  INFO 23928 --- [    Test worker] p6spy                                    : #1631033192585 | took 0ms | statement | connection 12| url jdbc:mysql://localhost:3306/library?serverTimezone=UTC&characterEncoding=UTF-8
-update hibernate_sequence set next_val= ? where next_val=?
-update hibernate_sequence set next_val= 6 where next_val=5;
-2021-09-08 01:46:32.612  INFO 23928 --- [    Test worker] p6spy                                    : #1631033192612 | took 27ms | commit | connection 12| url jdbc:mysql://localhost:3306/library?serverTimezone=UTC&characterEncoding=UTF-8
-
-;
-2021-09-08 01:46:32.613 DEBUG 23928 --- [    Test worker] org.hibernate.SQL                        : 
-    insert 
-    into
-        seat
-        (seat_number, seat_status, seat_id) 
-    values
-        (?, ?, ?)
-2021-09-08 01:46:32.615  INFO 23928 --- [    Test worker] p6spy                                    : #1631033192615 | took 1ms | statement | connection 11| url jdbc:mysql://localhost:3306/library?serverTimezone=UTC&characterEncoding=UTF-8
+2021-09-08 17:45:26.084 DEBUG 45812 --- [    Test worker] org.hibernate.SQL                        : call next value for hibernate_sequence
+2021-09-08 17:45:26.085  INFO 45812 --- [    Test worker] p6spy                                    : #1631090726085 | took 0ms | statement | connection 8| url jdbc:h2:mem:a6cf614a-72f4-4331-817f-769324c22774
+call next value for hibernate_sequence
+call next value for hibernate_sequence;
+2021-09-08 17:45:26.086 DEBUG 45812 --- [    Test worker] org.hibernate.SQL                        : insert into seat (seat_number, seat_status, seat_id) values (?, ?, ?)
+2021-09-08 17:45:26.086  INFO 45812 --- [    Test worker] p6spy                                    : #1631090726086 | took 0ms | statement | connection 8| url jdbc:h2:mem:a6cf614a-72f4-4331-817f-769324c22774
 insert into seat (seat_number, seat_status, seat_id) values (?, ?, ?)
 insert into seat (seat_number, seat_status, seat_id) values (5, 'AVAILABLE', 5);
-2021-09-08 01:46:32.643  INFO 23928 --- [    Test worker] p6spy                                    : #1631033192643 | took 26ms | commit | connection 11| url jdbc:mysql://localhost:3306/library?serverTimezone=UTC&characterEncoding=UTF-8
+2021-09-08 17:45:26.087  INFO 45812 --- [    Test worker] p6spy                                    : #1631090726087 | took 0ms | commit | connection 8| url jdbc:h2:mem:a6cf614a-72f4-4331-817f-769324c22774
 
 ;
-2021-09-08 01:46:32.645 DEBUG 23928 --- [    Test worker] org.hibernate.SQL                        : 
-    select
-        next_val as id_val 
-    from
-        hibernate_sequence for update
-            
-2021-09-08 01:46:32.647  INFO 23928 --- [    Test worker] p6spy                                    : #1631033192647 | took 0ms | statement | connection 14| url jdbc:mysql://localhost:3306/library?serverTimezone=UTC&characterEncoding=UTF-8
-select next_val as id_val from hibernate_sequence for update
-select next_val as id_val from hibernate_sequence for update;
-2021-09-08 01:46:32.647 DEBUG 23928 --- [    Test worker] org.hibernate.SQL                        : 
-    update
-        hibernate_sequence 
-    set
-        next_val= ? 
-    where
-        next_val=?
-2021-09-08 01:46:32.649  INFO 23928 --- [    Test worker] p6spy                                    : #1631033192649 | took 1ms | statement | connection 14| url jdbc:mysql://localhost:3306/library?serverTimezone=UTC&characterEncoding=UTF-8
-update hibernate_sequence set next_val= ? where next_val=?
-update hibernate_sequence set next_val= 7 where next_val=6;
-2021-09-08 01:46:32.677  INFO 23928 --- [    Test worker] p6spy                                    : #1631033192677 | took 28ms | commit | connection 14| url jdbc:mysql://localhost:3306/library?serverTimezone=UTC&characterEncoding=UTF-8
-
-;
-2021-09-08 01:46:32.678 DEBUG 23928 --- [    Test worker] org.hibernate.SQL                        : 
-    insert 
-    into
-        seat
-        (seat_number, seat_status, seat_id) 
-    values
-        (?, ?, ?)
-2021-09-08 01:46:32.680  INFO 23928 --- [    Test worker] p6spy                                    : #1631033192680 | took 1ms | statement | connection 13| url jdbc:mysql://localhost:3306/library?serverTimezone=UTC&characterEncoding=UTF-8
+2021-09-08 17:45:26.089 DEBUG 45812 --- [    Test worker] org.hibernate.SQL                        : call next value for hibernate_sequence
+2021-09-08 17:45:26.090  INFO 45812 --- [    Test worker] p6spy                                    : #1631090726090 | took 0ms | statement | connection 9| url jdbc:h2:mem:a6cf614a-72f4-4331-817f-769324c22774
+call next value for hibernate_sequence
+call next value for hibernate_sequence;
+2021-09-08 17:45:26.092 DEBUG 45812 --- [    Test worker] org.hibernate.SQL                        : insert into seat (seat_number, seat_status, seat_id) values (?, ?, ?)
+2021-09-08 17:45:26.093  INFO 45812 --- [    Test worker] p6spy                                    : #1631090726093 | took 0ms | statement | connection 9| url jdbc:h2:mem:a6cf614a-72f4-4331-817f-769324c22774
 insert into seat (seat_number, seat_status, seat_id) values (?, ?, ?)
 insert into seat (seat_number, seat_status, seat_id) values (6, 'AVAILABLE', 6);
-2021-09-08 01:46:32.709  INFO 23928 --- [    Test worker] p6spy                                    : #1631033192708 | took 28ms | commit | connection 13| url jdbc:mysql://localhost:3306/library?serverTimezone=UTC&characterEncoding=UTF-8
+2021-09-08 17:45:26.094  INFO 45812 --- [    Test worker] p6spy                                    : #1631090726094 | took 0ms | commit | connection 9| url jdbc:h2:mem:a6cf614a-72f4-4331-817f-769324c22774
 
 ;
-2021-09-08 01:46:32.710 DEBUG 23928 --- [    Test worker] org.hibernate.SQL                        : 
-    select
-        next_val as id_val 
-    from
-        hibernate_sequence for update
-            
-2021-09-08 01:46:32.711  INFO 23928 --- [    Test worker] p6spy                                    : #1631033192711 | took 0ms | statement | connection 16| url jdbc:mysql://localhost:3306/library?serverTimezone=UTC&characterEncoding=UTF-8
-select next_val as id_val from hibernate_sequence for update
-select next_val as id_val from hibernate_sequence for update;
-2021-09-08 01:46:32.712 DEBUG 23928 --- [    Test worker] org.hibernate.SQL                        : 
-    update
-        hibernate_sequence 
-    set
-        next_val= ? 
-    where
-        next_val=?
-2021-09-08 01:46:32.713  INFO 23928 --- [    Test worker] p6spy                                    : #1631033192713 | took 1ms | statement | connection 16| url jdbc:mysql://localhost:3306/library?serverTimezone=UTC&characterEncoding=UTF-8
-update hibernate_sequence set next_val= ? where next_val=?
-update hibernate_sequence set next_val= 8 where next_val=7;
-2021-09-08 01:46:32.740  INFO 23928 --- [    Test worker] p6spy                                    : #1631033192740 | took 27ms | commit | connection 16| url jdbc:mysql://localhost:3306/library?serverTimezone=UTC&characterEncoding=UTF-8
-
-;
-2021-09-08 01:46:32.741 DEBUG 23928 --- [    Test worker] org.hibernate.SQL                        : 
-    insert 
-    into
-        seat
-        (seat_number, seat_status, seat_id) 
-    values
-        (?, ?, ?)
-2021-09-08 01:46:32.742  INFO 23928 --- [    Test worker] p6spy                                    : #1631033192742 | took 1ms | statement | connection 15| url jdbc:mysql://localhost:3306/library?serverTimezone=UTC&characterEncoding=UTF-8
+2021-09-08 17:45:26.095 DEBUG 45812 --- [    Test worker] org.hibernate.SQL                        : call next value for hibernate_sequence
+2021-09-08 17:45:26.095  INFO 45812 --- [    Test worker] p6spy                                    : #1631090726095 | took 0ms | statement | connection 10| url jdbc:h2:mem:a6cf614a-72f4-4331-817f-769324c22774
+call next value for hibernate_sequence
+call next value for hibernate_sequence;
+2021-09-08 17:45:26.096 DEBUG 45812 --- [    Test worker] org.hibernate.SQL                        : insert into seat (seat_number, seat_status, seat_id) values (?, ?, ?)
+2021-09-08 17:45:26.097  INFO 45812 --- [    Test worker] p6spy                                    : #1631090726097 | took 0ms | statement | connection 10| url jdbc:h2:mem:a6cf614a-72f4-4331-817f-769324c22774
 insert into seat (seat_number, seat_status, seat_id) values (?, ?, ?)
 insert into seat (seat_number, seat_status, seat_id) values (7, 'AVAILABLE', 7);
-2021-09-08 01:46:32.771  INFO 23928 --- [    Test worker] p6spy                                    : #1631033192771 | took 27ms | commit | connection 15| url jdbc:mysql://localhost:3306/library?serverTimezone=UTC&characterEncoding=UTF-8
+2021-09-08 17:45:26.099  INFO 45812 --- [    Test worker] p6spy                                    : #1631090726099 | took 0ms | commit | connection 10| url jdbc:h2:mem:a6cf614a-72f4-4331-817f-769324c22774
 
 ;
-2021-09-08 01:46:32.772 DEBUG 23928 --- [    Test worker] org.hibernate.SQL                        : 
-    select
-        next_val as id_val 
-    from
-        hibernate_sequence for update
-            
-2021-09-08 01:46:32.773  INFO 23928 --- [    Test worker] p6spy                                    : #1631033192773 | took 0ms | statement | connection 18| url jdbc:mysql://localhost:3306/library?serverTimezone=UTC&characterEncoding=UTF-8
-select next_val as id_val from hibernate_sequence for update
-select next_val as id_val from hibernate_sequence for update;
-2021-09-08 01:46:32.774 DEBUG 23928 --- [    Test worker] org.hibernate.SQL                        : 
-    update
-        hibernate_sequence 
-    set
-        next_val= ? 
-    where
-        next_val=?
-2021-09-08 01:46:32.788  INFO 23928 --- [    Test worker] p6spy                                    : #1631033192788 | took 13ms | statement | connection 18| url jdbc:mysql://localhost:3306/library?serverTimezone=UTC&characterEncoding=UTF-8
-update hibernate_sequence set next_val= ? where next_val=?
-update hibernate_sequence set next_val= 9 where next_val=8;
-2021-09-08 01:46:32.831  INFO 23928 --- [    Test worker] p6spy                                    : #1631033192831 | took 41ms | commit | connection 18| url jdbc:mysql://localhost:3306/library?serverTimezone=UTC&characterEncoding=UTF-8
-
-;
-2021-09-08 01:46:32.832 DEBUG 23928 --- [    Test worker] org.hibernate.SQL                        : 
-    insert 
-    into
-        seat
-        (seat_number, seat_status, seat_id) 
-    values
-        (?, ?, ?)
-2021-09-08 01:46:32.844  INFO 23928 --- [    Test worker] p6spy                                    : #1631033192844 | took 11ms | statement | connection 17| url jdbc:mysql://localhost:3306/library?serverTimezone=UTC&characterEncoding=UTF-8
+2021-09-08 17:45:26.100 DEBUG 45812 --- [    Test worker] org.hibernate.SQL                        : call next value for hibernate_sequence
+2021-09-08 17:45:26.101  INFO 45812 --- [    Test worker] p6spy                                    : #1631090726101 | took 0ms | statement | connection 11| url jdbc:h2:mem:a6cf614a-72f4-4331-817f-769324c22774
+call next value for hibernate_sequence
+call next value for hibernate_sequence;
+2021-09-08 17:45:26.102 DEBUG 45812 --- [    Test worker] org.hibernate.SQL                        : insert into seat (seat_number, seat_status, seat_id) values (?, ?, ?)
+2021-09-08 17:45:26.102  INFO 45812 --- [    Test worker] p6spy                                    : #1631090726102 | took 0ms | statement | connection 11| url jdbc:h2:mem:a6cf614a-72f4-4331-817f-769324c22774
 insert into seat (seat_number, seat_status, seat_id) values (?, ?, ?)
 insert into seat (seat_number, seat_status, seat_id) values (8, 'AVAILABLE', 8);
-2021-09-08 01:46:32.884  INFO 23928 --- [    Test worker] p6spy                                    : #1631033192884 | took 39ms | commit | connection 17| url jdbc:mysql://localhost:3306/library?serverTimezone=UTC&characterEncoding=UTF-8
+2021-09-08 17:45:26.103  INFO 45812 --- [    Test worker] p6spy                                    : #1631090726103 | took 0ms | commit | connection 11| url jdbc:h2:mem:a6cf614a-72f4-4331-817f-769324c22774
 
 ;
-2021-09-08 01:46:32.886 DEBUG 23928 --- [    Test worker] org.hibernate.SQL                        : 
-    select
-        next_val as id_val 
-    from
-        hibernate_sequence for update
-            
-2021-09-08 01:46:32.887  INFO 23928 --- [    Test worker] p6spy                                    : #1631033192887 | took 0ms | statement | connection 20| url jdbc:mysql://localhost:3306/library?serverTimezone=UTC&characterEncoding=UTF-8
-select next_val as id_val from hibernate_sequence for update
-select next_val as id_val from hibernate_sequence for update;
-2021-09-08 01:46:32.887 DEBUG 23928 --- [    Test worker] org.hibernate.SQL                        : 
-    update
-        hibernate_sequence 
-    set
-        next_val= ? 
-    where
-        next_val=?
-2021-09-08 01:46:32.888  INFO 23928 --- [    Test worker] p6spy                                    : #1631033192888 | took 0ms | statement | connection 20| url jdbc:mysql://localhost:3306/library?serverTimezone=UTC&characterEncoding=UTF-8
-update hibernate_sequence set next_val= ? where next_val=?
-update hibernate_sequence set next_val= 10 where next_val=9;
-2021-09-08 01:46:32.917  INFO 23928 --- [    Test worker] p6spy                                    : #1631033192917 | took 28ms | commit | connection 20| url jdbc:mysql://localhost:3306/library?serverTimezone=UTC&characterEncoding=UTF-8
-
-;
-2021-09-08 01:46:32.919 DEBUG 23928 --- [    Test worker] org.hibernate.SQL                        : 
-    insert 
-    into
-        seat
-        (seat_number, seat_status, seat_id) 
-    values
-        (?, ?, ?)
-2021-09-08 01:46:32.921  INFO 23928 --- [    Test worker] p6spy                                    : #1631033192921 | took 1ms | statement | connection 19| url jdbc:mysql://localhost:3306/library?serverTimezone=UTC&characterEncoding=UTF-8
+2021-09-08 17:45:26.105 DEBUG 45812 --- [    Test worker] org.hibernate.SQL                        : call next value for hibernate_sequence
+2021-09-08 17:45:26.105  INFO 45812 --- [    Test worker] p6spy                                    : #1631090726105 | took 0ms | statement | connection 12| url jdbc:h2:mem:a6cf614a-72f4-4331-817f-769324c22774
+call next value for hibernate_sequence
+call next value for hibernate_sequence;
+2021-09-08 17:45:26.106 DEBUG 45812 --- [    Test worker] org.hibernate.SQL                        : insert into seat (seat_number, seat_status, seat_id) values (?, ?, ?)
+2021-09-08 17:45:26.107  INFO 45812 --- [    Test worker] p6spy                                    : #1631090726107 | took 0ms | statement | connection 12| url jdbc:h2:mem:a6cf614a-72f4-4331-817f-769324c22774
 insert into seat (seat_number, seat_status, seat_id) values (?, ?, ?)
 insert into seat (seat_number, seat_status, seat_id) values (9, 'AVAILABLE', 9);
-2021-09-08 01:46:32.948  INFO 23928 --- [    Test worker] p6spy                                    : #1631033192948 | took 27ms | commit | connection 19| url jdbc:mysql://localhost:3306/library?serverTimezone=UTC&characterEncoding=UTF-8
+2021-09-08 17:45:26.108  INFO 45812 --- [    Test worker] p6spy                                    : #1631090726108 | took 0ms | commit | connection 12| url jdbc:h2:mem:a6cf614a-72f4-4331-817f-769324c22774
 
 ;
-2021-09-08 01:46:32.950 DEBUG 23928 --- [    Test worker] org.hibernate.SQL                        : 
-    select
-        next_val as id_val 
-    from
-        hibernate_sequence for update
-            
-2021-09-08 01:46:32.951  INFO 23928 --- [    Test worker] p6spy                                    : #1631033192951 | took 0ms | statement | connection 22| url jdbc:mysql://localhost:3306/library?serverTimezone=UTC&characterEncoding=UTF-8
-select next_val as id_val from hibernate_sequence for update
-select next_val as id_val from hibernate_sequence for update;
-2021-09-08 01:46:32.952 DEBUG 23928 --- [    Test worker] org.hibernate.SQL                        : 
-    update
-        hibernate_sequence 
-    set
-        next_val= ? 
-    where
-        next_val=?
-2021-09-08 01:46:32.962  INFO 23928 --- [    Test worker] p6spy                                    : #1631033192962 | took 9ms | statement | connection 22| url jdbc:mysql://localhost:3306/library?serverTimezone=UTC&characterEncoding=UTF-8
-update hibernate_sequence set next_val= ? where next_val=?
-update hibernate_sequence set next_val= 11 where next_val=10;
-2021-09-08 01:46:33.002  INFO 23928 --- [    Test worker] p6spy                                    : #1631033193002 | took 40ms | commit | connection 22| url jdbc:mysql://localhost:3306/library?serverTimezone=UTC&characterEncoding=UTF-8
-
-;
-2021-09-08 01:46:33.003 DEBUG 23928 --- [    Test worker] org.hibernate.SQL                        : 
-    insert 
-    into
-        seat
-        (seat_number, seat_status, seat_id) 
-    values
-        (?, ?, ?)
-2021-09-08 01:46:33.023  INFO 23928 --- [    Test worker] p6spy                                    : #1631033193023 | took 18ms | statement | connection 21| url jdbc:mysql://localhost:3306/library?serverTimezone=UTC&characterEncoding=UTF-8
+2021-09-08 17:45:26.110 DEBUG 45812 --- [    Test worker] org.hibernate.SQL                        : call next value for hibernate_sequence
+2021-09-08 17:45:26.110  INFO 45812 --- [    Test worker] p6spy                                    : #1631090726110 | took 0ms | statement | connection 13| url jdbc:h2:mem:a6cf614a-72f4-4331-817f-769324c22774
+call next value for hibernate_sequence
+call next value for hibernate_sequence;
+2021-09-08 17:45:26.111 DEBUG 45812 --- [    Test worker] org.hibernate.SQL                        : insert into seat (seat_number, seat_status, seat_id) values (?, ?, ?)
+2021-09-08 17:45:26.111  INFO 45812 --- [    Test worker] p6spy                                    : #1631090726111 | took 0ms | statement | connection 13| url jdbc:h2:mem:a6cf614a-72f4-4331-817f-769324c22774
 insert into seat (seat_number, seat_status, seat_id) values (?, ?, ?)
 insert into seat (seat_number, seat_status, seat_id) values (10, 'AVAILABLE', 10);
-2021-09-08 01:46:33.093  INFO 23928 --- [    Test worker] p6spy                                    : #1631033193093 | took 69ms | commit | connection 21| url jdbc:mysql://localhost:3306/library?serverTimezone=UTC&characterEncoding=UTF-8
+2021-09-08 17:45:26.112  INFO 45812 --- [    Test worker] p6spy                                    : #1631090726112 | took 0ms | commit | connection 13| url jdbc:h2:mem:a6cf614a-72f4-4331-817f-769324c22774
 
 ;
-2021-09-08 01:46:33.102 DEBUG 23928 --- [    Test worker] org.hibernate.SQL                        : 
-    select
-        next_val as id_val 
-    from
-        hibernate_sequence for update
-            
-2021-09-08 01:46:33.103  INFO 23928 --- [    Test worker] p6spy                                    : #1631033193103 | took 0ms | statement | connection 24| url jdbc:mysql://localhost:3306/library?serverTimezone=UTC&characterEncoding=UTF-8
-select next_val as id_val from hibernate_sequence for update
-select next_val as id_val from hibernate_sequence for update;
-2021-09-08 01:46:33.103 DEBUG 23928 --- [    Test worker] org.hibernate.SQL                        : 
-    update
-        hibernate_sequence 
-    set
-        next_val= ? 
-    where
-        next_val=?
-2021-09-08 01:46:33.107  INFO 23928 --- [    Test worker] p6spy                                    : #1631033193107 | took 3ms | statement | connection 24| url jdbc:mysql://localhost:3306/library?serverTimezone=UTC&characterEncoding=UTF-8
-update hibernate_sequence set next_val= ? where next_val=?
-update hibernate_sequence set next_val= 12 where next_val=11;
-2021-09-08 01:46:33.148  INFO 23928 --- [    Test worker] p6spy                                    : #1631033193148 | took 40ms | commit | connection 24| url jdbc:mysql://localhost:3306/library?serverTimezone=UTC&characterEncoding=UTF-8
-
-;
-2021-09-08 01:46:33.150 DEBUG 23928 --- [    Test worker] org.hibernate.SQL                        : 
-    insert 
-    into
-        item
-        (hour_type, price, ticket, item_id) 
-    values
-        (?, ?, ?, ?)
-2021-09-08 01:46:33.203  INFO 23928 --- [    Test worker] p6spy                                    : #1631033193203 | took 51ms | statement | connection 23| url jdbc:mysql://localhost:3306/library?serverTimezone=UTC&characterEncoding=UTF-8
+2021-09-08 17:45:26.120 DEBUG 45812 --- [    Test worker] org.hibernate.SQL                        : call next value for hibernate_sequence
+2021-09-08 17:45:26.121  INFO 45812 --- [    Test worker] p6spy                                    : #1631090726121 | took 0ms | statement | connection 14| url jdbc:h2:mem:a6cf614a-72f4-4331-817f-769324c22774
+call next value for hibernate_sequence
+call next value for hibernate_sequence;
+2021-09-08 17:45:26.122 DEBUG 45812 --- [    Test worker] org.hibernate.SQL                        : insert into item (hour_type, price, ticket, item_id) values (?, ?, ?, ?)
+2021-09-08 17:45:26.123  INFO 45812 --- [    Test worker] p6spy                                    : #1631090726123 | took 0ms | statement | connection 14| url jdbc:h2:mem:a6cf614a-72f4-4331-817f-769324c22774
 insert into item (hour_type, price, ticket, item_id) values (?, ?, ?, ?)
 insert into item (hour_type, price, ticket, item_id) values (NULL, 10000, 'DAY', 11);
-2021-09-08 01:46:33.238  INFO 23928 --- [    Test worker] p6spy                                    : #1631033193238 | took 36ms | commit | connection 23| url jdbc:mysql://localhost:3306/library?serverTimezone=UTC&characterEncoding=UTF-8
+2021-09-08 17:45:26.124  INFO 45812 --- [    Test worker] p6spy                                    : #1631090726124 | took 0ms | commit | connection 14| url jdbc:h2:mem:a6cf614a-72f4-4331-817f-769324c22774
 
 ;
-2021-09-08 01:46:33.241 DEBUG 23928 --- [    Test worker] org.hibernate.SQL                        : 
-    select
-        next_val as id_val 
-    from
-        hibernate_sequence for update
-            
-2021-09-08 01:46:33.242  INFO 23928 --- [    Test worker] p6spy                                    : #1631033193242 | took 1ms | statement | connection 26| url jdbc:mysql://localhost:3306/library?serverTimezone=UTC&characterEncoding=UTF-8
-select next_val as id_val from hibernate_sequence for update
-select next_val as id_val from hibernate_sequence for update;
-2021-09-08 01:46:33.243 DEBUG 23928 --- [    Test worker] org.hibernate.SQL                        : 
-    update
-        hibernate_sequence 
-    set
-        next_val= ? 
-    where
-        next_val=?
-2021-09-08 01:46:33.253  INFO 23928 --- [    Test worker] p6spy                                    : #1631033193253 | took 9ms | statement | connection 26| url jdbc:mysql://localhost:3306/library?serverTimezone=UTC&characterEncoding=UTF-8
-update hibernate_sequence set next_val= ? where next_val=?
-update hibernate_sequence set next_val= 13 where next_val=12;
-2021-09-08 01:46:33.306  INFO 23928 --- [    Test worker] p6spy                                    : #1631033193306 | took 52ms | commit | connection 26| url jdbc:mysql://localhost:3306/library?serverTimezone=UTC&characterEncoding=UTF-8
-
-;
-2021-09-08 01:46:33.307 DEBUG 23928 --- [    Test worker] org.hibernate.SQL                        : 
-    insert 
-    into
-        item
-        (hour_type, price, ticket, item_id) 
-    values
-        (?, ?, ?, ?)
-2021-09-08 01:46:33.320  INFO 23928 --- [    Test worker] p6spy                                    : #1631033193320 | took 12ms | statement | connection 25| url jdbc:mysql://localhost:3306/library?serverTimezone=UTC&characterEncoding=UTF-8
+2021-09-08 17:45:26.126 DEBUG 45812 --- [    Test worker] org.hibernate.SQL                        : call next value for hibernate_sequence
+2021-09-08 17:45:26.126  INFO 45812 --- [    Test worker] p6spy                                    : #1631090726126 | took 0ms | statement | connection 15| url jdbc:h2:mem:a6cf614a-72f4-4331-817f-769324c22774
+call next value for hibernate_sequence
+call next value for hibernate_sequence;
+2021-09-08 17:45:26.127 DEBUG 45812 --- [    Test worker] org.hibernate.SQL                        : insert into item (hour_type, price, ticket, item_id) values (?, ?, ?, ?)
+2021-09-08 17:45:26.128  INFO 45812 --- [    Test worker] p6spy                                    : #1631090726128 | took 0ms | statement | connection 15| url jdbc:h2:mem:a6cf614a-72f4-4331-817f-769324c22774
 insert into item (hour_type, price, ticket, item_id) values (?, ?, ?, ?)
 insert into item (hour_type, price, ticket, item_id) values (NULL, 200000, 'MONTH', 12);
-2021-09-08 01:46:33.362  INFO 23928 --- [    Test worker] p6spy                                    : #1631033193362 | took 41ms | commit | connection 25| url jdbc:mysql://localhost:3306/library?serverTimezone=UTC&characterEncoding=UTF-8
+2021-09-08 17:45:26.128  INFO 45812 --- [    Test worker] p6spy                                    : #1631090726128 | took 0ms | commit | connection 15| url jdbc:h2:mem:a6cf614a-72f4-4331-817f-769324c22774
 
 ;
-2021-09-08 01:46:34.298  WARN 23928 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-09-08 01:46:35.700  INFO 23928 --- [    Test worker] f.r.ReservationApplicationTests          : Started ReservationApplicationTests in 27.699 seconds (JVM running for 30.348)
+2021-09-08 17:45:26.862  WARN 45812 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-09-08 17:45:28.072  INFO 45812 --- [    Test worker] f.r.ReservationApplicationTests          : Started ReservationApplicationTests in 8.999 seconds (JVM running for 11.748)
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

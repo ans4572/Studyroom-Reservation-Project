@@ -19,7 +19,15 @@ public class ErrorController extends ResponseEntityExceptionHandler {
         ErrorResult errorResult =
                 new ErrorResult(LocalDateTime.now(), ex.getMessage(), request.getDescription(false));
 
-        return new ResponseEntity<>(errorResult, HttpStatus.NOT_FOUND);
+        return new ResponseEntity<>(errorResult, HttpStatus.BAD_REQUEST);
+    }
+
+    @ExceptionHandler
+    public ResponseEntity noReservationNowExceptionHandler(NoReservationNowException ex, WebRequest request) {
+        ErrorResult errorResult =
+                new ErrorResult(LocalDateTime.now(), ex.getMessage(), request.getDescription(false));
+
+        return new ResponseEntity<>(errorResult, HttpStatus.BAD_REQUEST);
     }
 
     @ExceptionHandler
@@ -27,7 +35,7 @@ public class ErrorController extends ResponseEntityExceptionHandler {
         ErrorResult errorResult =
                 new ErrorResult(LocalDateTime.now(), ex.getMessage(), request.getDescription(false));
 
-        return new ResponseEntity<>(errorResult, HttpStatus.NOT_FOUND);
+        return new ResponseEntity<>(errorResult, HttpStatus.BAD_REQUEST);
     }
 
     @ExceptionHandler
@@ -35,7 +43,7 @@ public class ErrorController extends ResponseEntityExceptionHandler {
         ErrorResult errorResult =
                 new ErrorResult(LocalDateTime.now(), ex.getMessage(), request.getDescription(false));
 
-        return new ResponseEntity<>(errorResult, HttpStatus.NOT_FOUND);
+        return new ResponseEntity<>(errorResult, HttpStatus.BAD_REQUEST);
     }
 
     @ExceptionHandler
@@ -43,7 +51,7 @@ public class ErrorController extends ResponseEntityExceptionHandler {
         ErrorResult errorResult =
                 new ErrorResult(LocalDateTime.now(), ex.getMessage(), request.getDescription(false));
 
-        return new ResponseEntity<>(errorResult, HttpStatus.NOT_FOUND);
+        return new ResponseEntity<>(errorResult, HttpStatus.BAD_REQUEST);
     }
 
     @ExceptionHandler
@@ -51,7 +59,7 @@ public class ErrorController extends ResponseEntityExceptionHandler {
         ErrorResult errorResult =
                 new ErrorResult(LocalDateTime.now(), ex.getMessage(), request.getDescription(false));
 
-        return new ResponseEntity<>(errorResult, HttpStatus.NOT_FOUND);
+        return new ResponseEntity<>(errorResult, HttpStatus.BAD_REQUEST);
     }
 
     @ExceptionHandler(NoSeatException.class)
@@ -59,7 +67,7 @@ public class ErrorController extends ResponseEntityExceptionHandler {
         ErrorResult errorResult =
                 new ErrorResult(LocalDateTime.now(), ex.getMessage(), request.getDescription(false));
 
-        return new ResponseEntity<>(errorResult, HttpStatus.NOT_FOUND);
+        return new ResponseEntity<>(errorResult, HttpStatus.BAD_REQUEST);
     }
 
     @ExceptionHandler(LoginFailedException.class)
@@ -67,7 +75,7 @@ public class ErrorController extends ResponseEntityExceptionHandler {
         ErrorResult errorResult =
                 new ErrorResult(LocalDateTime.now(), ex.getMessage(), request.getDescription(false));
 
-        return new ResponseEntity<>(errorResult, HttpStatus.NOT_FOUND);
+        return new ResponseEntity<>(errorResult, HttpStatus.BAD_REQUEST);
     }
 
     @ExceptionHandler
@@ -75,7 +83,7 @@ public class ErrorController extends ResponseEntityExceptionHandler {
         ErrorResult errorResult =
                 new ErrorResult(LocalDateTime.now(), "로그인 후 이용 가능합니다.", request.getDescription(false));
 
-        return new ResponseEntity<>(errorResult, HttpStatus.NOT_FOUND);
+        return new ResponseEntity<>(errorResult, HttpStatus.BAD_REQUEST);
     }
 
     @Override

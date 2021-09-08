@@ -5,6 +5,7 @@ import fullstack.reservation.domain.User;
 import fullstack.reservation.dto.ReservationDto;
 import fullstack.reservation.dto.ReservationResultDto;
 import fullstack.reservation.dto.ReservationResultV2;
+import fullstack.reservation.exception.NoReservationNowException;
 import fullstack.reservation.service.ReservationService;
 import fullstack.reservation.session.SessionConst;
 import lombok.RequiredArgsConstructor;
@@ -70,20 +71,27 @@ public class ReservationController {
     //퇴실
     @DeleteMapping("/reservation")
     public ResponseEntity leaving(HttpServletRequest request) {
+
         HttpSession session = request.getSession(false);
         User sessionUser = (User)session.getAttribute(SessionConst.LOGIN_MEMBER);
 
-        if (session != null) {
-            session.invalidate();
-        }
+
 
         Reservation exit = reservationService.exit(sessionUser.getId());
+
+        if (exit == null) {
+            throw new NoReservationNowException("현재 이용중이지 않습니다.");
+        }
 
         ReservationResultDto reservationResultDto = ReservationResultDto.builder()
                 .name(sessionUser.getName())
                 .seatNumber(exit.getSeat().getSeatNumber())
                 .reservationTime(exit.getEnterDate())
                 .exitTime(exit.getExitDate()).build();
+
+        if (session != null) {
+            session.invalidate();
+        }
 
         EntityModel model = EntityModel.of(reservationResultDto);
         //self
