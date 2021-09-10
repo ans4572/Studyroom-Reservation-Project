@@ -28,6 +28,7 @@ import java.net.URI;
 import java.util.ArrayList;
 import java.util.List;
 
+@CrossOrigin(origins ="*")
 @RestController
 @RequiredArgsConstructor
 public class UserController {

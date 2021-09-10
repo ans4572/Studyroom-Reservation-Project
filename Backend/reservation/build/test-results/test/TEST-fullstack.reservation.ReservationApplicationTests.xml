@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="fullstack.reservation.ReservationApplicationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-09-08T08:45:28" hostname="DESKTOP-F55RK1N" time="0.18">
+<testsuite name="fullstack.reservation.ReservationApplicationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-09-10T14:53:38" hostname="DESKTOP-F55RK1N" time="0.173">
   <properties/>
-  <testcase name="contextLoads()" classname="fullstack.reservation.ReservationApplicationTests" time="0.18"/>
-  <system-out><![CDATA[17:45:18.580 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
-17:45:18.601 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
-17:45:18.654 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [fullstack.reservation.ReservationApplicationTests] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
-17:45:18.671 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [fullstack.reservation.ReservationApplicationTests], using SpringBootContextLoader
-17:45:18.678 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [fullstack.reservation.ReservationApplicationTests]: class path resource [fullstack/reservation/ReservationApplicationTests-context.xml] does not exist
-17:45:18.679 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [fullstack.reservation.ReservationApplicationTests]: class path resource [fullstack/reservation/ReservationApplicationTestsContext.groovy] does not exist
-17:45:18.679 [Test worker] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [fullstack.reservation.ReservationApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
-17:45:18.680 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [fullstack.reservation.ReservationApplicationTests]: ReservationApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-17:45:18.742 [Test worker] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [fullstack.reservation.ReservationApplicationTests]
-17:45:18.829 [Test worker] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [D:\springStudy\web-study\Studyroom-Reservation-Project-main\Studyroom-Reservation-Project-main\Backend\reservation\build\classes\java\main\fullstack\reservation\ReservationApplication.class]
-17:45:18.831 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration fullstack.reservation.ReservationApplication for test class fullstack.reservation.ReservationApplicationTests
-17:45:18.977 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [fullstack.reservation.ReservationApplicationTests]: using defaults.
-17:45:18.978 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
-17:45:19.017 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@78785697, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@7b1679a8, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@504f4ac3, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@717ee1de, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@4b88cd88, org.springframework.test.context.support.DirtiesContextTestExecutionListener@31b2668, org.springframework.test.context.transaction.TransactionalTestExecutionListener@29286d9a, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@2fde0970, org.springframework.test.context.event.EventPublishingTestExecutionListener@2237758e, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@78c52fc6, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@12ebd9f9, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@4d21c75d, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@54a35072, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@549fe3f, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@4921cb7e]
-17:45:19.022 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@2f044825 testClass = ReservationApplicationTests, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@76b7b756 testClass = ReservationApplicationTests, locations = '{}', classes = '{class fullstack.reservation.ReservationApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@6c46c39, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@3a8bee7f, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@22e1d9ba, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@6926b91e, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@3565dc58, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@1768ccb], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true]], class annotated with @DirtiesContext [false] with mode [null].
-17:45:19.061 [Test worker] DEBUG org.springframework.test.context.support.TestPropertySourceUtils - Adding inlined properties to environment: {spring.jmx.enabled=false, org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}
+  <testcase name="contextLoads()" classname="fullstack.reservation.ReservationApplicationTests" time="0.173"/>
+  <system-out><![CDATA[23:53:25.491 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+23:53:25.510 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+23:53:25.561 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [fullstack.reservation.ReservationApplicationTests] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+23:53:25.577 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [fullstack.reservation.ReservationApplicationTests], using SpringBootContextLoader
+23:53:25.584 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [fullstack.reservation.ReservationApplicationTests]: class path resource [fullstack/reservation/ReservationApplicationTests-context.xml] does not exist
+23:53:25.584 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [fullstack.reservation.ReservationApplicationTests]: class path resource [fullstack/reservation/ReservationApplicationTestsContext.groovy] does not exist
+23:53:25.585 [Test worker] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [fullstack.reservation.ReservationApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+23:53:25.586 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [fullstack.reservation.ReservationApplicationTests]: ReservationApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+23:53:25.648 [Test worker] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [fullstack.reservation.ReservationApplicationTests]
+23:53:25.734 [Test worker] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [D:\springStudy\web-study\Studyroom-Reservation-Project-main\Studyroom-Reservation-Project-main\Backend\reservation\build\classes\java\main\fullstack\reservation\ReservationApplication.class]
+23:53:25.736 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration fullstack.reservation.ReservationApplication for test class fullstack.reservation.ReservationApplicationTests
+23:53:25.886 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [fullstack.reservation.ReservationApplicationTests]: using defaults.
+23:53:25.887 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+23:53:25.921 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@7814bf54, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@343120a3, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@173d17aa, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@604e14a8, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@3d7de9ea, org.springframework.test.context.support.DirtiesContextTestExecutionListener@74f2de, org.springframework.test.context.transaction.TransactionalTestExecutionListener@7f0b253d, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@6ff09520, org.springframework.test.context.event.EventPublishingTestExecutionListener@3d90138d, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@1a55f4e3, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@3c511859, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@57e3d366, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@6a52be6c, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@5f15ad29, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@6b32f542]
+23:53:25.927 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@28f28b2c testClass = ReservationApplicationTests, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@6dd78b9a testClass = ReservationApplicationTests, locations = '{}', classes = '{class fullstack.reservation.ReservationApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@731c56ba, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@57f03f52, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@5072cf5c, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@502f6cf1, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@127686c6, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@431b94b2], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true]], class annotated with @DirtiesContext [false] with mode [null].
+23:53:25.970 [Test worker] DEBUG org.springframework.test.context.support.TestPropertySourceUtils - Adding inlined properties to environment: {spring.jmx.enabled=false, org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -27,252 +27,252 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v2.5.4)
 
-2021-09-08 17:45:19.541  INFO 45812 --- [    Test worker] f.r.ReservationApplicationTests          : Starting ReservationApplicationTests using Java 11.0.9 on DESKTOP-F55RK1N with PID 45812 (started by ksw in D:\springStudy\web-study\Studyroom-Reservation-Project-main\Studyroom-Reservation-Project-main\Backend\reservation)
-2021-09-08 17:45:19.544  INFO 45812 --- [    Test worker] f.r.ReservationApplicationTests          : No active profile set, falling back to default profiles: default
-2021-09-08 17:45:20.879  INFO 45812 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2021-09-08 17:45:21.040  INFO 45812 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 148 ms. Found 7 JPA repository interfaces.
-2021-09-08 17:45:22.125  INFO 45812 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2021-09-08 17:45:22.448  INFO 45812 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2021-09-08 17:45:22.602  INFO 45812 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2021-09-08 17:45:22.699  INFO 45812 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
-2021-09-08 17:45:22.957  INFO 45812 --- [    Test worker] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2021-09-08 17:45:23.196  INFO 45812 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2021-09-08 17:45:24.655 DEBUG 45812 --- [    Test worker] org.hibernate.SQL                        : drop table if exists board CASCADE 
-2021-09-08 17:45:24.659  INFO 45812 --- [    Test worker] p6spy                                    : #1631090724658 | took 1ms | statement | connection 2| url jdbc:h2:mem:a6cf614a-72f4-4331-817f-769324c22774
+2021-09-10 23:53:26.497  INFO 41316 --- [    Test worker] f.r.ReservationApplicationTests          : Starting ReservationApplicationTests using Java 11.0.9 on DESKTOP-F55RK1N with PID 41316 (started by ksw in D:\springStudy\web-study\Studyroom-Reservation-Project-main\Studyroom-Reservation-Project-main\Backend\reservation)
+2021-09-10 23:53:26.501  INFO 41316 --- [    Test worker] f.r.ReservationApplicationTests          : No active profile set, falling back to default profiles: default
+2021-09-10 23:53:28.537  INFO 41316 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-09-10 23:53:28.703  INFO 41316 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 153 ms. Found 7 JPA repository interfaces.
+2021-09-10 23:53:31.042  INFO 41316 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-09-10 23:53:32.218  INFO 41316 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-09-10 23:53:32.487  INFO 41316 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-09-10 23:53:32.612  INFO 41316 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-09-10 23:53:32.891  INFO 41316 --- [    Test worker] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-09-10 23:53:33.250  INFO 41316 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-09-10 23:53:35.681 DEBUG 41316 --- [    Test worker] org.hibernate.SQL                        : drop table if exists board CASCADE 
+2021-09-10 23:53:35.683  INFO 41316 --- [    Test worker] p6spy                                    : #1631285615683 | took 0ms | statement | connection 2| url jdbc:h2:mem:79fc388e-25f3-4fc3-88c2-c728f39d1dc2
 drop table if exists board CASCADE 
 drop table if exists board CASCADE ;
-2021-09-08 17:45:24.659 DEBUG 45812 --- [    Test worker] org.hibernate.SQL                        : drop table if exists item CASCADE 
-2021-09-08 17:45:24.659  INFO 45812 --- [    Test worker] p6spy                                    : #1631090724659 | took 0ms | statement | connection 2| url jdbc:h2:mem:a6cf614a-72f4-4331-817f-769324c22774
+2021-09-10 23:53:35.684 DEBUG 41316 --- [    Test worker] org.hibernate.SQL                        : drop table if exists item CASCADE 
+2021-09-10 23:53:35.684  INFO 41316 --- [    Test worker] p6spy                                    : #1631285615684 | took 0ms | statement | connection 2| url jdbc:h2:mem:79fc388e-25f3-4fc3-88c2-c728f39d1dc2
 drop table if exists item CASCADE 
 drop table if exists item CASCADE ;
-2021-09-08 17:45:24.660 DEBUG 45812 --- [    Test worker] org.hibernate.SQL                        : drop table if exists manager CASCADE 
-2021-09-08 17:45:24.660  INFO 45812 --- [    Test worker] p6spy                                    : #1631090724660 | took 0ms | statement | connection 2| url jdbc:h2:mem:a6cf614a-72f4-4331-817f-769324c22774
+2021-09-10 23:53:35.684 DEBUG 41316 --- [    Test worker] org.hibernate.SQL                        : drop table if exists manager CASCADE 
+2021-09-10 23:53:35.685  INFO 41316 --- [    Test worker] p6spy                                    : #1631285615685 | took 0ms | statement | connection 2| url jdbc:h2:mem:79fc388e-25f3-4fc3-88c2-c728f39d1dc2
 drop table if exists manager CASCADE 
 drop table if exists manager CASCADE ;
-2021-09-08 17:45:24.660 DEBUG 45812 --- [    Test worker] org.hibernate.SQL                        : drop table if exists orders CASCADE 
-2021-09-08 17:45:24.661  INFO 45812 --- [    Test worker] p6spy                                    : #1631090724661 | took 0ms | statement | connection 2| url jdbc:h2:mem:a6cf614a-72f4-4331-817f-769324c22774
+2021-09-10 23:53:35.685 DEBUG 41316 --- [    Test worker] org.hibernate.SQL                        : drop table if exists orders CASCADE 
+2021-09-10 23:53:35.685  INFO 41316 --- [    Test worker] p6spy                                    : #1631285615685 | took 0ms | statement | connection 2| url jdbc:h2:mem:79fc388e-25f3-4fc3-88c2-c728f39d1dc2
 drop table if exists orders CASCADE 
 drop table if exists orders CASCADE ;
-2021-09-08 17:45:24.661 DEBUG 45812 --- [    Test worker] org.hibernate.SQL                        : drop table if exists reservation CASCADE 
-2021-09-08 17:45:24.661  INFO 45812 --- [    Test worker] p6spy                                    : #1631090724661 | took 0ms | statement | connection 2| url jdbc:h2:mem:a6cf614a-72f4-4331-817f-769324c22774
+2021-09-10 23:53:35.686 DEBUG 41316 --- [    Test worker] org.hibernate.SQL                        : drop table if exists reservation CASCADE 
+2021-09-10 23:53:35.686  INFO 41316 --- [    Test worker] p6spy                                    : #1631285615686 | took 0ms | statement | connection 2| url jdbc:h2:mem:79fc388e-25f3-4fc3-88c2-c728f39d1dc2
 drop table if exists reservation CASCADE 
 drop table if exists reservation CASCADE ;
-2021-09-08 17:45:24.662 DEBUG 45812 --- [    Test worker] org.hibernate.SQL                        : drop table if exists seat CASCADE 
-2021-09-08 17:45:24.662  INFO 45812 --- [    Test worker] p6spy                                    : #1631090724662 | took 0ms | statement | connection 2| url jdbc:h2:mem:a6cf614a-72f4-4331-817f-769324c22774
+2021-09-10 23:53:35.686 DEBUG 41316 --- [    Test worker] org.hibernate.SQL                        : drop table if exists seat CASCADE 
+2021-09-10 23:53:35.687  INFO 41316 --- [    Test worker] p6spy                                    : #1631285615687 | took 0ms | statement | connection 2| url jdbc:h2:mem:79fc388e-25f3-4fc3-88c2-c728f39d1dc2
 drop table if exists seat CASCADE 
 drop table if exists seat CASCADE ;
-2021-09-08 17:45:24.662 DEBUG 45812 --- [    Test worker] org.hibernate.SQL                        : drop table if exists ticket_user CASCADE 
-2021-09-08 17:45:24.663  INFO 45812 --- [    Test worker] p6spy                                    : #1631090724663 | took 0ms | statement | connection 2| url jdbc:h2:mem:a6cf614a-72f4-4331-817f-769324c22774
+2021-09-10 23:53:35.687 DEBUG 41316 --- [    Test worker] org.hibernate.SQL                        : drop table if exists ticket_user CASCADE 
+2021-09-10 23:53:35.687  INFO 41316 --- [    Test worker] p6spy                                    : #1631285615687 | took 0ms | statement | connection 2| url jdbc:h2:mem:79fc388e-25f3-4fc3-88c2-c728f39d1dc2
 drop table if exists ticket_user CASCADE 
 drop table if exists ticket_user CASCADE ;
-2021-09-08 17:45:24.663 DEBUG 45812 --- [    Test worker] org.hibernate.SQL                        : drop table if exists user CASCADE 
-2021-09-08 17:45:24.663  INFO 45812 --- [    Test worker] p6spy                                    : #1631090724663 | took 0ms | statement | connection 2| url jdbc:h2:mem:a6cf614a-72f4-4331-817f-769324c22774
+2021-09-10 23:53:35.688 DEBUG 41316 --- [    Test worker] org.hibernate.SQL                        : drop table if exists user CASCADE 
+2021-09-10 23:53:35.688  INFO 41316 --- [    Test worker] p6spy                                    : #1631285615688 | took 0ms | statement | connection 2| url jdbc:h2:mem:79fc388e-25f3-4fc3-88c2-c728f39d1dc2
 drop table if exists user CASCADE 
 drop table if exists user CASCADE ;
-2021-09-08 17:45:24.664 DEBUG 45812 --- [    Test worker] org.hibernate.SQL                        : drop sequence if exists hibernate_sequence
-2021-09-08 17:45:24.664  INFO 45812 --- [    Test worker] p6spy                                    : #1631090724664 | took 0ms | statement | connection 2| url jdbc:h2:mem:a6cf614a-72f4-4331-817f-769324c22774
+2021-09-10 23:53:35.689 DEBUG 41316 --- [    Test worker] org.hibernate.SQL                        : drop sequence if exists hibernate_sequence
+2021-09-10 23:53:35.689  INFO 41316 --- [    Test worker] p6spy                                    : #1631285615689 | took 0ms | statement | connection 2| url jdbc:h2:mem:79fc388e-25f3-4fc3-88c2-c728f39d1dc2
 drop sequence if exists hibernate_sequence
 drop sequence if exists hibernate_sequence;
-2021-09-08 17:45:24.668 DEBUG 45812 --- [    Test worker] org.hibernate.SQL                        : create sequence hibernate_sequence start with 1 increment by 1
-2021-09-08 17:45:24.671  INFO 45812 --- [    Test worker] p6spy                                    : #1631090724671 | took 2ms | statement | connection 3| url jdbc:h2:mem:a6cf614a-72f4-4331-817f-769324c22774
+2021-09-10 23:53:35.693 DEBUG 41316 --- [    Test worker] org.hibernate.SQL                        : create sequence hibernate_sequence start with 1 increment by 1
+2021-09-10 23:53:35.696  INFO 41316 --- [    Test worker] p6spy                                    : #1631285615696 | took 2ms | statement | connection 3| url jdbc:h2:mem:79fc388e-25f3-4fc3-88c2-c728f39d1dc2
 create sequence hibernate_sequence start with 1 increment by 1
 create sequence hibernate_sequence start with 1 increment by 1;
-2021-09-08 17:45:24.672 DEBUG 45812 --- [    Test worker] org.hibernate.SQL                        : create table board (board_id bigint not null, content varchar(255), created_date timestamp, last_modified_date timestamp, title varchar(255), manager_id bigint, primary key (board_id))
-2021-09-08 17:45:24.679  INFO 45812 --- [    Test worker] p6spy                                    : #1631090724679 | took 6ms | statement | connection 3| url jdbc:h2:mem:a6cf614a-72f4-4331-817f-769324c22774
+2021-09-10 23:53:35.696 DEBUG 41316 --- [    Test worker] org.hibernate.SQL                        : create table board (board_id bigint not null, content varchar(255), created_date timestamp, last_modified_date timestamp, title varchar(255), manager_id bigint, primary key (board_id))
+2021-09-10 23:53:35.704  INFO 41316 --- [    Test worker] p6spy                                    : #1631285615704 | took 7ms | statement | connection 3| url jdbc:h2:mem:79fc388e-25f3-4fc3-88c2-c728f39d1dc2
 create table board (board_id bigint not null, content varchar(255), created_date timestamp, last_modified_date timestamp, title varchar(255), manager_id bigint, primary key (board_id))
 create table board (board_id bigint not null, content varchar(255), created_date timestamp, last_modified_date timestamp, title varchar(255), manager_id bigint, primary key (board_id));
-2021-09-08 17:45:24.679 DEBUG 45812 --- [    Test worker] org.hibernate.SQL                        : create table item (item_id bigint not null, hour_type varchar(255), price integer not null, ticket varchar(255), primary key (item_id))
-2021-09-08 17:45:24.681  INFO 45812 --- [    Test worker] p6spy                                    : #1631090724681 | took 1ms | statement | connection 3| url jdbc:h2:mem:a6cf614a-72f4-4331-817f-769324c22774
+2021-09-10 23:53:35.704 DEBUG 41316 --- [    Test worker] org.hibernate.SQL                        : create table item (item_id bigint not null, hour_type varchar(255), price integer not null, ticket varchar(255), primary key (item_id))
+2021-09-10 23:53:35.706  INFO 41316 --- [    Test worker] p6spy                                    : #1631285615706 | took 1ms | statement | connection 3| url jdbc:h2:mem:79fc388e-25f3-4fc3-88c2-c728f39d1dc2
 create table item (item_id bigint not null, hour_type varchar(255), price integer not null, ticket varchar(255), primary key (item_id))
 create table item (item_id bigint not null, hour_type varchar(255), price integer not null, ticket varchar(255), primary key (item_id));
-2021-09-08 17:45:24.681 DEBUG 45812 --- [    Test worker] org.hibernate.SQL                        : create table manager (manager_id bigint not null, login_id varchar(255), name varchar(255), password varchar(255), primary key (manager_id))
-2021-09-08 17:45:24.683  INFO 45812 --- [    Test worker] p6spy                                    : #1631090724683 | took 1ms | statement | connection 3| url jdbc:h2:mem:a6cf614a-72f4-4331-817f-769324c22774
+2021-09-10 23:53:35.706 DEBUG 41316 --- [    Test worker] org.hibernate.SQL                        : create table manager (manager_id bigint not null, login_id varchar(255), name varchar(255), password varchar(255), primary key (manager_id))
+2021-09-10 23:53:35.707  INFO 41316 --- [    Test worker] p6spy                                    : #1631285615707 | took 0ms | statement | connection 3| url jdbc:h2:mem:79fc388e-25f3-4fc3-88c2-c728f39d1dc2
 create table manager (manager_id bigint not null, login_id varchar(255), name varchar(255), password varchar(255), primary key (manager_id))
 create table manager (manager_id bigint not null, login_id varchar(255), name varchar(255), password varchar(255), primary key (manager_id));
-2021-09-08 17:45:24.684 DEBUG 45812 --- [    Test worker] org.hibernate.SQL                        : create table orders (orders_id bigint not null, order_date timestamp, order_type varchar(255), item_id bigint, user_id bigint, primary key (orders_id))
-2021-09-08 17:45:24.686  INFO 45812 --- [    Test worker] p6spy                                    : #1631090724686 | took 1ms | statement | connection 3| url jdbc:h2:mem:a6cf614a-72f4-4331-817f-769324c22774
+2021-09-10 23:53:35.708 DEBUG 41316 --- [    Test worker] org.hibernate.SQL                        : create table orders (orders_id bigint not null, order_date timestamp, order_type varchar(255), item_id bigint, user_id bigint, primary key (orders_id))
+2021-09-10 23:53:35.709  INFO 41316 --- [    Test worker] p6spy                                    : #1631285615709 | took 1ms | statement | connection 3| url jdbc:h2:mem:79fc388e-25f3-4fc3-88c2-c728f39d1dc2
 create table orders (orders_id bigint not null, order_date timestamp, order_type varchar(255), item_id bigint, user_id bigint, primary key (orders_id))
 create table orders (orders_id bigint not null, order_date timestamp, order_type varchar(255), item_id bigint, user_id bigint, primary key (orders_id));
-2021-09-08 17:45:24.686 DEBUG 45812 --- [    Test worker] org.hibernate.SQL                        : create table reservation (reservation_id bigint not null, enter_date timestamp, exit_date timestamp, seat_id bigint, user_id bigint, primary key (reservation_id))
-2021-09-08 17:45:24.688  INFO 45812 --- [    Test worker] p6spy                                    : #1631090724688 | took 1ms | statement | connection 3| url jdbc:h2:mem:a6cf614a-72f4-4331-817f-769324c22774
+2021-09-10 23:53:35.710 DEBUG 41316 --- [    Test worker] org.hibernate.SQL                        : create table reservation (reservation_id bigint not null, enter_date timestamp, exit_date timestamp, seat_id bigint, user_id bigint, primary key (reservation_id))
+2021-09-10 23:53:35.711  INFO 41316 --- [    Test worker] p6spy                                    : #1631285615711 | took 1ms | statement | connection 3| url jdbc:h2:mem:79fc388e-25f3-4fc3-88c2-c728f39d1dc2
 create table reservation (reservation_id bigint not null, enter_date timestamp, exit_date timestamp, seat_id bigint, user_id bigint, primary key (reservation_id))
 create table reservation (reservation_id bigint not null, enter_date timestamp, exit_date timestamp, seat_id bigint, user_id bigint, primary key (reservation_id));
-2021-09-08 17:45:24.688 DEBUG 45812 --- [    Test worker] org.hibernate.SQL                        : create table seat (seat_id bigint not null, seat_number integer not null, seat_status varchar(255), primary key (seat_id))
-2021-09-08 17:45:24.690  INFO 45812 --- [    Test worker] p6spy                                    : #1631090724690 | took 1ms | statement | connection 3| url jdbc:h2:mem:a6cf614a-72f4-4331-817f-769324c22774
+2021-09-10 23:53:35.712 DEBUG 41316 --- [    Test worker] org.hibernate.SQL                        : create table seat (seat_id bigint not null, seat_number integer not null, seat_status varchar(255), primary key (seat_id))
+2021-09-10 23:53:35.713  INFO 41316 --- [    Test worker] p6spy                                    : #1631285615713 | took 1ms | statement | connection 3| url jdbc:h2:mem:79fc388e-25f3-4fc3-88c2-c728f39d1dc2
 create table seat (seat_id bigint not null, seat_number integer not null, seat_status varchar(255), primary key (seat_id))
 create table seat (seat_id bigint not null, seat_number integer not null, seat_status varchar(255), primary key (seat_id));
-2021-09-08 17:45:24.690 DEBUG 45812 --- [    Test worker] org.hibernate.SQL                        : create table ticket_user (ticket_id bigint not null, expired_date timestamp, user_user_id bigint, primary key (ticket_id))
-2021-09-08 17:45:24.692  INFO 45812 --- [    Test worker] p6spy                                    : #1631090724692 | took 1ms | statement | connection 3| url jdbc:h2:mem:a6cf614a-72f4-4331-817f-769324c22774
+2021-09-10 23:53:35.713 DEBUG 41316 --- [    Test worker] org.hibernate.SQL                        : create table ticket_user (ticket_id bigint not null, expired_date timestamp, user_user_id bigint, primary key (ticket_id))
+2021-09-10 23:53:35.715  INFO 41316 --- [    Test worker] p6spy                                    : #1631285615715 | took 1ms | statement | connection 3| url jdbc:h2:mem:79fc388e-25f3-4fc3-88c2-c728f39d1dc2
 create table ticket_user (ticket_id bigint not null, expired_date timestamp, user_user_id bigint, primary key (ticket_id))
 create table ticket_user (ticket_id bigint not null, expired_date timestamp, user_user_id bigint, primary key (ticket_id));
-2021-09-08 17:45:24.692 DEBUG 45812 --- [    Test worker] org.hibernate.SQL                        : create table user (user_id bigint not null, age integer not null, created_date timestamp, gender varchar(255), last_modified_date timestamp, login_id varchar(255), name varchar(255), password varchar(255), ticket_id bigint, primary key (user_id))
-2021-09-08 17:45:24.694  INFO 45812 --- [    Test worker] p6spy                                    : #1631090724694 | took 1ms | statement | connection 3| url jdbc:h2:mem:a6cf614a-72f4-4331-817f-769324c22774
+2021-09-10 23:53:35.715 DEBUG 41316 --- [    Test worker] org.hibernate.SQL                        : create table user (user_id bigint not null, age integer not null, created_date timestamp, gender varchar(255), last_modified_date timestamp, login_id varchar(255), name varchar(255), password varchar(255), ticket_id bigint, primary key (user_id))
+2021-09-10 23:53:35.716  INFO 41316 --- [    Test worker] p6spy                                    : #1631285615716 | took 1ms | statement | connection 3| url jdbc:h2:mem:79fc388e-25f3-4fc3-88c2-c728f39d1dc2
 create table user (user_id bigint not null, age integer not null, created_date timestamp, gender varchar(255), last_modified_date timestamp, login_id varchar(255), name varchar(255), password varchar(255), ticket_id bigint, primary key (user_id))
 create table user (user_id bigint not null, age integer not null, created_date timestamp, gender varchar(255), last_modified_date timestamp, login_id varchar(255), name varchar(255), password varchar(255), ticket_id bigint, primary key (user_id));
-2021-09-08 17:45:24.695 DEBUG 45812 --- [    Test worker] org.hibernate.SQL                        : alter table board add constraint FK823kr97vy648u763w10vwv95i foreign key (manager_id) references manager
-2021-09-08 17:45:24.705  INFO 45812 --- [    Test worker] p6spy                                    : #1631090724705 | took 10ms | statement | connection 3| url jdbc:h2:mem:a6cf614a-72f4-4331-817f-769324c22774
+2021-09-10 23:53:35.717 DEBUG 41316 --- [    Test worker] org.hibernate.SQL                        : alter table board add constraint FK823kr97vy648u763w10vwv95i foreign key (manager_id) references manager
+2021-09-10 23:53:35.726  INFO 41316 --- [    Test worker] p6spy                                    : #1631285615726 | took 9ms | statement | connection 3| url jdbc:h2:mem:79fc388e-25f3-4fc3-88c2-c728f39d1dc2
 alter table board add constraint FK823kr97vy648u763w10vwv95i foreign key (manager_id) references manager
 alter table board add constraint FK823kr97vy648u763w10vwv95i foreign key (manager_id) references manager;
-2021-09-08 17:45:24.706 DEBUG 45812 --- [    Test worker] org.hibernate.SQL                        : alter table orders add constraint FK1f1jovhxtx7fax217fq0gi17 foreign key (item_id) references item
-2021-09-08 17:45:24.707  INFO 45812 --- [    Test worker] p6spy                                    : #1631090724707 | took 1ms | statement | connection 3| url jdbc:h2:mem:a6cf614a-72f4-4331-817f-769324c22774
+2021-09-10 23:53:35.726 DEBUG 41316 --- [    Test worker] org.hibernate.SQL                        : alter table orders add constraint FK1f1jovhxtx7fax217fq0gi17 foreign key (item_id) references item
+2021-09-10 23:53:35.728  INFO 41316 --- [    Test worker] p6spy                                    : #1631285615728 | took 1ms | statement | connection 3| url jdbc:h2:mem:79fc388e-25f3-4fc3-88c2-c728f39d1dc2
 alter table orders add constraint FK1f1jovhxtx7fax217fq0gi17 foreign key (item_id) references item
 alter table orders add constraint FK1f1jovhxtx7fax217fq0gi17 foreign key (item_id) references item;
-2021-09-08 17:45:24.708 DEBUG 45812 --- [    Test worker] org.hibernate.SQL                        : alter table orders add constraint FKel9kyl84ego2otj2accfd8mr7 foreign key (user_id) references user
-2021-09-08 17:45:24.710  INFO 45812 --- [    Test worker] p6spy                                    : #1631090724710 | took 1ms | statement | connection 3| url jdbc:h2:mem:a6cf614a-72f4-4331-817f-769324c22774
+2021-09-10 23:53:35.729 DEBUG 41316 --- [    Test worker] org.hibernate.SQL                        : alter table orders add constraint FKel9kyl84ego2otj2accfd8mr7 foreign key (user_id) references user
+2021-09-10 23:53:35.731  INFO 41316 --- [    Test worker] p6spy                                    : #1631285615731 | took 1ms | statement | connection 3| url jdbc:h2:mem:79fc388e-25f3-4fc3-88c2-c728f39d1dc2
 alter table orders add constraint FKel9kyl84ego2otj2accfd8mr7 foreign key (user_id) references user
 alter table orders add constraint FKel9kyl84ego2otj2accfd8mr7 foreign key (user_id) references user;
-2021-09-08 17:45:24.710 DEBUG 45812 --- [    Test worker] org.hibernate.SQL                        : alter table reservation add constraint FKewd3sohjspqf2sjjvdcmcefpb foreign key (seat_id) references seat
-2021-09-08 17:45:24.713  INFO 45812 --- [    Test worker] p6spy                                    : #1631090724713 | took 2ms | statement | connection 3| url jdbc:h2:mem:a6cf614a-72f4-4331-817f-769324c22774
+2021-09-10 23:53:35.731 DEBUG 41316 --- [    Test worker] org.hibernate.SQL                        : alter table reservation add constraint FKewd3sohjspqf2sjjvdcmcefpb foreign key (seat_id) references seat
+2021-09-10 23:53:35.733  INFO 41316 --- [    Test worker] p6spy                                    : #1631285615733 | took 1ms | statement | connection 3| url jdbc:h2:mem:79fc388e-25f3-4fc3-88c2-c728f39d1dc2
 alter table reservation add constraint FKewd3sohjspqf2sjjvdcmcefpb foreign key (seat_id) references seat
 alter table reservation add constraint FKewd3sohjspqf2sjjvdcmcefpb foreign key (seat_id) references seat;
-2021-09-08 17:45:24.713 DEBUG 45812 --- [    Test worker] org.hibernate.SQL                        : alter table reservation add constraint FKm4oimk0l1757o9pwavorj6ljg foreign key (user_id) references user
-2021-09-08 17:45:24.715  INFO 45812 --- [    Test worker] p6spy                                    : #1631090724715 | took 1ms | statement | connection 3| url jdbc:h2:mem:a6cf614a-72f4-4331-817f-769324c22774
+2021-09-10 23:53:35.733 DEBUG 41316 --- [    Test worker] org.hibernate.SQL                        : alter table reservation add constraint FKm4oimk0l1757o9pwavorj6ljg foreign key (user_id) references user
+2021-09-10 23:53:35.735  INFO 41316 --- [    Test worker] p6spy                                    : #1631285615735 | took 1ms | statement | connection 3| url jdbc:h2:mem:79fc388e-25f3-4fc3-88c2-c728f39d1dc2
 alter table reservation add constraint FKm4oimk0l1757o9pwavorj6ljg foreign key (user_id) references user
 alter table reservation add constraint FKm4oimk0l1757o9pwavorj6ljg foreign key (user_id) references user;
-2021-09-08 17:45:24.715 DEBUG 45812 --- [    Test worker] org.hibernate.SQL                        : alter table ticket_user add constraint FKj6famkhbucghqhg4diwlvrvaa foreign key (user_user_id) references user
-2021-09-08 17:45:24.717  INFO 45812 --- [    Test worker] p6spy                                    : #1631090724717 | took 1ms | statement | connection 3| url jdbc:h2:mem:a6cf614a-72f4-4331-817f-769324c22774
+2021-09-10 23:53:35.735 DEBUG 41316 --- [    Test worker] org.hibernate.SQL                        : alter table ticket_user add constraint FKj6famkhbucghqhg4diwlvrvaa foreign key (user_user_id) references user
+2021-09-10 23:53:35.737  INFO 41316 --- [    Test worker] p6spy                                    : #1631285615737 | took 1ms | statement | connection 3| url jdbc:h2:mem:79fc388e-25f3-4fc3-88c2-c728f39d1dc2
 alter table ticket_user add constraint FKj6famkhbucghqhg4diwlvrvaa foreign key (user_user_id) references user
 alter table ticket_user add constraint FKj6famkhbucghqhg4diwlvrvaa foreign key (user_user_id) references user;
-2021-09-08 17:45:24.717 DEBUG 45812 --- [    Test worker] org.hibernate.SQL                        : alter table user add constraint FK38t21tkxjyxjscd7w5o8y36lk foreign key (ticket_id) references ticket_user
-2021-09-08 17:45:24.719  INFO 45812 --- [    Test worker] p6spy                                    : #1631090724719 | took 1ms | statement | connection 3| url jdbc:h2:mem:a6cf614a-72f4-4331-817f-769324c22774
+2021-09-10 23:53:35.737 DEBUG 41316 --- [    Test worker] org.hibernate.SQL                        : alter table user add constraint FK38t21tkxjyxjscd7w5o8y36lk foreign key (ticket_id) references ticket_user
+2021-09-10 23:53:35.739  INFO 41316 --- [    Test worker] p6spy                                    : #1631285615739 | took 1ms | statement | connection 3| url jdbc:h2:mem:79fc388e-25f3-4fc3-88c2-c728f39d1dc2
 alter table user add constraint FK38t21tkxjyxjscd7w5o8y36lk foreign key (ticket_id) references ticket_user
 alter table user add constraint FK38t21tkxjyxjscd7w5o8y36lk foreign key (ticket_id) references ticket_user;
-2021-09-08 17:45:24.723  INFO 45812 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2021-09-08 17:45:24.737  INFO 45812 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2021-09-08 17:45:25.983 DEBUG 45812 --- [    Test worker] org.hibernate.SQL                        : call next value for hibernate_sequence
-2021-09-08 17:45:25.996  INFO 45812 --- [    Test worker] p6spy                                    : #1631090725996 | took 4ms | statement | connection 4| url jdbc:h2:mem:a6cf614a-72f4-4331-817f-769324c22774
+2021-09-10 23:53:35.744  INFO 41316 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-09-10 23:53:35.756  INFO 41316 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-09-10 23:53:36.791 DEBUG 41316 --- [    Test worker] org.hibernate.SQL                        : call next value for hibernate_sequence
+2021-09-10 23:53:36.802  INFO 41316 --- [    Test worker] p6spy                                    : #1631285616802 | took 3ms | statement | connection 4| url jdbc:h2:mem:79fc388e-25f3-4fc3-88c2-c728f39d1dc2
 call next value for hibernate_sequence
 call next value for hibernate_sequence;
-2021-09-08 17:45:26.059 DEBUG 45812 --- [    Test worker] org.hibernate.SQL                        : insert into seat (seat_number, seat_status, seat_id) values (?, ?, ?)
-2021-09-08 17:45:26.063  INFO 45812 --- [    Test worker] p6spy                                    : #1631090726063 | took 0ms | statement | connection 4| url jdbc:h2:mem:a6cf614a-72f4-4331-817f-769324c22774
+2021-09-10 23:53:36.854 DEBUG 41316 --- [    Test worker] org.hibernate.SQL                        : insert into seat (seat_number, seat_status, seat_id) values (?, ?, ?)
+2021-09-10 23:53:36.856  INFO 41316 --- [    Test worker] p6spy                                    : #1631285616856 | took 0ms | statement | connection 4| url jdbc:h2:mem:79fc388e-25f3-4fc3-88c2-c728f39d1dc2
 insert into seat (seat_number, seat_status, seat_id) values (?, ?, ?)
 insert into seat (seat_number, seat_status, seat_id) values (1, 'AVAILABLE', 1);
-2021-09-08 17:45:26.068  INFO 45812 --- [    Test worker] p6spy                                    : #1631090726068 | took 0ms | commit | connection 4| url jdbc:h2:mem:a6cf614a-72f4-4331-817f-769324c22774
+2021-09-10 23:53:36.859  INFO 41316 --- [    Test worker] p6spy                                    : #1631285616859 | took 0ms | commit | connection 4| url jdbc:h2:mem:79fc388e-25f3-4fc3-88c2-c728f39d1dc2
 
 ;
-2021-09-08 17:45:26.070 DEBUG 45812 --- [    Test worker] org.hibernate.SQL                        : call next value for hibernate_sequence
-2021-09-08 17:45:26.070  INFO 45812 --- [    Test worker] p6spy                                    : #1631090726070 | took 0ms | statement | connection 5| url jdbc:h2:mem:a6cf614a-72f4-4331-817f-769324c22774
+2021-09-10 23:53:36.861 DEBUG 41316 --- [    Test worker] org.hibernate.SQL                        : call next value for hibernate_sequence
+2021-09-10 23:53:36.861  INFO 41316 --- [    Test worker] p6spy                                    : #1631285616861 | took 0ms | statement | connection 5| url jdbc:h2:mem:79fc388e-25f3-4fc3-88c2-c728f39d1dc2
 call next value for hibernate_sequence
 call next value for hibernate_sequence;
-2021-09-08 17:45:26.071 DEBUG 45812 --- [    Test worker] org.hibernate.SQL                        : insert into seat (seat_number, seat_status, seat_id) values (?, ?, ?)
-2021-09-08 17:45:26.072  INFO 45812 --- [    Test worker] p6spy                                    : #1631090726072 | took 0ms | statement | connection 5| url jdbc:h2:mem:a6cf614a-72f4-4331-817f-769324c22774
+2021-09-10 23:53:36.862 DEBUG 41316 --- [    Test worker] org.hibernate.SQL                        : insert into seat (seat_number, seat_status, seat_id) values (?, ?, ?)
+2021-09-10 23:53:36.862  INFO 41316 --- [    Test worker] p6spy                                    : #1631285616862 | took 0ms | statement | connection 5| url jdbc:h2:mem:79fc388e-25f3-4fc3-88c2-c728f39d1dc2
 insert into seat (seat_number, seat_status, seat_id) values (?, ?, ?)
 insert into seat (seat_number, seat_status, seat_id) values (2, 'AVAILABLE', 2);
-2021-09-08 17:45:26.073  INFO 45812 --- [    Test worker] p6spy                                    : #1631090726073 | took 0ms | commit | connection 5| url jdbc:h2:mem:a6cf614a-72f4-4331-817f-769324c22774
+2021-09-10 23:53:36.863  INFO 41316 --- [    Test worker] p6spy                                    : #1631285616863 | took 0ms | commit | connection 5| url jdbc:h2:mem:79fc388e-25f3-4fc3-88c2-c728f39d1dc2
 
 ;
-2021-09-08 17:45:26.075 DEBUG 45812 --- [    Test worker] org.hibernate.SQL                        : call next value for hibernate_sequence
-2021-09-08 17:45:26.076  INFO 45812 --- [    Test worker] p6spy                                    : #1631090726076 | took 0ms | statement | connection 6| url jdbc:h2:mem:a6cf614a-72f4-4331-817f-769324c22774
+2021-09-10 23:53:36.864 DEBUG 41316 --- [    Test worker] org.hibernate.SQL                        : call next value for hibernate_sequence
+2021-09-10 23:53:36.864  INFO 41316 --- [    Test worker] p6spy                                    : #1631285616864 | took 0ms | statement | connection 6| url jdbc:h2:mem:79fc388e-25f3-4fc3-88c2-c728f39d1dc2
 call next value for hibernate_sequence
 call next value for hibernate_sequence;
-2021-09-08 17:45:26.077 DEBUG 45812 --- [    Test worker] org.hibernate.SQL                        : insert into seat (seat_number, seat_status, seat_id) values (?, ?, ?)
-2021-09-08 17:45:26.077  INFO 45812 --- [    Test worker] p6spy                                    : #1631090726077 | took 0ms | statement | connection 6| url jdbc:h2:mem:a6cf614a-72f4-4331-817f-769324c22774
+2021-09-10 23:53:36.865 DEBUG 41316 --- [    Test worker] org.hibernate.SQL                        : insert into seat (seat_number, seat_status, seat_id) values (?, ?, ?)
+2021-09-10 23:53:36.865  INFO 41316 --- [    Test worker] p6spy                                    : #1631285616865 | took 0ms | statement | connection 6| url jdbc:h2:mem:79fc388e-25f3-4fc3-88c2-c728f39d1dc2
 insert into seat (seat_number, seat_status, seat_id) values (?, ?, ?)
 insert into seat (seat_number, seat_status, seat_id) values (3, 'AVAILABLE', 3);
-2021-09-08 17:45:26.078  INFO 45812 --- [    Test worker] p6spy                                    : #1631090726078 | took 0ms | commit | connection 6| url jdbc:h2:mem:a6cf614a-72f4-4331-817f-769324c22774
+2021-09-10 23:53:36.865  INFO 41316 --- [    Test worker] p6spy                                    : #1631285616865 | took 0ms | commit | connection 6| url jdbc:h2:mem:79fc388e-25f3-4fc3-88c2-c728f39d1dc2
 
 ;
-2021-09-08 17:45:26.079 DEBUG 45812 --- [    Test worker] org.hibernate.SQL                        : call next value for hibernate_sequence
-2021-09-08 17:45:26.079  INFO 45812 --- [    Test worker] p6spy                                    : #1631090726079 | took 0ms | statement | connection 7| url jdbc:h2:mem:a6cf614a-72f4-4331-817f-769324c22774
+2021-09-10 23:53:36.866 DEBUG 41316 --- [    Test worker] org.hibernate.SQL                        : call next value for hibernate_sequence
+2021-09-10 23:53:36.866  INFO 41316 --- [    Test worker] p6spy                                    : #1631285616866 | took 0ms | statement | connection 7| url jdbc:h2:mem:79fc388e-25f3-4fc3-88c2-c728f39d1dc2
 call next value for hibernate_sequence
 call next value for hibernate_sequence;
-2021-09-08 17:45:26.080 DEBUG 45812 --- [    Test worker] org.hibernate.SQL                        : insert into seat (seat_number, seat_status, seat_id) values (?, ?, ?)
-2021-09-08 17:45:26.081  INFO 45812 --- [    Test worker] p6spy                                    : #1631090726081 | took 0ms | statement | connection 7| url jdbc:h2:mem:a6cf614a-72f4-4331-817f-769324c22774
+2021-09-10 23:53:36.867 DEBUG 41316 --- [    Test worker] org.hibernate.SQL                        : insert into seat (seat_number, seat_status, seat_id) values (?, ?, ?)
+2021-09-10 23:53:36.867  INFO 41316 --- [    Test worker] p6spy                                    : #1631285616867 | took 0ms | statement | connection 7| url jdbc:h2:mem:79fc388e-25f3-4fc3-88c2-c728f39d1dc2
 insert into seat (seat_number, seat_status, seat_id) values (?, ?, ?)
 insert into seat (seat_number, seat_status, seat_id) values (4, 'AVAILABLE', 4);
-2021-09-08 17:45:26.083  INFO 45812 --- [    Test worker] p6spy                                    : #1631090726083 | took 0ms | commit | connection 7| url jdbc:h2:mem:a6cf614a-72f4-4331-817f-769324c22774
+2021-09-10 23:53:36.868  INFO 41316 --- [    Test worker] p6spy                                    : #1631285616868 | took 0ms | commit | connection 7| url jdbc:h2:mem:79fc388e-25f3-4fc3-88c2-c728f39d1dc2
 
 ;
-2021-09-08 17:45:26.084 DEBUG 45812 --- [    Test worker] org.hibernate.SQL                        : call next value for hibernate_sequence
-2021-09-08 17:45:26.085  INFO 45812 --- [    Test worker] p6spy                                    : #1631090726085 | took 0ms | statement | connection 8| url jdbc:h2:mem:a6cf614a-72f4-4331-817f-769324c22774
+2021-09-10 23:53:36.869 DEBUG 41316 --- [    Test worker] org.hibernate.SQL                        : call next value for hibernate_sequence
+2021-09-10 23:53:36.869  INFO 41316 --- [    Test worker] p6spy                                    : #1631285616869 | took 0ms | statement | connection 8| url jdbc:h2:mem:79fc388e-25f3-4fc3-88c2-c728f39d1dc2
 call next value for hibernate_sequence
 call next value for hibernate_sequence;
-2021-09-08 17:45:26.086 DEBUG 45812 --- [    Test worker] org.hibernate.SQL                        : insert into seat (seat_number, seat_status, seat_id) values (?, ?, ?)
-2021-09-08 17:45:26.086  INFO 45812 --- [    Test worker] p6spy                                    : #1631090726086 | took 0ms | statement | connection 8| url jdbc:h2:mem:a6cf614a-72f4-4331-817f-769324c22774
+2021-09-10 23:53:36.870 DEBUG 41316 --- [    Test worker] org.hibernate.SQL                        : insert into seat (seat_number, seat_status, seat_id) values (?, ?, ?)
+2021-09-10 23:53:36.870  INFO 41316 --- [    Test worker] p6spy                                    : #1631285616870 | took 0ms | statement | connection 8| url jdbc:h2:mem:79fc388e-25f3-4fc3-88c2-c728f39d1dc2
 insert into seat (seat_number, seat_status, seat_id) values (?, ?, ?)
 insert into seat (seat_number, seat_status, seat_id) values (5, 'AVAILABLE', 5);
-2021-09-08 17:45:26.087  INFO 45812 --- [    Test worker] p6spy                                    : #1631090726087 | took 0ms | commit | connection 8| url jdbc:h2:mem:a6cf614a-72f4-4331-817f-769324c22774
+2021-09-10 23:53:36.870  INFO 41316 --- [    Test worker] p6spy                                    : #1631285616870 | took 0ms | commit | connection 8| url jdbc:h2:mem:79fc388e-25f3-4fc3-88c2-c728f39d1dc2
 
 ;
-2021-09-08 17:45:26.089 DEBUG 45812 --- [    Test worker] org.hibernate.SQL                        : call next value for hibernate_sequence
-2021-09-08 17:45:26.090  INFO 45812 --- [    Test worker] p6spy                                    : #1631090726090 | took 0ms | statement | connection 9| url jdbc:h2:mem:a6cf614a-72f4-4331-817f-769324c22774
+2021-09-10 23:53:36.871 DEBUG 41316 --- [    Test worker] org.hibernate.SQL                        : call next value for hibernate_sequence
+2021-09-10 23:53:36.871  INFO 41316 --- [    Test worker] p6spy                                    : #1631285616871 | took 0ms | statement | connection 9| url jdbc:h2:mem:79fc388e-25f3-4fc3-88c2-c728f39d1dc2
 call next value for hibernate_sequence
 call next value for hibernate_sequence;
-2021-09-08 17:45:26.092 DEBUG 45812 --- [    Test worker] org.hibernate.SQL                        : insert into seat (seat_number, seat_status, seat_id) values (?, ?, ?)
-2021-09-08 17:45:26.093  INFO 45812 --- [    Test worker] p6spy                                    : #1631090726093 | took 0ms | statement | connection 9| url jdbc:h2:mem:a6cf614a-72f4-4331-817f-769324c22774
+2021-09-10 23:53:36.872 DEBUG 41316 --- [    Test worker] org.hibernate.SQL                        : insert into seat (seat_number, seat_status, seat_id) values (?, ?, ?)
+2021-09-10 23:53:36.873  INFO 41316 --- [    Test worker] p6spy                                    : #1631285616873 | took 0ms | statement | connection 9| url jdbc:h2:mem:79fc388e-25f3-4fc3-88c2-c728f39d1dc2
 insert into seat (seat_number, seat_status, seat_id) values (?, ?, ?)
 insert into seat (seat_number, seat_status, seat_id) values (6, 'AVAILABLE', 6);
-2021-09-08 17:45:26.094  INFO 45812 --- [    Test worker] p6spy                                    : #1631090726094 | took 0ms | commit | connection 9| url jdbc:h2:mem:a6cf614a-72f4-4331-817f-769324c22774
+2021-09-10 23:53:36.873  INFO 41316 --- [    Test worker] p6spy                                    : #1631285616873 | took 0ms | commit | connection 9| url jdbc:h2:mem:79fc388e-25f3-4fc3-88c2-c728f39d1dc2
 
 ;
-2021-09-08 17:45:26.095 DEBUG 45812 --- [    Test worker] org.hibernate.SQL                        : call next value for hibernate_sequence
-2021-09-08 17:45:26.095  INFO 45812 --- [    Test worker] p6spy                                    : #1631090726095 | took 0ms | statement | connection 10| url jdbc:h2:mem:a6cf614a-72f4-4331-817f-769324c22774
+2021-09-10 23:53:36.874 DEBUG 41316 --- [    Test worker] org.hibernate.SQL                        : call next value for hibernate_sequence
+2021-09-10 23:53:36.874  INFO 41316 --- [    Test worker] p6spy                                    : #1631285616874 | took 0ms | statement | connection 10| url jdbc:h2:mem:79fc388e-25f3-4fc3-88c2-c728f39d1dc2
 call next value for hibernate_sequence
 call next value for hibernate_sequence;
-2021-09-08 17:45:26.096 DEBUG 45812 --- [    Test worker] org.hibernate.SQL                        : insert into seat (seat_number, seat_status, seat_id) values (?, ?, ?)
-2021-09-08 17:45:26.097  INFO 45812 --- [    Test worker] p6spy                                    : #1631090726097 | took 0ms | statement | connection 10| url jdbc:h2:mem:a6cf614a-72f4-4331-817f-769324c22774
+2021-09-10 23:53:36.874 DEBUG 41316 --- [    Test worker] org.hibernate.SQL                        : insert into seat (seat_number, seat_status, seat_id) values (?, ?, ?)
+2021-09-10 23:53:36.875  INFO 41316 --- [    Test worker] p6spy                                    : #1631285616875 | took 0ms | statement | connection 10| url jdbc:h2:mem:79fc388e-25f3-4fc3-88c2-c728f39d1dc2
 insert into seat (seat_number, seat_status, seat_id) values (?, ?, ?)
 insert into seat (seat_number, seat_status, seat_id) values (7, 'AVAILABLE', 7);
-2021-09-08 17:45:26.099  INFO 45812 --- [    Test worker] p6spy                                    : #1631090726099 | took 0ms | commit | connection 10| url jdbc:h2:mem:a6cf614a-72f4-4331-817f-769324c22774
+2021-09-10 23:53:36.875  INFO 41316 --- [    Test worker] p6spy                                    : #1631285616875 | took 0ms | commit | connection 10| url jdbc:h2:mem:79fc388e-25f3-4fc3-88c2-c728f39d1dc2
 
 ;
-2021-09-08 17:45:26.100 DEBUG 45812 --- [    Test worker] org.hibernate.SQL                        : call next value for hibernate_sequence
-2021-09-08 17:45:26.101  INFO 45812 --- [    Test worker] p6spy                                    : #1631090726101 | took 0ms | statement | connection 11| url jdbc:h2:mem:a6cf614a-72f4-4331-817f-769324c22774
+2021-09-10 23:53:36.876 DEBUG 41316 --- [    Test worker] org.hibernate.SQL                        : call next value for hibernate_sequence
+2021-09-10 23:53:36.877  INFO 41316 --- [    Test worker] p6spy                                    : #1631285616877 | took 0ms | statement | connection 11| url jdbc:h2:mem:79fc388e-25f3-4fc3-88c2-c728f39d1dc2
 call next value for hibernate_sequence
 call next value for hibernate_sequence;
-2021-09-08 17:45:26.102 DEBUG 45812 --- [    Test worker] org.hibernate.SQL                        : insert into seat (seat_number, seat_status, seat_id) values (?, ?, ?)
-2021-09-08 17:45:26.102  INFO 45812 --- [    Test worker] p6spy                                    : #1631090726102 | took 0ms | statement | connection 11| url jdbc:h2:mem:a6cf614a-72f4-4331-817f-769324c22774
+2021-09-10 23:53:36.877 DEBUG 41316 --- [    Test worker] org.hibernate.SQL                        : insert into seat (seat_number, seat_status, seat_id) values (?, ?, ?)
+2021-09-10 23:53:36.878  INFO 41316 --- [    Test worker] p6spy                                    : #1631285616878 | took 0ms | statement | connection 11| url jdbc:h2:mem:79fc388e-25f3-4fc3-88c2-c728f39d1dc2
 insert into seat (seat_number, seat_status, seat_id) values (?, ?, ?)
 insert into seat (seat_number, seat_status, seat_id) values (8, 'AVAILABLE', 8);
-2021-09-08 17:45:26.103  INFO 45812 --- [    Test worker] p6spy                                    : #1631090726103 | took 0ms | commit | connection 11| url jdbc:h2:mem:a6cf614a-72f4-4331-817f-769324c22774
+2021-09-10 23:53:36.879  INFO 41316 --- [    Test worker] p6spy                                    : #1631285616879 | took 0ms | commit | connection 11| url jdbc:h2:mem:79fc388e-25f3-4fc3-88c2-c728f39d1dc2
 
 ;
-2021-09-08 17:45:26.105 DEBUG 45812 --- [    Test worker] org.hibernate.SQL                        : call next value for hibernate_sequence
-2021-09-08 17:45:26.105  INFO 45812 --- [    Test worker] p6spy                                    : #1631090726105 | took 0ms | statement | connection 12| url jdbc:h2:mem:a6cf614a-72f4-4331-817f-769324c22774
+2021-09-10 23:53:36.880 DEBUG 41316 --- [    Test worker] org.hibernate.SQL                        : call next value for hibernate_sequence
+2021-09-10 23:53:36.880  INFO 41316 --- [    Test worker] p6spy                                    : #1631285616880 | took 0ms | statement | connection 12| url jdbc:h2:mem:79fc388e-25f3-4fc3-88c2-c728f39d1dc2
 call next value for hibernate_sequence
 call next value for hibernate_sequence;
-2021-09-08 17:45:26.106 DEBUG 45812 --- [    Test worker] org.hibernate.SQL                        : insert into seat (seat_number, seat_status, seat_id) values (?, ?, ?)
-2021-09-08 17:45:26.107  INFO 45812 --- [    Test worker] p6spy                                    : #1631090726107 | took 0ms | statement | connection 12| url jdbc:h2:mem:a6cf614a-72f4-4331-817f-769324c22774
+2021-09-10 23:53:36.880 DEBUG 41316 --- [    Test worker] org.hibernate.SQL                        : insert into seat (seat_number, seat_status, seat_id) values (?, ?, ?)
+2021-09-10 23:53:36.881  INFO 41316 --- [    Test worker] p6spy                                    : #1631285616881 | took 0ms | statement | connection 12| url jdbc:h2:mem:79fc388e-25f3-4fc3-88c2-c728f39d1dc2
 insert into seat (seat_number, seat_status, seat_id) values (?, ?, ?)
 insert into seat (seat_number, seat_status, seat_id) values (9, 'AVAILABLE', 9);
-2021-09-08 17:45:26.108  INFO 45812 --- [    Test worker] p6spy                                    : #1631090726108 | took 0ms | commit | connection 12| url jdbc:h2:mem:a6cf614a-72f4-4331-817f-769324c22774
+2021-09-10 23:53:36.881  INFO 41316 --- [    Test worker] p6spy                                    : #1631285616881 | took 0ms | commit | connection 12| url jdbc:h2:mem:79fc388e-25f3-4fc3-88c2-c728f39d1dc2
 
 ;
-2021-09-08 17:45:26.110 DEBUG 45812 --- [    Test worker] org.hibernate.SQL                        : call next value for hibernate_sequence
-2021-09-08 17:45:26.110  INFO 45812 --- [    Test worker] p6spy                                    : #1631090726110 | took 0ms | statement | connection 13| url jdbc:h2:mem:a6cf614a-72f4-4331-817f-769324c22774
+2021-09-10 23:53:36.882 DEBUG 41316 --- [    Test worker] org.hibernate.SQL                        : call next value for hibernate_sequence
+2021-09-10 23:53:36.882  INFO 41316 --- [    Test worker] p6spy                                    : #1631285616882 | took 0ms | statement | connection 13| url jdbc:h2:mem:79fc388e-25f3-4fc3-88c2-c728f39d1dc2
 call next value for hibernate_sequence
 call next value for hibernate_sequence;
-2021-09-08 17:45:26.111 DEBUG 45812 --- [    Test worker] org.hibernate.SQL                        : insert into seat (seat_number, seat_status, seat_id) values (?, ?, ?)
-2021-09-08 17:45:26.111  INFO 45812 --- [    Test worker] p6spy                                    : #1631090726111 | took 0ms | statement | connection 13| url jdbc:h2:mem:a6cf614a-72f4-4331-817f-769324c22774
+2021-09-10 23:53:36.883 DEBUG 41316 --- [    Test worker] org.hibernate.SQL                        : insert into seat (seat_number, seat_status, seat_id) values (?, ?, ?)
+2021-09-10 23:53:36.883  INFO 41316 --- [    Test worker] p6spy                                    : #1631285616883 | took 0ms | statement | connection 13| url jdbc:h2:mem:79fc388e-25f3-4fc3-88c2-c728f39d1dc2
 insert into seat (seat_number, seat_status, seat_id) values (?, ?, ?)
 insert into seat (seat_number, seat_status, seat_id) values (10, 'AVAILABLE', 10);
-2021-09-08 17:45:26.112  INFO 45812 --- [    Test worker] p6spy                                    : #1631090726112 | took 0ms | commit | connection 13| url jdbc:h2:mem:a6cf614a-72f4-4331-817f-769324c22774
+2021-09-10 23:53:36.883  INFO 41316 --- [    Test worker] p6spy                                    : #1631285616883 | took 0ms | commit | connection 13| url jdbc:h2:mem:79fc388e-25f3-4fc3-88c2-c728f39d1dc2
 
 ;
-2021-09-08 17:45:26.120 DEBUG 45812 --- [    Test worker] org.hibernate.SQL                        : call next value for hibernate_sequence
-2021-09-08 17:45:26.121  INFO 45812 --- [    Test worker] p6spy                                    : #1631090726121 | took 0ms | statement | connection 14| url jdbc:h2:mem:a6cf614a-72f4-4331-817f-769324c22774
+2021-09-10 23:53:36.890 DEBUG 41316 --- [    Test worker] org.hibernate.SQL                        : call next value for hibernate_sequence
+2021-09-10 23:53:36.890  INFO 41316 --- [    Test worker] p6spy                                    : #1631285616890 | took 0ms | statement | connection 14| url jdbc:h2:mem:79fc388e-25f3-4fc3-88c2-c728f39d1dc2
 call next value for hibernate_sequence
 call next value for hibernate_sequence;
-2021-09-08 17:45:26.122 DEBUG 45812 --- [    Test worker] org.hibernate.SQL                        : insert into item (hour_type, price, ticket, item_id) values (?, ?, ?, ?)
-2021-09-08 17:45:26.123  INFO 45812 --- [    Test worker] p6spy                                    : #1631090726123 | took 0ms | statement | connection 14| url jdbc:h2:mem:a6cf614a-72f4-4331-817f-769324c22774
+2021-09-10 23:53:36.891 DEBUG 41316 --- [    Test worker] org.hibernate.SQL                        : insert into item (hour_type, price, ticket, item_id) values (?, ?, ?, ?)
+2021-09-10 23:53:36.891  INFO 41316 --- [    Test worker] p6spy                                    : #1631285616891 | took 0ms | statement | connection 14| url jdbc:h2:mem:79fc388e-25f3-4fc3-88c2-c728f39d1dc2
 insert into item (hour_type, price, ticket, item_id) values (?, ?, ?, ?)
 insert into item (hour_type, price, ticket, item_id) values (NULL, 10000, 'DAY', 11);
-2021-09-08 17:45:26.124  INFO 45812 --- [    Test worker] p6spy                                    : #1631090726124 | took 0ms | commit | connection 14| url jdbc:h2:mem:a6cf614a-72f4-4331-817f-769324c22774
+2021-09-10 23:53:36.892  INFO 41316 --- [    Test worker] p6spy                                    : #1631285616892 | took 0ms | commit | connection 14| url jdbc:h2:mem:79fc388e-25f3-4fc3-88c2-c728f39d1dc2
 
 ;
-2021-09-08 17:45:26.126 DEBUG 45812 --- [    Test worker] org.hibernate.SQL                        : call next value for hibernate_sequence
-2021-09-08 17:45:26.126  INFO 45812 --- [    Test worker] p6spy                                    : #1631090726126 | took 0ms | statement | connection 15| url jdbc:h2:mem:a6cf614a-72f4-4331-817f-769324c22774
+2021-09-10 23:53:36.894 DEBUG 41316 --- [    Test worker] org.hibernate.SQL                        : call next value for hibernate_sequence
+2021-09-10 23:53:36.894  INFO 41316 --- [    Test worker] p6spy                                    : #1631285616894 | took 0ms | statement | connection 15| url jdbc:h2:mem:79fc388e-25f3-4fc3-88c2-c728f39d1dc2
 call next value for hibernate_sequence
 call next value for hibernate_sequence;
-2021-09-08 17:45:26.127 DEBUG 45812 --- [    Test worker] org.hibernate.SQL                        : insert into item (hour_type, price, ticket, item_id) values (?, ?, ?, ?)
-2021-09-08 17:45:26.128  INFO 45812 --- [    Test worker] p6spy                                    : #1631090726128 | took 0ms | statement | connection 15| url jdbc:h2:mem:a6cf614a-72f4-4331-817f-769324c22774
+2021-09-10 23:53:36.895 DEBUG 41316 --- [    Test worker] org.hibernate.SQL                        : insert into item (hour_type, price, ticket, item_id) values (?, ?, ?, ?)
+2021-09-10 23:53:36.896  INFO 41316 --- [    Test worker] p6spy                                    : #1631285616896 | took 0ms | statement | connection 15| url jdbc:h2:mem:79fc388e-25f3-4fc3-88c2-c728f39d1dc2
 insert into item (hour_type, price, ticket, item_id) values (?, ?, ?, ?)
 insert into item (hour_type, price, ticket, item_id) values (NULL, 200000, 'MONTH', 12);
-2021-09-08 17:45:26.128  INFO 45812 --- [    Test worker] p6spy                                    : #1631090726128 | took 0ms | commit | connection 15| url jdbc:h2:mem:a6cf614a-72f4-4331-817f-769324c22774
+2021-09-10 23:53:36.896  INFO 41316 --- [    Test worker] p6spy                                    : #1631285616896 | took 0ms | commit | connection 15| url jdbc:h2:mem:79fc388e-25f3-4fc3-88c2-c728f39d1dc2
 
 ;
-2021-09-08 17:45:26.862  WARN 45812 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-09-08 17:45:28.072  INFO 45812 --- [    Test worker] f.r.ReservationApplicationTests          : Started ReservationApplicationTests in 8.999 seconds (JVM running for 11.748)
+2021-09-10 23:53:37.318  WARN 41316 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-09-10 23:53:38.341  INFO 41316 --- [    Test worker] f.r.ReservationApplicationTests          : Started ReservationApplicationTests in 12.361 seconds (JVM running for 15.069)
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
