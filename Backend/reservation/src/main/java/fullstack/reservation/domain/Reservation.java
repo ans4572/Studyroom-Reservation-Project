@@ -34,4 +34,9 @@ public class Reservation {
     public void changeExitDate(LocalDateTime exitDate) {
         this.exitDate = exitDate;
     }
+
+    public void changeSeat(Seat seat) {
+        this.seat = seat;
+    }
+
 }

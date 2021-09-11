@@ -27,4 +27,8 @@ public class Seat {
     public void changSeatStatus(SeatStatus seatStatus) {
         this.seatStatus = seatStatus;
     }
+
+    public void changeSeat(int seatNumber) {
+        this.seatNumber = seatNumber;
+    }
 }
