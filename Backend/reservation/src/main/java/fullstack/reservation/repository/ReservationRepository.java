@@ -14,6 +14,6 @@ public interface ReservationRepository extends JpaRepository<Reservation, Long> 
     @Query("select r from Reservation r join fetch r.user u join fetch r.seat s where u.id = :id")
     List<Reservation> findReservationByUserId(@Param("id") Long id);
 
-    @Query("select r from Reservation r join fetch r.user u join fetch r.seat s where s.seatStatus = :seatStatus")
+    @Query("select r from Reservation r join fetch r.user u join fetch r.seat s where s.seatStatus = :seatStatus and r.exitDate is null")
     List<Reservation> findReservationJoinSeatBySeatStatus(@Param("seatStatus") SeatStatus seatStatus);
 }
