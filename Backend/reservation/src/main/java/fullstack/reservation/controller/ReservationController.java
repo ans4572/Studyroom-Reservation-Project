@@ -180,12 +180,17 @@ public class ReservationController {
         changeSeatResultDto.setCurrentSeatNumber(tmp.getSeat().getSeatNumber());
 
         URI uri = ServletUriComponentsBuilder.fromCurrentRequest()
-                .path("{/seatNumber}")
+                .path("/{id}")
                 .buildAndExpand(tmp.getSeat().getSeatNumber())
                 .toUri();
 
 
         EntityModel model = EntityModel.of(changeSeatResultDto);
+
+        WebMvcLinkBuilder self = WebMvcLinkBuilder.linkTo(WebMvcLinkBuilder
+                .methodOn(this.getClass()).changeSeatOnReservation(changeSeatNumberDto, request));
+
+        model.add(self.withSelfRel());
 
         return ResponseEntity.created(uri).body(model);
     }

@@ -1,6 +1,8 @@
 package fullstack.reservation.dto;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import fullstack.reservation.domain.Enum.Gender;
+import fullstack.reservation.domain.User;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -9,7 +11,11 @@ import java.time.LocalDateTime;
 
 @Data
 @NoArgsConstructor
+@AllArgsConstructor
 public class SeatOnReservationDto {
+
+    @JsonIgnore
+    private User user;
 
     private String name;
 
@@ -19,10 +25,4 @@ public class SeatOnReservationDto {
 
     private LocalDateTime enterDate;
 
-    public SeatOnReservationDto(String name, Gender gender, int seatNumber, LocalDateTime enterDate) {
-        this.name = name;
-        this.gender = gender;
-        this.seatNumber = seatNumber;
-        this.enterDate = enterDate;
-    }
 }
