@@ -167,6 +167,9 @@ public class ReservationController {
             }
         }
 
+        if (tmp == null) {
+            throw new IllegalStateException("현재 사용중인 좌석이 없습니다.");
+        }
 
         ChangeSeatResultDto changeSeatResultDto = ChangeSeatResultDto.builder()
                 .name(sessionUser.getName())
