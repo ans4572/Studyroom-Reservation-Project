@@ -2,6 +2,7 @@ package fullstack.reservation.service;
 
 import fullstack.reservation.domain.Enum.SeatStatus;
 import fullstack.reservation.domain.Seat;
+import fullstack.reservation.repository.ReservationRepository;
 import fullstack.reservation.repository.SeatRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -28,5 +29,4 @@ public class SeatService {
     public List<Seat> retrieveAll() {
         return seatRepository.findAll();
     }
-
 }

@@ -2,9 +2,7 @@ package fullstack.reservation.controller;
 
 import fullstack.reservation.domain.Reservation;
 import fullstack.reservation.domain.User;
-import fullstack.reservation.dto.ReservationDto;
-import fullstack.reservation.dto.ReservationResultDto;
-import fullstack.reservation.dto.ReservationResultV2;
+import fullstack.reservation.dto.*;
 import fullstack.reservation.exception.NoReservationNowException;
 import fullstack.reservation.service.ReservationService;
 import fullstack.reservation.session.SessionConst;
@@ -27,7 +25,6 @@ import java.util.List;
 @RestController
 @RequiredArgsConstructor
 @Slf4j
-@CrossOrigin(origins ="*")
 public class ReservationController {
 
     private final ReservationService reservationService;
@@ -148,5 +145,55 @@ public class ReservationController {
         }
 
         return ResponseEntity.ok().body(list);
+    }
+    
+    //좌석 이동
+    @PutMapping("/reservation")//유저 정보, 예약 정보, 좌석 정보
+    public ResponseEntity changeSeatOnReservation(@RequestBody ChangeSeatNumberDto changeSeatNumberDto,
+                                                  HttpServletRequest request) {
+        HttpSession session = request.getSession(false);
+        User sessionUser = (User)session.getAttribute(SessionConst.LOGIN_MEMBER);
+        
+        List<Reservation> reservations = reservationService.retrieveByUserId(sessionUser.getId());
+        
+        //유저가 현재 사용중인 예약
+        Reservation tmp = null;
+
+        for (Reservation reservation : reservations) {
+            if (reservation.getExitDate() == null) {
+                tmp = reservation;
+                break;
+            }
+        }
+
+        if (tmp == null) {
+            throw new IllegalStateException("현재 사용중인 좌석이 없습니다.");
+        }
+
+        ChangeSeatResultDto changeSeatResultDto = ChangeSeatResultDto.builder()
+                .name(sessionUser.getName())
+                .reservationTime(tmp.getEnterDate())
+                .prevSeatNumber(tmp.getSeat().getSeatNumber())
+                .build();
+        
+        //좌석변경 서비스
+        reservationService.changeSeat(tmp, changeSeatNumberDto.getSeatNumber());
+
+        changeSeatResultDto.setCurrentSeatNumber(tmp.getSeat().getSeatNumber());
+
+        URI uri = ServletUriComponentsBuilder.fromCurrentRequest()
+                .path("/{id}")
+                .buildAndExpand(tmp.getSeat().getSeatNumber())
+                .toUri();
+
+
+        EntityModel model = EntityModel.of(changeSeatResultDto);
+
+        WebMvcLinkBuilder self = WebMvcLinkBuilder.linkTo(WebMvcLinkBuilder
+                .methodOn(this.getClass()).changeSeatOnReservation(changeSeatNumberDto, request));
+
+        model.add(self.withSelfRel());
+
+        return ResponseEntity.created(uri).body(model);
     }
 }

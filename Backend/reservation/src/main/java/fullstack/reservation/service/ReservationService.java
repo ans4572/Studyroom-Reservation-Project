@@ -1,11 +1,10 @@
 package fullstack.reservation.service;
 
 import fullstack.reservation.domain.*;
-import fullstack.reservation.domain.Enum.OrderType;
 import fullstack.reservation.domain.Enum.SeatStatus;
 import fullstack.reservation.exception.NoAvailableTicketException;
-import fullstack.reservation.exception.NoReservationException;
-import fullstack.reservation.exception.NoSeatException;
+import fullstack.reservation.exception.CurrentReservationException;
+import fullstack.reservation.exception.DuplicatedSeatException;
 import fullstack.reservation.repository.*;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -39,13 +38,13 @@ public class ReservationService {
 
         for (Reservation r : reservations) {
             if (r.getExitDate() == null) {
-                throw new NoReservationException("아직 퇴실하지 않는 정보가 있습니다.");
+                throw new CurrentReservationException("아직 퇴실하지 않는 정보가 있습니다.");
             }
         }
 
         //좌석 상태
         if (findSeat.getSeatStatus() == SeatStatus.UNAVAILABLE) {
-            throw new NoSeatException("이미 좌석이 사용중입니다.");
+            throw new DuplicatedSeatException("이미 좌석이 사용중입니다.");
         }
 
         Reservation reservation = Reservation.builder()
@@ -89,4 +88,28 @@ public class ReservationService {
         return tmp;
     }
 
+    public List<Reservation> findSeatOnReservation() {
+        return reservationRepository.findReservationJoinSeatBySeatStatus(SeatStatus.UNAVAILABLE);
+    }
+
+    @Transactional
+    public void changeSeat(Reservation reservation, int seatNumber) {
+        //현재 사용중이 좌석
+        Seat useSeat = reservation.getSeat();
+        //바꿀 좌석
+        Seat findSeat = seatRepository.findBySeatNumber(seatNumber);
+
+        if (findSeat == null) {
+            throw new IllegalStateException("해당 좌석은 존재하지 않습니다.");
+        }
+
+        if (findSeat.getSeatStatus() == SeatStatus.UNAVAILABLE) {
+            throw new DuplicatedSeatException("이미 좌석이 사용중입니다.");
+        }
+
+        useSeat.changSeatStatus(SeatStatus.AVAILABLE);
+        findSeat.changSeatStatus(SeatStatus.UNAVAILABLE);
+
+        reservation.changeSeat(findSeat);
+    }
 }
