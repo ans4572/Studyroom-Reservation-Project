@@ -18,14 +18,11 @@ public class WebConfig implements WebMvcConfigurer {
                 .excludePathPatterns("/css/**", "/*.ico", "/error", "/users/**", "/");
     }
 
-//    @Bean
-//    public WebMvcConfigurer webMvcConfigurer() {
-//        return new WebMvcConfigurer() {
-//            public void addCorsMappings(CorsRegistry registry) {
-//                registry.addMapping("/**")
-//                        .allowCredentials(true)
-//                        .maxAge(3600);
-//            }
-//        };
-//    }
+    @Override
+    public void addCorsMappings(CorsRegistry registry) {
+        registry.addMapping("/**")
+                .allowedOrigins("http://localhost:3000")
+                .allowedMethods("GET", "POST", "DELETE", "PUT")
+                .allowCredentials(true);
+    }
 }

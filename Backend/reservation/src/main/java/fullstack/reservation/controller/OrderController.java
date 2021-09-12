@@ -24,7 +24,6 @@ import java.util.List;
 
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.*;
 
-@CrossOrigin(origins ="*")
 @RestController
 @RequiredArgsConstructor
 public class OrderController {

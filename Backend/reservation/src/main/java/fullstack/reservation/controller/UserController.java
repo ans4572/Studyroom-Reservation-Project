@@ -28,7 +28,6 @@ import java.net.URI;
 import java.util.ArrayList;
 import java.util.List;
 
-@CrossOrigin(origins ="http://localhost:3000", allowCredentials = "true")
 @RestController
 @RequiredArgsConstructor
 public class UserController {
