@@ -16,14 +16,14 @@ import java.util.logging.LogRecord;
 @Configuration
 @EnableWebMvc
 public class WebConfig implements WebMvcConfigurer, Filter {
-
-    @Override
-    public void addInterceptors(InterceptorRegistry registry) {
-        registry.addInterceptor(new LoginCheckInterceptor())
-                .order(1)
-                .addPathPatterns("/**")
-                .excludePathPatterns("/css/**", "/*.ico", "/error", "/users/**", "/");
-    }
+//
+//    @Override
+//    public void addInterceptors(InterceptorRegistry registry) {
+//        registry.addInterceptor(new LoginCheckInterceptor())
+//                .order(1)
+//                .addPathPatterns("/**")
+//                .excludePathPatterns("/css/**", "/*.ico", "/error", "/users/**", "/");
+//    }
 
 //    @Override
 //    public void addCorsMappings(CorsRegistry registry) {
