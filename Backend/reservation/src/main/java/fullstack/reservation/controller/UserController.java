@@ -36,6 +36,14 @@ public class UserController {
     private final ModelMapper modelMapper;
     private final LoginService loginService;
 
+    @GetMapping("/test")
+    public String testA(HttpServletRequest request) {
+        HttpSession session = request.getSession();
+        session.setAttribute(SessionConst.LOGIN_MEMBER, "김상운");
+
+        return "성공";
+    }
+
     //회원 가입
     @PostMapping("/users")
     public ResponseEntity createUser(@RequestBody @Valid CreateUserDto createUserDto, HttpServletRequest request) {
