@@ -27,6 +27,8 @@ public class LoginCheckInterceptor implements HandlerInterceptor {
             log.info("requestURI = {}", requestURI);
             throw new InterceptorException("인터셉터 오류");
         }
+
+
         return true;
     }
 }
