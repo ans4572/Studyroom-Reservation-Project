@@ -20,13 +20,15 @@ public class InitService {
 
     @PostConstruct
     public void postInit() {
-        for (int i = 0; i < 10; i++) {
+
+        for (int i = 0; i < 47; i++) {
             Seat seat = Seat.builder()
                     .seatNumber(i + 1)
                     .seatStatus(SeatStatus.AVAILABLE)
                     .build();
             seatService.register(seat);
         }
+
         Item day = Item.builder()
                 .price(10000)
                 .ticket(Ticket.DAY)
