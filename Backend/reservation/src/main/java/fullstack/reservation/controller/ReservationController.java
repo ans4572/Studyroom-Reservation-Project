@@ -57,11 +57,6 @@ public class ReservationController {
         model.add(self.withSelfRel());
         model.add(retrieve.withRel("retrieve"));
 
-
-        if (session != null) {
-            session.invalidate();
-        }
-
         return ResponseEntity.created(uri).body(model);
     }
     
@@ -94,10 +89,11 @@ public class ReservationController {
         EntityModel model = EntityModel.of(reservationResultDto);
         //self
         WebMvcLinkBuilder self = WebMvcLinkBuilder.linkTo(WebMvcLinkBuilder.methodOn(this.getClass()).leaving(request));
-
+        WebMvcLinkBuilder login = WebMvcLinkBuilder.linkTo(WebMvcLinkBuilder.methodOn(UserController.class).login(new LoginDto(), request));
         model.add(self.withSelfRel());
+
         //login
-        model.add(Link.of("http://localhost:8080/users/login", "login"));
+        model.add(login.withRel("login"));
 
         return ResponseEntity.ok().body(model);
     }
