@@ -10,6 +10,7 @@ import fullstack.reservation.service.UserService;
 import fullstack.reservation.session.SessionConst;
 import fullstack.reservation.vo.ReservationStatus;
 import lombok.RequiredArgsConstructor;
+import org.springframework.hateoas.CollectionModel;
 import org.springframework.hateoas.EntityModel;
 import org.springframework.hateoas.server.mvc.WebMvcLinkBuilder;
 import org.springframework.http.ResponseEntity;
@@ -61,8 +62,20 @@ public class MyPageController {
         }
 
         if (userReservation == null) {
-            return ResponseEntity.ok(new UserDetailDtoV2(false, user.getName(), user.getLoginId(),
-                    user.getTicketUser().getExpiredDate()));
+            UserDetailDtoV2 userDetailDtoV2 = new UserDetailDtoV2(false, user.getName(), user.getLoginId(),
+                    user.getTicketUser().getExpiredDate());
+
+            WebMvcLinkBuilder self = linkTo(methodOn(this.getClass()).myPage(request));
+            WebMvcLinkBuilder myOrders = linkTo(methodOn(this.getClass()).myOrders(request));
+            WebMvcLinkBuilder myReservations = linkTo(methodOn(this.getClass()).myReservations(request));
+
+            EntityModel model = EntityModel.of(userDetailDtoV2);
+
+            model.add(self.withSelfRel());
+            model.add(myOrders.withRel("orders"));
+            model.add(myReservations.withRel("reservations"));
+
+            return ResponseEntity.ok(model);
         }
 
         LocalDateTime enterDate = userReservation.getEnterDate();
@@ -82,7 +95,17 @@ public class MyPageController {
                 .seatNumber(userReservation.getSeat().getSeatNumber())
                 .build();
 
-        return ResponseEntity.ok(userDetailDto);
+        WebMvcLinkBuilder self = linkTo(methodOn(this.getClass()).myPage(request));
+        WebMvcLinkBuilder myOrders = linkTo(methodOn(this.getClass()).myOrders(request));
+        WebMvcLinkBuilder myReservations = linkTo(methodOn(this.getClass()).myReservations(request));
+
+        EntityModel model = EntityModel.of(userDetailDto);
+
+        model.add(self.withSelfRel());
+        model.add(myOrders.withRel("orders"));
+        model.add(myReservations.withRel("reservations"));
+
+        return ResponseEntity.ok(model);
     }
     
     //구매내역
@@ -96,7 +119,17 @@ public class MyPageController {
         List<OrderResultDto> collect = orders.stream().map(o -> new OrderResultDto(o.getUser().getName(),o.getItem().getPrice(), o.getItem().getTicket(), o.getOrderDate()))
                 .collect(Collectors.toList());
 
-        return ResponseEntity.ok(collect);
+        WebMvcLinkBuilder self = linkTo(methodOn(this.getClass()).myOrders(request));
+        WebMvcLinkBuilder reservations = linkTo(methodOn(this.getClass()).myReservations(request));
+        WebMvcLinkBuilder myPage = linkTo(methodOn(this.getClass()).myPage(request));
+
+        CollectionModel model = CollectionModel.of(collect);
+
+        model.add(self.withSelfRel());
+        model.add(reservations.withRel("reservations"));
+        model.add(myPage.withRel("my-page"));
+
+        return ResponseEntity.ok(model);
     }
     
     //예약 내역
@@ -116,7 +149,18 @@ public class MyPageController {
             }
         }
 
-        return ResponseEntity.ok(list);
+        WebMvcLinkBuilder self = linkTo(methodOn(this.getClass()).myReservations(request));
+        WebMvcLinkBuilder orders = linkTo(methodOn(this.getClass()).myOrders(request));
+        WebMvcLinkBuilder myPage = linkTo(methodOn(this.getClass()).myPage(request));
+
+
+
+        CollectionModel model = CollectionModel.of(list);
+        model.add(self.withSelfRel());
+        model.add(orders.withRel("orders"));
+        model.add(myPage.withRel("my-page"));
+
+        return ResponseEntity.ok(model);
     }
 
     @PutMapping("/my-page")
@@ -126,6 +170,13 @@ public class MyPageController {
 
         userService.editUser(sessionUser.getId(), editUserDto);
 
-        return ResponseEntity.ok(editUserDto);
+        WebMvcLinkBuilder self = linkTo(methodOn(this.getClass()).editUser(editUserDto, request));
+        WebMvcLinkBuilder myPage = linkTo(methodOn(this.getClass()).myPage(request));
+
+        EntityModel model = EntityModel.of(editUserDto);
+        model.add(self.withSelfRel());
+        model.add(myPage.withRel("my-page"));
+
+        return ResponseEntity.ok(model);
     }
 }
