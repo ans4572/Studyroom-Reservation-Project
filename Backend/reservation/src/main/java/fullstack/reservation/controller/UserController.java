@@ -164,13 +164,4 @@ public class UserController {
 
         return ResponseEntity.ok().body(modelList);
     }
-
-    //테스트
-    @GetMapping("/login/test")
-    public ResponseEntity test(HttpServletRequest request) {
-        HttpSession session = request.getSession(false);
-        User user = (User)session.getAttribute(SessionConst.LOGIN_MEMBER);
-
-        return ResponseEntity.ok().body(user);
-    }
 }
