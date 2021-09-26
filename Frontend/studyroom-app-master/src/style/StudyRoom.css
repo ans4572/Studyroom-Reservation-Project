@@ -1,0 +1,244 @@
+/* .studyroom-container {} */
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 120px;
+}
+.status {
+  display: flex;
+}
+.status-box {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  border-radius: 10px;
+  height: 26px;
+  padding: 8px 16px;
+  margin-left: 15px;
+}
+.status-box:first-child {
+  background: beige;
+}
+.status-box:last-child {
+  background: lightblue;
+}
+.container {
+  background-color: rgb(103, 146, 148);
+}
+.door-container {
+  display: grid;
+  grid-gap: 6px;
+  grid-template-columns: repeat(21, 50px);
+  padding: 0 25px 0 25px;
+}
+.door {
+  border-radius: 6px 6px 0 0;
+  text-align: center;
+  background-color: white;
+  grid-column-start: 11;
+  padding: 5px;
+}
+.table-container {
+  background-color: rgb(103, 146, 148);
+  display: grid;
+  grid-template-rows: repeat(12, 40px);
+  grid-template-columns: repeat(21, 50px);
+  grid-gap: 6px;
+  padding: 25px 25px 0 25px;
+}
+
+.table {
+  display: flex;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 2px 0 0 4px;
+  box-sizing: border-box;
+  background-color: beige;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+/* 1-6 */
+.table:nth-child(1) {
+  grid-row-start: 11;
+}
+.table:nth-child(2) {
+  grid-row-start: 9;
+}
+.table:nth-child(3) {
+  grid-row-start: 7;
+}
+.table:nth-child(4) {
+  grid-row-start: 5;
+}
+.table:nth-child(5) {
+  grid-row-start: 3;
+}
+.table:nth-child(6) {
+  grid-row-start: 1;
+}
+.table:nth-child(7) {
+  grid-column-start: 3;
+}
+.table:nth-child(8) {
+  grid-column-start: 5;
+}
+.table:nth-child(9) {
+  grid-column-start: 7;
+}
+.table:nth-child(10) {
+  grid-column-start: 9;
+}
+.table:nth-child(11) {
+  grid-column-start: 11;
+}
+.table:nth-child(12) {
+  grid-column-start: 13;
+}
+.table:nth-child(13) {
+  grid-column-start: 15;
+}
+.table:nth-child(14) {
+  grid-column-start: 17;
+}
+.table:nth-child(15) {
+  grid-column-start: 19;
+}
+.table:nth-child(16) {
+  grid-column-start: 21;
+}
+
+/* 17-21 */
+.table:nth-child(17) {
+  grid-column-start: 21;
+  grid-row-start: 3;
+}
+.table:nth-child(18) {
+  grid-column-start: 21;
+  grid-row-start: 5;
+}
+.table:nth-child(19) {
+  grid-column-start: 21;
+  grid-row-start: 7;
+}
+.table:nth-child(20) {
+  grid-column-start: 21;
+  grid-row-start: 9;
+}
+.table:nth-child(21) {
+  grid-column-start: 21;
+  grid-row-start: 11;
+}
+
+/* 22- */
+.table:nth-child(22) {
+  grid-column-start: 3;
+  grid-row-start: 4;
+}
+.table:nth-child(23) {
+  grid-column-start: 4;
+  grid-row-start: 4;
+}
+.table:nth-child(24) {
+  grid-column-start: 5;
+  grid-row-start: 4;
+}
+.table:nth-child(25) {
+  grid-column-start: 6;
+  grid-row-start: 4;
+}
+.table:nth-child(26) {
+  grid-column-start: 3;
+  grid-row-start: 5;
+}
+.table:nth-child(27) {
+  grid-column-start: 4;
+  grid-row-start: 5;
+}
+.table:nth-child(28) {
+  grid-column-start: 5;
+  grid-row-start: 5;
+}
+.table:nth-child(29) {
+  grid-column-start: 6;
+  grid-row-start: 5;
+}
+
+.table:nth-child(30) {
+  grid-column-start: 9;
+  grid-row-start: 8;
+}
+.table:nth-child(31) {
+  grid-column-start: 10;
+  grid-row-start: 8;
+}
+.table:nth-child(32) {
+  grid-column-start: 11;
+  grid-row-start: 8;
+}
+.table:nth-child(33) {
+  grid-column-start: 12;
+  grid-row-start: 8;
+}
+.table:nth-child(34) {
+  grid-column-start: 13;
+  grid-row-start: 8;
+}
+.table:nth-child(35) {
+  grid-column-start: 9;
+  grid-row-start: 9;
+}
+.table:nth-child(36) {
+  grid-column-start: 10;
+  grid-row-start: 9;
+}
+.table:nth-child(37) {
+  grid-column-start: 11;
+  grid-row-start: 9;
+}
+
+.table:nth-child(38) {
+  grid-column-start: 12;
+  grid-row-start: 9;
+}
+.table:nth-child(39) {
+  grid-column-start: 13;
+  grid-row-start: 9;
+}
+.table:nth-child(40) {
+  grid-column-start: 16;
+  grid-row-start: 4;
+}
+.table:nth-child(41) {
+  grid-column-start: 17;
+  grid-row-start: 4;
+}
+.table:nth-child(42) {
+  grid-column-start: 18;
+  grid-row-start: 4;
+}
+.table:nth-child(43) {
+  grid-column-start: 19;
+  grid-row-start: 4;
+}
+.table:nth-child(44) {
+  grid-column-start: 16;
+  grid-row-start: 5;
+}
+.table:nth-child(45) {
+  grid-column-start: 17;
+  grid-row-start: 5;
+}
+.table:nth-child(46) {
+  grid-column-start: 18;
+  grid-row-start: 5;
+}
+.table:nth-child(47) {
+  grid-column-start: 19;
+  grid-row-start: 5;
+}
+
+/* .table18 {
+  order: 2;
+} */

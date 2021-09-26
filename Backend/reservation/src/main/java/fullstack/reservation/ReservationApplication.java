@@ -18,5 +18,4 @@ public class ReservationApplication {
 	public ModelMapper modelMapper() {
 		return new ModelMapper();
 	}
-
 }

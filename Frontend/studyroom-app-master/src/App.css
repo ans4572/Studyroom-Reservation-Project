@@ -1,0 +1,21 @@
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  margin: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* .users-component {
+  padding: 20px 40px;
+}
+.user {
+  width: 400px;
+  border: 1px solid #b4b4b4;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+} */
+/* .home-container {
+  border: 1px solid black;
+  padding: 20px 40px;
+} */

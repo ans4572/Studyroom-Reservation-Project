@@ -1,0 +1,47 @@
+.buyVoucher {
+  margin-top: 200px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.day,
+.month {
+  cursor: pointer;
+  border: none;
+  width: 300px;
+  height: 200px;
+  font-size: 40px;
+  border-radius: 10px;
+  background-color: #339af0;
+  color: white;
+  margin: 100px;
+  font-weight: 500;
+}
+
+.day:hover,
+.month:hover {
+  background-color: #1864ab;
+}
+
+@media screen and (max-width: 1000px) {
+  .buyVoucher button {
+    width: 200px;
+    height: 120px;
+    font-size: 26px;
+    color: white;
+    margin: 60px;
+  }
+}
+
+/* ul li {
+  color: white;
+  text-align: center;
+  list-style: none;
+  background-color: rgb(62, 91, 187);
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+} */

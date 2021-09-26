@@ -37,6 +37,9 @@ public class ReservationController {
 
         Reservation reservation = reservationService.reservation(sessionUser.getId(), reservationDto.getSeatNumber());
 
+        if (session != null) {
+            session.invalidate();
+        }
 
         URI uri = ServletUriComponentsBuilder.fromCurrentRequest()
                 .path("/{id}")
@@ -176,6 +179,11 @@ public class ReservationController {
         reservationService.changeSeat(tmp, changeSeatNumberDto.getSeatNumber());
 
         changeSeatResultDto.setCurrentSeatNumber(tmp.getSeat().getSeatNumber());
+
+        //좌석 변경 후 로그아웃
+        if (session!= null) {
+            session.invalidate();
+        }
 
         URI uri = ServletUriComponentsBuilder.fromCurrentRequest()
                 .path("/{id}")

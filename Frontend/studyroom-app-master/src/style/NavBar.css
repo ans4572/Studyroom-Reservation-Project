@@ -1,0 +1,49 @@
+.nav-container {
+  font-size: 20px;
+  font-weight: 500;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #228be6;
+}
+div.home {
+  padding: 10px;
+  font-weight: 700;
+}
+ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+li {
+  margin: 0 0 0 30px;
+  /* margin: 0 20px; */
+}
+a {
+  color: black;
+  padding: 10px;
+}
+a {
+  text-decoration: none;
+}
+.active {
+  color: white;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 1000px) {
+  .nav-container {
+    font-size: 16px;
+    /* 10 60 */
+    padding: 5px 20px;
+  }
+  li {
+    margin: 5px;
+  }
+}

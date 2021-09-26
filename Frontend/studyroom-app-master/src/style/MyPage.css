@@ -1,0 +1,48 @@
+.mypage-container {
+  width: 800px;
+  /* height: 400px; */
+  margin-top: 200px;
+  padding: 40px 60px;
+  border: 2px solid #1864ab;
+  border-radius: 10px;
+}
+.user {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.user .img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+}
+.user .info {
+  display: flex;
+  flex-direction: column;
+}
+.mpbtn-container button {
+  width: 90px;
+  height: 40px;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  background-color: #339af0;
+  margin: 0 10px 15px 0;
+}
+.mpbtn-container button:hover {
+  background-color: #1864ab;
+}
+.mpbtn-container button:last-child {
+  background-color: #ff6b6b;
+}
+.mpbtn-container button:last-child:hover {
+  background-color: #c92a2a;
+}
+@media screen and (max-width: 1000px) {
+  .mypage-container {
+    max-width: 500px;
+  }
+}
