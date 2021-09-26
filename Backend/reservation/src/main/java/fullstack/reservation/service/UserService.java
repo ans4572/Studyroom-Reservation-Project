@@ -2,6 +2,7 @@ package fullstack.reservation.service;
 
 import fullstack.reservation.domain.TicketUser;
 import fullstack.reservation.domain.User;
+import fullstack.reservation.dto.EditUserDto;
 import fullstack.reservation.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -35,5 +36,11 @@ public class UserService {
     //전체 조회
     public List<User> retrieveAll() {
         return userRepository.findAll();
+    }
+
+    @Transactional
+    public void editUser(Long userId, EditUserDto editUserDto) {
+        User findUser = retrieveOne(userId);
+        findUser.editUser(editUserDto);
     }
 }

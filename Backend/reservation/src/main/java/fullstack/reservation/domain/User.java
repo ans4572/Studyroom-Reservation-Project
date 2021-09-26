@@ -1,6 +1,7 @@
 package fullstack.reservation.domain;
 
 import fullstack.reservation.domain.Enum.Gender;
+import fullstack.reservation.dto.EditUserDto;
 import lombok.*;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
@@ -45,6 +46,13 @@ public class User {
     public void setTicketUser(TicketUser ticketUser) {
         this.ticketUser = ticketUser;
         ticketUser.setUser(this);
+    }
+
+    public void editUser(EditUserDto editUserDto) {
+        this.name = editUserDto.getName();
+        this.password = editUserDto.getPassword();
+        this.gender = editUserDto.getGender();
+        this.age = editUserDto.getAge();
     }
 }
 

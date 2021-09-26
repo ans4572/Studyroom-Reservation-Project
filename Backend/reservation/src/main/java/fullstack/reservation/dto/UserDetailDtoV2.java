@@ -9,7 +9,8 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @Builder
 public class UserDetailDtoV2 {
-
+    
+    //현재 사용중인지
     private boolean currentUsage;
 
     //이름

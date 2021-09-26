@@ -10,7 +10,8 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @Builder
 public class UserDetailDto {
-
+    
+    //현재 사용중인지
     private boolean currentUsage;
 
     //이름
@@ -27,6 +28,7 @@ public class UserDetailDto {
 
     //이용권 만료일
     private LocalDateTime expireDate;
-
+    
+    //사용중인 좌석 정보
     private int seatNumber;
 }
