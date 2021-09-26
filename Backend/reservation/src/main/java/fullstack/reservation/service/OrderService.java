@@ -66,6 +66,10 @@ public class OrderService {
         return orderRepository.findById(id).orElse(null);
     }
 
+    public List<Order> retrieveByUserId(Long userId) {
+        return orderRepository.findByUserId(userId);
+    }
+
     public List<Order> retrieveAll() {
         return orderRepository.findAll();
     }

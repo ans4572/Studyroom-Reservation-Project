@@ -18,4 +18,10 @@ public class OrderResultDto {
     private int price;
     private Ticket ticket;
     private LocalDateTime orderDate;
+
+    public OrderResultDto(int price, Ticket ticket, LocalDateTime orderDate) {
+        this.price = price;
+        this.ticket = ticket;
+        this.orderDate = orderDate;
+    }
 }
