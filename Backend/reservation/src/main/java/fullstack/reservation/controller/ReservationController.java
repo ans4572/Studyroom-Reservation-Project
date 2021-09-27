@@ -30,7 +30,7 @@ public class ReservationController {
     private final ReservationService reservationService;
     
     //예약 후 로그아웃
-    @PostMapping("/reservation")
+    @PostMapping("/reservations")
     public ResponseEntity reservation(@RequestBody ReservationDto reservationDto, HttpServletRequest request) {
         HttpSession session = request.getSession(false);
         User sessionUser = (User)session.getAttribute(SessionConst.LOGIN_MEMBER);
@@ -65,7 +65,7 @@ public class ReservationController {
     
     
     //퇴실
-    @DeleteMapping("/reservation")
+    @DeleteMapping("/reservations")
     public ResponseEntity leaving(HttpServletRequest request) {
 
         HttpSession session = request.getSession(false);
@@ -102,7 +102,7 @@ public class ReservationController {
     }
     
     //단건 조회
-    @GetMapping("/reservation/{id}")
+    @GetMapping("/reservations/{id}")
     public ResponseEntity getReservation(@PathVariable Long id) {
         Reservation reservation = reservationService.retrieveOne(id);
 
@@ -122,7 +122,7 @@ public class ReservationController {
         return new ResponseEntity(model, HttpStatus.OK);
     }
 
-    @GetMapping("/reservation")
+    @GetMapping("/reservations")
     public ResponseEntity getAllReservation() {
         List<Reservation> reservations = reservationService.retrieveAll();
         List<EntityModel> list = new ArrayList<>();
@@ -147,7 +147,7 @@ public class ReservationController {
     }
     
     //좌석 이동
-    @PutMapping("/reservation")//유저 정보, 예약 정보, 좌석 정보
+    @PutMapping("/reservations")//유저 정보, 예약 정보, 좌석 정보
     public ResponseEntity changeSeatOnReservation(@RequestBody ChangeSeatNumberDto changeSeatNumberDto,
                                                   HttpServletRequest request) {
         HttpSession session = request.getSession(false);

@@ -24,6 +24,9 @@ public class LogInterceptor implements HandlerInterceptor {
         request.setAttribute(LOG_ID, uuid);
 
         log.info("REQUEST : [{}][{}][{}]", uuid, requestURI, handler);
+
+        response.setHeader("Set-Cookie", "JSESSIONID=" + request.getRequestedSessionId() +
+                "; path=/; SameSite=None");
         return true;
     }
 

@@ -8,6 +8,7 @@ import fullstack.reservation.service.UserService;
 import fullstack.reservation.session.SessionConst;
 import fullstack.reservation.vo.Message;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.convention.MatchingStrategies;
 import org.springframework.hateoas.EntityModel;
@@ -27,6 +28,7 @@ import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
+@Slf4j
 public class UserController {
 
     private final UserService userService;
@@ -100,6 +102,7 @@ public class UserController {
 
         if (session != null) {
             session.invalidate();
+            log.info("session is invalidated.");
         }
         Message message = new Message("successfully logout");
         EntityModel model = EntityModel.of(message);
