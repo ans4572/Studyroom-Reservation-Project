@@ -23,6 +23,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import java.time.Duration;
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 import java.util.List;
@@ -116,8 +117,11 @@ public class MyPageController {
 
         List<Order> orders = orderService.retrieveByUserId(sessionUser.getId());
 
-        List<OrderResultDto> collect = orders.stream().map(o -> new OrderResultDto(o.getUser().getName(),o.getItem().getPrice(), o.getItem().getTicket(), o.getOrderDate()))
-                .collect(Collectors.toList());
+        List<OrderResultDto> collect = new ArrayList<>();
+        for (Order o : orders) {
+            OrderResultDto orderResultDto = new OrderResultDto(o.getUser().getName(), o.getItem().getPrice(), o.getItem().getTicket(), o.getOrderDate());
+            collect.add(orderResultDto);
+        }
 
         WebMvcLinkBuilder self = linkTo(methodOn(this.getClass()).myOrders(request));
         WebMvcLinkBuilder reservations = linkTo(methodOn(this.getClass()).myReservations(request));
